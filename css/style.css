@@ -1,4 +1,13 @@
 /********** Template CSS **********/
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
 :root {
     --primary: #2480FD;
     --light: #EFF5FF;
@@ -89,7 +98,8 @@
 }
 
 .navbar .navbar-nav .nav-link {
-    margin-right: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
     padding: 25px 0;
     color: #FFFFFF;
     font-size: 15px;
@@ -103,16 +113,7 @@
     color: var(--primary);
 }
 
-@media (max-width: 991.98px) {
-    .navbar .navbar-nav .nav-link {
-        margin-right: 0;
-        padding: 10px 0;
-    }
 
-    .navbar .navbar-nav {
-        border-top: 1px solid #EEEEEE;
-    }
-}
 
 .navbar .navbar-brand,
 .navbar a.btn {
@@ -134,61 +135,27 @@
 }
 
 .nav-bar-container {
-    height: 80px;
+    height: 90px;
     margin: auto;
-    width: fit-content;
+    width: 85%;
     flex-direction: row;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-@media (max-width: 992px) {
-
-    .nav-bar-container {
-        height: 60px;
-        margin: auto;
-        width: 100%;
-        flex-direction: row;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: max-content;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-
-    .navbar.sticky-top {
-        width: 100%;
-        margin: 0;
-    }
-
-    .logo {
-        height: 45px !important;
-        margin-left: 10px;
-    }
+.dropdown-item {
+    padding: .25rem 1.5rem;
 }
 
-@media (min-width: 992px) {
-
-    .navbar .nav-item .dropdown-menu {
-        display: block;
-        border: none;
-        margin-top: 0;
-        top: 150%;
-        opacity: 0;
-        visibility: hidden;
-        transition: .5s;
-    }
-
-    .navbar .nav-item:hover .dropdown-menu {
-        top: 100%;
-        visibility: visible;
-        transition: .5s;
-        opacity: 1;
-    }
+.space-around {
+    justify-content: space-around;
 }
 
+.banner-container {
+    height: 700px
+}
 
 /*** Header ***/
 .header-carousel .owl-carousel-text {
@@ -313,30 +280,6 @@
 }
 
 
-/*** Feature ***/
-@media (min-width: 992px) {
-    .container.feature {
-        max-width: 100% !important;
-    }
-
-    .feature-text {
-        padding-left: calc(((100% - 960px) / 2) + .75rem);
-    }
-}
-
-@media (min-width: 1200px) {
-    .feature-text {
-        padding-left: calc(((100% - 1140px) / 2) + .75rem);
-    }
-}
-
-@media (min-width: 1400px) {
-    .feature-text {
-        padding-left: calc(((100% - 1320px) / 2) + .75rem);
-    }
-}
-
-
 /*** Team ***/
 .team-item img {
     position: relative;
@@ -430,22 +373,6 @@
     width: 0;
     background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
     z-index: 1;
-}
-
-@media (min-width: 768px) {
-
-    .testimonial-carousel::before,
-    .testimonial-carousel::after {
-        width: 200px;
-    }
-}
-
-@media (min-width: 992px) {
-
-    .testimonial-carousel::before,
-    .testimonial-carousel::after {
-        width: 300px;
-    }
 }
 
 .testimonial-carousel .owl-item .testimonial-text {
@@ -655,7 +582,6 @@
 .fotter-phone {
     background-color: #FFFFFF;
     border: 1px solid #2480FD;
-    border-radius: 1px;
     font-family: "Montserrat", sans-serif;
     font-size: 18px;
     font-weight: 450;
@@ -663,6 +589,7 @@
     text-align: left;
     width: fit-content;
     border-radius: 25px;
+    height: fit-content;
 }
 
 .color-primary {
@@ -698,4 +625,360 @@
 
 .top-icon {
     font-size: 20px;
+}
+
+.header-phone-review {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 3rem !important;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.header-phone-review-box {
+    margin-top: 20px;
+    align-items: center;
+}
+
+.header-phone {
+    background-color: #FFFFFF;
+    border: 1px solid #2480FD;
+    color: #2480FD;
+    font-size: 18px;
+    font-weight: 450;
+    line-height: 27px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    width: fit-content;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: auto;
+}
+
+.header-review {
+    width: fit-content;
+    background-color: rgba(245, 245, 245, 1);
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: auto;
+}
+
+.header-review-rating {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: left;
+    color: rgba(0, 0, 0, 1) !important;
+}
+
+.header-review-text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: left;
+    color: rgba(0, 0, 0, 1) !important;
+}
+
+.flow-header {
+    width: 80%;
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.flow-header {
+    width: 80%;
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.flow-body {
+    padding-top: 20px;
+    width: 80%;
+    gap: 10px;
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flow-body-step {
+    background-color: rgba(36, 128, 253, 0.15);
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 5px 10px 5px 10px;
+    color: rgba(36, 128, 253, 1);
+}
+
+.flow-body-heading {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+    text-align: center;
+    color: rgba(0, 0, 0, 1) !important;
+}
+
+.flow-text {
+    padding-top: 10px;
+    font-family: "Montserrat", sans-serif;
+    color: rgba(0, 0, 0, 1) !important;
+    font-size: 18px;
+    font-weight: 450;
+    line-height: 32px;
+    text-align: left;
+}
+
+.shorts-header {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.shorts-header-text {
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 75px;
+    text-align: left;
+    font-family: "Montserrat", sans-serif;
+    color: rgba(0, 0, 0, 1) !important;
+}
+
+.shorts-header-buttons {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.shorts-header-button {
+    background-color: #FFFFFF;
+    border: 1px solid #2480FD;
+    border-radius: 3px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.shorts-scroller {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding-top: 3rem !important;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 3rem !important;
+}
+
+.shorts-scroller img {
+    width: 23%;
+    margin-right: 1%;
+    margin-left: 1%;
+    scroll-snap-align: end;
+}
+
+#shorts-container::-webkit-scrollbar {
+    height: 6px;
+}
+
+#shorts-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#shorts-container::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(36, 128, 253, 1);
+}
+
+.line-break {
+    width: 100%;
+}
+
+.w-80 {
+    width: 80% !important
+}
+
+.w-85 {
+    width: 85% !important
+}
+
+.w-90 {
+    width: 90% !important
+}
+
+.w-95 {
+    width: 95% !important
+}
+
+.p-container {
+    padding-top: 9rem !important;
+    padding-right: 3rem;
+    padding-left: 3rem;
+}
+
+@media (max-width: 992px) {
+    .nav-bar-container {
+        height: 60px;
+        margin: auto;
+        width: 100%;
+        flex-direction: row;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: max-content;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .navbar.sticky-top {
+        width: 100%;
+        margin: 0;
+    }
+
+    .logo {
+        height: 45px !important;
+        margin-left: 10px;
+    }
+
+    .header-phone-review-box {
+        width: 100%;
+        justify-content: center;
+        margin-top: 20px;
+        align-items: center;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .navbar .navbar-nav .nav-link {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+
+    .navbar .navbar-nav {
+        border-top: 1px solid #EEEEEE;
+    }
+
+    .navbar .nav-item .dropdown-menu {
+        border: none;
+        margin-top: 0;
+        top: 150%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        top: 100%;
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+
+    .shorts-scroller img {
+        width: 48%;
+        margin-right: 1%;
+        margin-left: 1%;
+        scroll-snap-align: end;
+    }
+}
+
+/*** Feature ***/
+@media (min-width: 992px) {
+    .container.feature {
+        max-width: 100% !important;
+    }
+
+    .feature-text {
+        padding-left: calc(((100% - 960px) / 2) + .75rem);
+    }
+}
+
+@media (min-width: 1200px) {
+    .feature-text {
+        padding-left: calc(((100% - 1140px) / 2) + .75rem);
+    }
+}
+
+@media (max-width: 1250px) {
+    .shorts-header-buttons {
+        visibility: hidden;
+    }
+}
+
+@media (min-width: 1400px) {
+    .feature-text {
+        padding-left: calc(((100% - 1320px) / 2) + .75rem);
+    }
+}
+
+@media (min-width: 768px) {
+
+    .testimonial-carousel::before,
+    .testimonial-carousel::after {
+        width: 200px;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .banner-container {
+        height: 900px
+    }
+
+    .flow-body {
+        width: 100%;
+    }
+
+    .p-container {
+        padding-top: 9rem !important;
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .banner-container {
+        height: 1000px
+    }
+}
+
+
+@media (min-width: 992px) {
+
+    .testimonial-carousel::before,
+    .testimonial-carousel::after {
+        width: 300px;
+    }
 }
