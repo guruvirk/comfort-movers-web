@@ -663,6 +663,10 @@ body {
     flex-wrap: wrap;
 }
 
+.about-cover-data {
+    justify-content: flex-start !important;
+}
+
 .header-phone-review-box {
     margin-top: 20px;
     align-items: center;
@@ -1095,11 +1099,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    position: relative;
 }
 
 .served-box-item-text {
     width: 55%;
     padding-bottom: 20px;
+}
+
+.about-page {
+    width: 50% !important;
 }
 
 .served-text {
@@ -1534,7 +1544,52 @@ body {
     color: rgba(255, 255, 255, 1);
 }
 
+.progress-line-div {
+    width: 80%;
+}
+
+.progress-line-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.progress-line {
+    width: 100%;
+    border-radius: 15px;
+    padding: 5px;
+    border: 1px solid #2480FD;
+}
+
+.progress-line div {
+    height: 10px;
+    width: 100%;
+    background-color: #2480FD;
+    border-radius: 15px;
+}
+
+.why-us-image {
+    width: 90% !important;
+}
+
+.moving-soon-banner {
+    position: absolute;
+    top: 60%;
+    width: 35%;
+    left: -12%;
+}
+
+.about-image {
+    width: 90% !important;
+}
+
 @media (max-width: 992px) {
+
+    .d-text-left {
+        text-align: left !important;
+    }
 
     .cover-heading-text {
         font-family: "Montserrat", sans-serif;
@@ -1705,6 +1760,29 @@ body {
         align-items: center;
     }
 
+    .about-cover-data {
+        justify-content: center !important;
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+
+    .about-cover-data div {
+        text-align: center;
+    }
+
+    .about-cover-data .header-phone {
+        width: 90% !important;
+    }
+
+    .about-cover-data .header-review {
+        width: 90% !important;
+    }
+
+    .about-founder-heading {
+        text-align: left;
+        padding-bottom: 1rem;
+    }
+
     .top-choice-box-item-img {
         width: 100%;
         text-align: center;
@@ -1861,13 +1939,17 @@ body {
     }
 
     .served-box-item-img img {
-        width: 100% !important;
+        width: 100%;
         margin: auto;
         height: auto;
     }
 
     .served-box-item-text {
         width: 100%;
+    }
+
+    .about-page {
+        width: 100% !important;
     }
 
     .served-text {
@@ -2150,6 +2232,32 @@ body {
         font-weight: 350;
         line-height: 21.94px;
         color: rgba(255, 255, 255, 1);
+    }
+
+    .progress-line-div {
+        width: 100%;
+    }
+
+    .about-page-why-us {
+        justify-content: flex-end !important;
+        margin-bottom: 5rem;
+    }
+
+    .why-us-image {
+        width: 65% !important;
+        margin: 0 !important;
+        margin-right: 20px !important;
+    }
+
+    .moving-soon-banner {
+        position: absolute;
+        top: 35%;
+        width: 40% !important;
+        left: 4%;
+    }
+
+    .about-image {
+        width: 100% !important;
     }
 
 }
