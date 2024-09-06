@@ -585,6 +585,7 @@ body {
 .footer-links-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-direction: row;
     width: 80%;
 }
@@ -720,8 +721,6 @@ body {
     text-align: left;
     color: rgba(0, 0, 0, 1) !important;
 }
-
-.flow-header-box {}
 
 .flow-header {
     width: 80%;
@@ -1607,6 +1606,15 @@ body {
     border-bottom: 1px solid #00000040;
 }
 
+.about-long-distance-box-heading {
+    margin-top: 1rem;
+    width: 20% !important;
+}
+
+.about-long-distance-box-text {
+    width: 70% !important;
+}
+
 .long-distance-img-1 {
     position: absolute;
     top: -20%;
@@ -1649,6 +1657,103 @@ body {
 
 .about-gallary-item img {
     height: 150px !important;
+}
+
+.about-here-contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.about-here-contact div {
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    align-content: center;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.about-here-contact h6 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 450;
+    line-height: 27px;
+    text-align: left;
+    color: rgba(0, 0, 0, 1);
+    margin: 0;
+}
+
+.about-follow-us {
+    display: flex;
+    justify-content: flex-start;
+    gap: 25px;
+    flex-direction: row;
+    width: 80%;
+}
+
+.about-form {
+    background-color: rgba(36, 128, 253, 0.05);
+    border-radius: 10px;
+    width: 100%;
+    padding: 50px;
+    text-align: center;
+}
+
+.about-form-heading {
+    font-family: "Montserrat", sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 75px;
+    text-align: center;
+    color: rgba(0, 0, 0, 1);
+    margin-bottom: 1rem;
+}
+
+.form-input {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #00000040;
+    background-color: #FFFFFF;
+    padding: 10px;
+}
+
+.form-textarea {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #00000040;
+    background-color: #FFFFFF;
+    padding: 10px;
+    height: 100px;
+}
+
+.form-checkboxes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.form-checkbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
+.form-checkbox p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 450;
+    line-height: 28.8px;
+    text-align: left;
+    color: #383c3e;
+    margin: 0;
 }
 
 @media (max-width: 992px) {
@@ -2346,6 +2451,18 @@ body {
         width: 75% !important;
     }
 
+    .about-long-distance-box {
+        flex-wrap: wrap;
+    }
+
+    .about-long-distance-box-heading {
+        width: 100% !important;
+    }
+
+    .about-long-distance-box-text {
+        width: 100% !important;
+    }
+
 }
 
 @media (max-width: 992px) {
@@ -2380,6 +2497,31 @@ body {
         margin-right: 1%;
         margin-left: 1%;
         scroll-snap-align: end;
+    }
+
+    .about-form {
+        padding: 10px;
+    }
+
+    .about-form-heading {
+        font-family: "Montserrat", sans-serif;
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 35px;
+        text-align: center;
+        color: rgba(0, 0, 0, 1);
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+    }
+
+    .form-checkboxes {
+        flex-wrap: wrap;
+        gap: 5px;
+        justify-content: flex-start;
+    }
+
+    .form-checkbox {
+        width: 35%;
     }
 }
 
