@@ -83,12 +83,17 @@
   const buttonRight = document.getElementById('shorts-slideRight');
   const buttonLeft = document.getElementById('shorts-slideLeft');
 
-  buttonRight.onclick = function () {
-    const width = Math.round((document.getElementById('shorts-container').offsetWidth * 24) / 100);
-    document.getElementById('shorts-container').scrollLeft += width;
-  };
-  buttonLeft.onclick = function () {
-    const width = Math.round((document.getElementById('shorts-container').offsetWidth * 24) / 100);
-    document.getElementById('shorts-container').scrollLeft -= width;
-  };
+  if (buttonRight) {
+    buttonRight.onclick = function () {
+      const width = Math.round((document.getElementById('shorts-container').offsetWidth * 24) / 100);
+      document.getElementById('shorts-container').scrollLeft += width;
+    };
+  }
+
+  if (buttonLeft) {
+    buttonLeft.onclick = function () {
+      const width = Math.round((document.getElementById('shorts-container').offsetWidth * 24) / 100);
+      document.getElementById('shorts-container').scrollLeft -= width;
+    };
+  }
 })(jQuery);
