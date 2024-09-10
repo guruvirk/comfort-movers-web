@@ -1,372 +1,592 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <title>Klinik - Clinic Website Template</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+  <head>
+    <meta charset="utf-8" />
+    <title>Comfort Movers</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/favicon.ico" rel="icon" />
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-</head>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
 
-<body>
+  <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
     </div>
     <!-- Spinner End -->
 
-
     <!-- Topbar Start -->
     <div class="container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
-        <div class="row gx-0 d-none d-lg-flex">
-            <div class="col-lg-7 px-5 text-start">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
-                    <small>123 Street, New York, USA</small>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center py-3">
-                    <small class="far fa-clock text-primary me-2"></small>
-                    <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
-                </div>
-            </div>
-            <div class="col-lg-5 px-5 text-end">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <small class="fa fa-phone-alt text-primary me-2"></small>
-                    <small>+012 345 6789</small>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center">
-                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
+      <marquee scrollamount="15" class="row gx-0 d-none d-lg-flex">
+        <div class="col-lg-7 px-5 text-start">
+          <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+            <small class="fa fa-map-marker-alt text-primary me-2 top-icon"></small>
+            <small class="top-text">Albany, Auckland, New Zealand 0632</small>
+          </div>
+          <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+            <small class="fa fa-envelope text-primary me-2 top-icon"></small>
+            <small class="top-text">admin@comfortmovers.co.nz</small>
+          </div>
+          <div class="h-100 d-inline-flex align-items-center py-3">
+            <small class="fa fa-phone-alt text-primary me-2 top-icon"></small>
+            <small class="top-text">0223407710</small>
+          </div>
         </div>
+      </marquee>
     </div>
     <!-- Topbar End -->
 
-
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h1 class="m-0 text-primary"><i class="far fa-hospital me-3"></i>Klinik</h1>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
+      <div class="nav-bar-container">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-lg-5 my-2">
+          <img class="logo" src="img/Logo.png" />
         </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
+        <button type="button" class="navbar-toggler me-4 my-2" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="service.html" class="nav-item nav-link active">Service</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu rounded-0 rounded-bottom m-0">
-                        <a href="feature.html" class="dropdown-item">Feature</a>
-                        <a href="team.html" class="dropdown-item">Our Doctor</a>
-                        <a href="appointment.html" class="dropdown-item">Appointment</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item">404 Page</a>
-                    </div>
-                </div>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
+        <div class="collapse navbar-collapse space-around my-2" id="navbarCollapse">
+          <div class="navbar-nav p-4 p-lg-0 mx-xl-5">
+            <div class="nav-item dropdown">
+              <a href="" class="nav-link dropdown-toggle nal-link-text" data-bs-toggle="dropdown">Service</a>
+              <div class="dropdown-menu rounded-0 rounded-bottom m-0">
+                <a href="" class="dropdown-item nal-link-text">Express</a>
+                <a href="" class="dropdown-item nal-link-text">House</a>
+                <a href="" class="dropdown-item nal-link-text">Office</a>
+                <a href="" class="dropdown-item nal-link-text">Intercity</a>
+                <a href="" class="dropdown-item nal-link-text">Packing</a>
+                <a href="" class="dropdown-item nal-link-text">Storage</a>
+                <a href="" class="dropdown-item nal-link-text">Commercial</a>
+              </div>
             </div>
-            <a href="" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Appointment<i class="fa fa-arrow-right ms-3"></i></a>
+            <div class="nav-item dropdown mx-lg-3">
+              <a href="" class="nav-link dropdown-toggle nal-link-text" data-bs-toggle="dropdown">Resources</a>
+              <div class="dropdown-menu rounded-0 rounded-bottom m-0">
+                <a href="" class="dropdown-item nal-link-text">Products</a>
+                <a href="" class="dropdown-item nal-link-text">Carrer</a>
+                <a href="" class="dropdown-item nal-link-text">FAQ</a>
+                <a href="" class="dropdown-item nal-link-text">License</a>
+              </div>
+            </div>
+            <div class="nav-item dropdown">
+              <a href="" class="nav-link dropdown-toggle nal-link-text" data-bs-toggle="dropdown">Company</a>
+              <div class="dropdown-menu rounded-0 rounded-bottom m-0">
+                <a href="about-us.html" class="dropdown-item nal-link-text">About Us</a>
+                <a href="contact.html" class="dropdown-item nal-link-text">Contact Us</a>
+                <a href="" class="dropdown-item nal-link-text">Reviews</a>
+                <a href="" class="dropdown-item nal-link-text">Rate</a>
+                <a href="" class="dropdown-item nal-link-text">Blogs</a>
+                <a href="" class="dropdown-item nal-link-text">Reservation</a>
+              </div>
+            </div>
+            <a href="" class="nav-item nav-link nal-link-text">Rates</a>
+          </div>
+          <a href="" class="btn btn-primary rounded-0 py-2 px-lg-3 d-none d-lg-block my-2 mx-lg-3">Get A Free Quote</a>
         </div>
+      </div>
     </nav>
     <!-- Navbar End -->
 
-
-    <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <h1 class="display-3 text-white mb-3 animated slideInDown">Services</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb text-uppercase mb-0">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-primary active" aria-current="page">Services</li>
-                </ol>
-            </nav>
-        </div>
+    <!-- Cover Start -->
+    <div class="served-box-item-img about-page d-sm-none">
+      <img style="width: 100%" src="img/services-cover.png" />
     </div>
-    <!-- Page Header End -->
-
-
-    <!-- Service Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <p class="d-inline-block border rounded-pill py-1 px-4">Services</p>
-                <h1>Health Care Solutions</h1>
+    <div
+      class="items-container mx-auto p-container served-box justify-content-between align-items-center wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="served-box-item-text about-page">
+        <h1 class="cover-heading-text"><span class="color-primary">Our </span>Services</h1>
+        <p class="cover-sub-text">
+          Need pro services? We're on it! Want your stuff moved quickly and easily? That's our jam!
+        </p>
+        <div class="header-phone-review about-cover-data">
+          <div class="header-phone-review-box">
+            <button href="" class="header-phone"><i class="fa fa-phone-alt"></i>&nbsp;&nbsp;&nbsp;022-340-7710</button>
+          </div>
+          <div class="header-phone-review-box">
+            <div href="" class="header-review">
+              <img src="img/devicon_google.png" /><span class="header-review-rating">&nbsp;&nbsp;4.9/5</span
+              ><img src="img/ic_round-star.png" /><span class="header-review-text">&nbsp;&nbsp;&nbsp;600+ reviews</span>
             </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-light rounded h-100 p-5">
-                        <div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4" style="width: 65px; height: 65px;">
-                            <i class="fa fa-heartbeat text-primary fs-4"></i>
-                        </div>
-                        <h4 class="mb-3">Cardiology</h4>
-                        <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                        <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item bg-light rounded h-100 p-5">
-                        <div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4" style="width: 65px; height: 65px;">
-                            <i class="fa fa-x-ray text-primary fs-4"></i>
-                        </div>
-                        <h4 class="mb-3">Pulmonary</h4>
-                        <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                        <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item bg-light rounded h-100 p-5">
-                        <div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4" style="width: 65px; height: 65px;">
-                            <i class="fa fa-brain text-primary fs-4"></i>
-                        </div>
-                        <h4 class="mb-3">Neurology</h4>
-                        <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                        <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-light rounded h-100 p-5">
-                        <div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4" style="width: 65px; height: 65px;">
-                            <i class="fa fa-wheelchair text-primary fs-4"></i>
-                        </div>
-                        <h4 class="mb-3">Orthopedics</h4>
-                        <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                        <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item bg-light rounded h-100 p-5">
-                        <div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4" style="width: 65px; height: 65px;">
-                            <i class="fa fa-tooth text-primary fs-4"></i>
-                        </div>
-                        <h4 class="mb-3">Dental Surgery</h4>
-                        <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                        <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item bg-light rounded h-100 p-5">
-                        <div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4" style="width: 65px; height: 65px;">
-                            <i class="fa fa-vials text-primary fs-4"></i>
-                        </div>
-                        <h4 class="mb-3">Laboratory</h4>
-                        <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                        <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
+      <div class="served-box-item-img about-page d-none d-sm-flex justify-content-end">
+        <img class="about-image" src="img/services-cover.png" />
+      </div>
     </div>
-    <!-- Service End -->
+    <!-- Cover End -->
 
-
-    <!-- Appointment Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="d-inline-block border rounded-pill py-1 px-4">Appointment</p>
-                    <h1 class="mb-4">Make An Appointment To Visit Our Doctor</h1>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                    <div class="bg-light rounded d-flex align-items-center p-5 mb-4">
-                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
-                            <i class="fa fa-phone-alt text-primary"></i>
-                        </div>
-                        <div class="ms-4">
-                            <p class="mb-2">Call Us Now</p>
-                            <h5 class="mb-0">+012 345 6789</h5>
-                        </div>
-                    </div>
-                    <div class="bg-light rounded d-flex align-items-center p-5">
-                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
-                            <i class="fa fa-envelope-open text-primary"></i>
-                        </div>
-                        <div class="ms-4">
-                            <p class="mb-2">Mail Us Now</p>
-                            <h5 class="mb-0">info@example.com</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="bg-light rounded h-100 d-flex align-items-center p-5">
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control border-0" placeholder="Your Name" style="height: 55px;">
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <input type="email" class="form-control border-0" placeholder="Your Email" style="height: 55px;">
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control border-0" placeholder="Your Mobile" style="height: 55px;">
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <select class="form-select border-0" style="height: 55px;">
-                                        <option selected>Choose Doctor</option>
-                                        <option value="1">Doctor 1</option>
-                                        <option value="2">Doctor 2</option>
-                                        <option value="3">Doctor 3</option>
-                                    </select>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <div class="date" id="date" data-target-input="nearest">
-                                        <input type="text"
-                                            class="form-control border-0 datetimepicker-input"
-                                            placeholder="Choose Date" data-target="#date" data-toggle="datetimepicker" style="height: 55px;">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <div class="time" id="time" data-target-input="nearest">
-                                        <input type="text"
-                                            class="form-control border-0 datetimepicker-input"
-                                            placeholder="Choose Date" data-target="#time" data-toggle="datetimepicker" style="height: 55px;">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <textarea class="form-control border-0" rows="5" placeholder="Describe your problem"></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Book Appointment</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+    <!-- Our Services Start -->
+    <div class="items-container mx-auto p-container text-center wow fadeIn" data-wow-delay="0.1s">
+      <div class="row mt-4">
+        <div class="col-md-4 col-12 our-services-item">
+          <div class="our-services-box">
+            <img class="our-services-item-img" src="img/services-1.png" />
+            <h3 class="our-services-item-text">
+              Express Services&nbsp;&nbsp;<img height="14" width="7" src="img/chevron-right.png" />
+            </h3>
+          </div>
         </div>
-    </div>
-    <!-- Appointment End -->
-
-
-    <!-- Testimonial Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <p class="d-inline-block border rounded-pill py-1 px-4">Testimonial</p>
-                <h1>What Say Our Patients!</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-                <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="img/testimonial-1.jpg" style="width: 100px; height: 100px;">
-                    <div class="testimonial-text rounded text-center p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                        <h5 class="mb-1">Patient Name</h5>
-                        <span class="fst-italic">Profession</span>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="img/testimonial-2.jpg" style="width: 100px; height: 100px;">
-                    <div class="testimonial-text rounded text-center p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                        <h5 class="mb-1">Patient Name</h5>
-                        <span class="fst-italic">Profession</span>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="img/testimonial-3.jpg" style="width: 100px; height: 100px;">
-                    <div class="testimonial-text rounded text-center p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                        <h5 class="mb-1">Patient Name</h5>
-                        <span class="fst-italic">Profession</span>
-                    </div>
-                </div>
-            </div>
+        <div class="col-md-4 col-12 our-services-item">
+          <div class="our-services-box">
+            <img class="our-services-item-img" src="img/services-2.png" />
+            <h3 class="our-services-item-text">
+              House Hold Moving&nbsp;&nbsp;<img height="14" width="7" src="img/chevron-right.png" />
+            </h3>
+          </div>
         </div>
+        <div class="col-md-4 col-12 our-services-item">
+          <div class="our-services-box">
+            <img class="our-services-item-img" src="img/services-3.png" />
+            <h3 class="our-services-item-text">
+              Office&nbsp;&nbsp;<img height="14" width="7" src="img/chevron-right.png" />
+            </h3>
+          </div>
+        </div>
+        <div class="col-md-4 col-12 our-services-item">
+          <div class="our-services-box">
+            <img class="our-services-item-img" src="img/services-4.png" />
+            <h3 class="our-services-item-text">
+              Intercity Services&nbsp;&nbsp;<img height="14" width="7" src="img/chevron-right.png" />
+            </h3>
+          </div>
+        </div>
+        <div class="col-md-4 col-12 our-services-item">
+          <div class="our-services-box">
+            <img class="our-services-item-img" src="img/services-5.png" />
+            <h3 class="our-services-item-text">
+              Packing Services&nbsp;&nbsp;<img height="14" width="7" src="img/chevron-right.png" />
+            </h3>
+          </div>
+        </div>
+        <div class="col-md-4 col-12 our-services-item">
+          <div class="our-services-box">
+            <img class="our-services-item-img" src="img/services-6.png" />
+            <h3 class="our-services-item-text">
+              Commercial Services&nbsp;&nbsp;<img height="14" width="7" src="img/chevron-right.png" />
+            </h3>
+          </div>
+        </div>
+        <div class="col-md-4 col-12 our-services-item">
+          <div class="our-services-box">
+            <img class="our-services-item-img" src="img/services-7.png" />
+            <h3 class="our-services-item-text">
+              Ware House & Storage Services&nbsp;&nbsp;<img height="14" width="7" src="img/chevron-right.png" />
+            </h3>
+          </div>
+        </div>
+        <div class="col-md-4 col-12 our-services-item">
+          <div class="our-services-box">
+            <img class="our-services-item-img" src="img/services-8.png" />
+            <h3 class="our-services-item-text">
+              Additional Services&nbsp;&nbsp;<img height="14" width="7" src="img/chevron-right.png" />
+            </h3>
+          </div>
+        </div>
+        <div class="col-md-4 col-12 our-services-item">
+          <div class="our-services-download">
+            <div class="our-services-download-box">
+              <img class="our-services-download-img" src="img/download-icon.png" />
+            </div>
+            <h3 class="our-services-download-text">Download Our Brochure</h3>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- Testimonial End -->
-        
+    <!-- Our Services End -->
+
+    <!-- Transport Start -->
+    <div
+      class="items-container mx-auto p-container served-box justify-content-between align-items-center wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="service-served-box-item-img justify-content-start d-sm-none">
+        <img class="about-image" src="img/services-page-2.png" />
+      </div>
+      <div class="served-box-item-text service-page mt-4">
+        <h1 class="top-choice-heading d-text-left pb-2">
+          Unbeatable <span class="color-primary">Trucking</span> And <span class="color-primary">Transport</span> Services
+        </h1>
+        <p class="served-text">
+          Efficiency? We're faster than a All Blacks' try! Reliability? You can count on us like pavlova at Christmas! And
+          care? We'll treat your stuff better than a beloved jandal collection.
+        </p>
+        <button href="" class="home-bolg-read-button">Get Free Estimate</button>
+      </div>
+      <div class="service-served-box-item-img d-none d-sm-flex justify-content-end">
+        <img class="about-image" src="img/services-page-2.png" />
+      </div>
+    </div>
+    <!-- Transport End -->
+
+    <!-- Our Mission Shore -->
+    <div
+      class="items-container mx-auto p-container served-box justify-content-between align-items-center wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="served-box-item-img about-page justify-content-start d-sm-none">
+        <img class="about-image" src="img/services-page-3.png" />
+        <div class="service-founder-info">
+          <div class="play-button">
+            <img src="img/play.png" />
+          </div>
+          <div class="text-left">
+            <h6 class="service-play-heading">Harsimran Singh</h6>
+            <p class="service-play-text">Founder & CEO Comfort Movers</p>
+          </div>
+        </div>
+      </div>
+      <div class="served-box-item-text about-page mt-4">
+        <h1 class="top-choice-heading d-text-left pb-2">
+          Our <span class="color-primary">Mission</span> & <span class="color-primary">Vision</span>
+        </h1>
+        <p class="served-text">
+          We're so dedicated to giving you an amazing experience, you might actually miss us when we're done! 😉
+        </p>
+        <div class="row">
+          <div class="col-12">
+            <div class="top-choice-item">
+              <div class="w-15">
+                <img height="48" width="38" src="img/accuracy.png" />
+              </div>
+              <h3 class="top-choice-item-text">100% Accuracy</h3>
+              <p class="served-text">
+                We guarantee 100% accuracy in every move, using specialized tools and advanced systems to handle each detail
+                with precision and care.
+              </p>
+            </div>
+            <div class="md-border-bottom-half"></div>
+          </div>
+          <div class="col-12">
+            <div class="top-choice-item">
+              <div class="w-15">
+                <img height="45" width="55" src="img/fast-service.png" />
+              </div>
+              <h3 class="top-choice-item-text">Fast Service</h3>
+              <p class="served-text">
+                We ensure a swift-moving process with our skilled team, advanced infrastructure, and fully equipped vehicles,
+                minimizing relocation time.
+              </p>
+            </div>
+            <div class="md-border-bottom-half"></div>
+          </div>
+          <div class="col-12">
+            <div class="top-choice-item">
+              <div class="w-15">
+                <img height="50" width="50" src="img/safety.png" />
+              </div>
+              <h3 class="top-choice-item-text">Safety and Gurantee</h3>
+              <p class="served-text">
+                Partnering with licensed and insured companies, we prioritize safety and security, ensuring your belongings
+                are transported securely.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="served-box-item-img about-page justify-content-start d-none d-sm-flex justify-content-end">
+        <img class="about-image" src="img/services-page-3.png" />
+        <div class="service-founder-info">
+            <div class="play-button">
+              <img src="img/play.png" />
+            </div>
+            <div class="text-left">
+              <h6 class="service-play-heading">Harsimran Singh</h6>
+              <p class="service-play-text">Founder & CEO Comfort Movers</p>
+            </div>
+          </div>
+      </div>
+    </div>
+    <!-- Our Mission End -->
+
+    <!-- Floating Bar Start -->
+    <div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
+      <marquee scrollamount="15" style="width: fit-content">
+        <div class="px-5 home-floating-item">
+          <h1>Comprehnsive Services</h1>
+          <img src="img/Logo.png" />
+          <h1>Competitive Prices</h1>
+          <img src="img/Logo.png" />
+          <h1>Comprehnsive Services</h1>
+          <img src="img/Logo.png" />
+          <h1>Competitive Prices</h1>
+          <img src="img/Logo.png" />
+        </div>
+      </marquee>
+    </div>
+    <!-- Floating Bar End -->
+
+    <!-- FAQ Start -->
+    <div class="items-container mx-auto p-container text-center wow fadeIn row" data-wow-delay="0.1s">
+      <div class="col-md-5 col-12">
+        <h2 class="home-faq-heading mt-2">Frequently Asked <span class="color-primary">Questions</span></h2>
+        <p class="home-faq-sub-heading mt-2">Got questions about moving with Comfort Movers? We've got answers!</p>
+        <h6 class="d-none home-faq-text mt-5">Still have more questions? ping us at</h6>
+        <div class="d-none d-sm-flex home-faq-info mt-3">
+          <div>
+            <img height="21" width="21" src="img/phone.png" />
+          </div>
+          <p>022-340-7710</p>
+        </div>
+        <div class="d-none d-sm-flex home-faq-info">
+          <div>
+            <img height="22" width="27" src="img/mail.png" />
+          </div>
+          <p>admin@comfortmovers.co.nz</p>
+        </div>
+      </div>
+      <div class="col-md-7 col-12">
+        <button class="faq-collapsible">What services do you offer? <img src="img/chevron-down.png" /></button>
+        <div class="faq-content">
+          <p>
+            We offer a range of services including local and long-distance moving, packing and unpacking, storage solutions,
+            and special item handling.
+          </p>
+        </div>
+        <button class="faq-collapsible">
+          How do you ensure the safety of my belongings during the move?
+          <img src="img/chevron-down.png" />
+        </button>
+        <div class="faq-content">
+          <p>
+            We offer a range of services including local and long-distance moving, packing and unpacking, storage solutions,
+            and special item handling.
+          </p>
+        </div>
+        <button class="faq-collapsible">Can you provide an estimate for my move? <img src="img/chevron-down.png" /></button>
+        <div class="faq-content">
+          <p>
+            We offer a range of services including local and long-distance moving, packing and unpacking, storage solutions,
+            and special item handling.
+          </p>
+        </div>
+        <button class="faq-collapsible">Are you insured and licensed? <img src="img/chevron-down.png" /></button>
+        <div class="faq-content">
+          <p>
+            We offer a range of services including local and long-distance moving, packing and unpacking, storage solutions,
+            and special item handling.
+          </p>
+        </div>
+        <button class="faq-collapsible">What should I do to prepare for the move? <img src="img/chevron-down.png" /></button>
+        <div class="faq-content">
+          <p>
+            We offer a range of services including local and long-distance moving, packing and unpacking, storage solutions,
+            and special item handling.
+          </p>
+        </div>
+        <button class="faq-collapsible">
+          Do you offer packing supplies and services? <img src="img/chevron-down.png" />
+        </button>
+        <div class="faq-content">
+          <p>
+            We offer a range of services including local and long-distance moving, packing and unpacking, storage solutions,
+            and special item handling.
+          </p>
+        </div>
+        <h6 class="d-sm-none home-faq-text mt-5">Still have more questions? ping us at</h6>
+        <div class="d-sm-none home-faq-info mt-3">
+          <div>
+            <img height="21" width="21" src="img/phone.png" />
+          </div>
+          <p>022-340-7710</p>
+        </div>
+        <div class="d-sm-none home-faq-info">
+          <div>
+            <img height="22" width="27" src="img/mail.png" />
+          </div>
+          <p>admin@comfortmovers.co.nz</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      var coll = document.getElementsByClassName('faq-collapsible');
+      let i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener('click', function () {
+          this.classList.toggle('faq-active');
+          var content = this.nextElementSibling;
+          if (content.style.maxHeight) {
+            this.firstElementChild.src = 'img/chevron-down.png';
+            content.style.maxHeight = null;
+            content.style.borderWidth = 0;
+            content.style.borderTopWidth = 0;
+            content.style.borderLeftWidth = 0;
+          } else {
+            this.firstElementChild.src = 'img/chevron-up.png';
+            content.style.maxHeight = content.scrollHeight + 'px';
+            content.style.borderWidth = '1px';
+            content.style.borderTopWidth = 0;
+            content.style.borderLeftWidth = '10px';
+          }
+        });
+      }
+    </script>
+    <!-- FAQ End -->
+
+    <!-- Partners Start -->
+    <div class="items-container mx-auto p-container text-center wow fadeIn" data-wow-delay="0.1s">
+      <h1 class="our-services-heading">Our <span class="color-primary">Partners</span></h1>
+      <h4 class="our-services-text">
+        Collaborating with trusted partners who share our commitment to quality and customer satisfaction, we deliver
+        seamless solutions across every aspect of moving and storage.
+      </h4>
+      <div class="partner-container">
+        <img src="img/partner-copenhagen.png" />
+        <img src="img/partner-helsinki.png" />
+        <img src="img/parner-lars.png" />
+        <img src="img/partner-sk.png" />
+        <img src="img/partner-hagen.png" />
+      </div>
+    </div>
+    <!-- Partners End -->
+
+    <!-- Stay In Touch Start -->
+    <div class="home-subscribe-container wow fadeIn" data-wow-delay="0.1s">
+      <div class="home-subscribe-box row justify-content-between align-items-center">
+        <div class="col-md-4 col-12">
+          <h4 class="home-subscribe-box-heading">Stay In Touch With Us</h4>
+          <h6 class="home-subscribe-box-text">We make moving simple as we are house moving pros 😎</h6>
+        </div>
+        <div class="col-md-7 col-12">
+          <div class="home-subscribe-box-email">
+            <input type="text" placeholder="Enter your email" />
+            <button>Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Stay In Touch End -->
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Address</h5>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Services</h5>
-                    <a class="btn btn-link" href="">Cardiology</a>
-                    <a class="btn btn-link" href="">Pulmonary</a>
-                    <a class="btn btn-link" href="">Neurology</a>
-                    <a class="btn btn-link" href="">Orthopedics</a>
-                    <a class="btn btn-link" href="">Laboratory</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Quick Links</h5>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Newsletter</h5>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
-                </div>
+    <div class="items-container p-container footer wow fadeIn mx-auto" data-wow-delay="0.1s">
+      <div class="py-5">
+        <div class="row">
+          <div class="row col-lg-5 col-md-6">
+            <div class="col-12">
+              <img class="fotter-logo" src="img/Logo.png" />
             </div>
-        </div>
-        <div class="container">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
-                    </div>
-                </div>
+            <div class="col-12 my-5">
+              <a href="" class="fotter-phone"><i class="fa fa-phone-alt"></i>&nbsp;&nbsp;&nbsp;022-340-7710</a>
             </div>
+            <div class="col-12 bottom-info">
+              <div>
+                <img height="22" width="27" src="img/mail.png" />
+              </div>
+              <p>admin@comfortmovers.co.nz</p>
+            </div>
+            <div class="col-12 bottom-info">
+              <div>
+                <img height="26" width="19" src="img/location.png" />
+              </div>
+              <p>1601 N Gower St Ste 205 Albany, Auckland, New Zealand 0632</p>
+            </div>
+            <div class="col-12 bottom-info">
+              <div>
+                <img height="29" width="29" src="img/user-time.png" />
+              </div>
+              <p>Mon-Fri : 6am - 6pm <br />Sat-Sun : 8am - 4pm</p>
+            </div>
+          </div>
+          <div class="col-lg-1"></div>
+          <div class="row col-lg-6 col-md-6">
+            <div class="col-lg-4 col-md-4 my-3 col-6">
+              <p class="mb-4 fotter-heading">Company</p>
+              <a class="btn fotter-link" href="about-us.html">About Us</a>
+              <a class="btn fotter-link" href="contact.html">Contact Us</a>
+              <a class="btn fotter-link" href="">Reviews</a>
+              <a class="btn fotter-link" href="">Rate</a>
+              <a class="btn fotter-link" href="">Blogs</a>
+              <a class="btn fotter-link" href="">Reservation</a>
+            </div>
+            <div class="col-lg-4 col-md-4 my-3 col-6">
+              <p class="mb-4 fotter-heading">Services</p>
+              <a class="btn fotter-link" href="">Express</a>
+              <a class="btn fotter-link" href="">House</a>
+              <a class="btn fotter-link" href="">Office</a>
+              <a class="btn fotter-link" href="">Intercity</a>
+              <a class="btn fotter-link" href="">Packing</a>
+              <a class="btn fotter-link" href="">Storage</a>
+              <a class="btn fotter-link" href="">Commercial</a>
+            </div>
+            <div class="col-lg-4 col-md-4 my-3 col-6">
+              <p class="mb-4 fotter-heading">Resources</p>
+              <a class="btn fotter-link" href="">Products</a>
+              <a class="btn fotter-link" href="">Carrer</a>
+              <a class="btn fotter-link" href="">FAQ</a>
+              <a class="btn fotter-link" href="">License</a>
+              <a class="btn fotter-link" href="">Get Brochure</a>
+            </div>
+            <div class="col-12 row">
+              <div class="col-lg-4 col-md-4 my-3 col-6">
+                <p class="fotter-heading">Follow us on</p>
+                <div class="footer-links-container">
+                  <img style="height: 37px" src="img/logos_facebook.png" />
+                  <img style="height: 37px" src="img/skill-icons_instagram.png" />
+                  <img style="height: 37px" src="img/skill-icons_linkedin.png" />
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 my-3 col-6">
+                <p class="fotter-heading">License</p>
+                <p class="fotter-link">989CSC98CSKJN</p>
+              </div>
+              <div class="col-lg-4 col-md-4 my-3 col-6">
+                <img style="height: 67px" src="img/image 47.png" />
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="container fotter-end">
+        <div class="copyright">
+          <div class="row">
+            <div class="col-md-6 text-md-start mb-3 mb-md-0 fotter-end-text">
+              Copyright © 2024 Comfort Movers All rights reserved.
+            </div>
+            <div class="col-md-6 text-md-end mb-3 mb-md-0 fotter-bottom">
+              <a class="fotter-end-text me-4">Privacy Policy</a><a class="fotter-end-text">Terms & conditions</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Footer End -->
 
-
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
-
+    <a href="" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -382,6 +602,5 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-</body>
-
+  </body>
 </html>

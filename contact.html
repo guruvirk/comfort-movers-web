@@ -1,270 +1,397 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <title>Klinik - Clinic Website Template</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+  <head>
+    <meta charset="utf-8" />
+    <title>Comfort Movers</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/favicon.ico" rel="icon" />
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-</head>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
 
-<body>
+  <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
     </div>
     <!-- Spinner End -->
 
-
     <!-- Topbar Start -->
     <div class="container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
-        <div class="row gx-0 d-none d-lg-flex">
-            <div class="col-lg-7 px-5 text-start">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
-                    <small>123 Street, New York, USA</small>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center py-3">
-                    <small class="far fa-clock text-primary me-2"></small>
-                    <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
-                </div>
-            </div>
-            <div class="col-lg-5 px-5 text-end">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <small class="fa fa-phone-alt text-primary me-2"></small>
-                    <small>+012 345 6789</small>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center">
-                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
+      <marquee scrollamount="15" class="row gx-0 d-none d-lg-flex">
+        <div class="col-lg-7 px-5 text-start">
+          <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+            <small class="fa fa-map-marker-alt text-primary me-2 top-icon"></small>
+            <small class="top-text">Albany, Auckland, New Zealand 0632</small>
+          </div>
+          <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+            <small class="fa fa-envelope text-primary me-2 top-icon"></small>
+            <small class="top-text">admin@comfortmovers.co.nz</small>
+          </div>
+          <div class="h-100 d-inline-flex align-items-center py-3">
+            <small class="fa fa-phone-alt text-primary me-2 top-icon"></small>
+            <small class="top-text">0223407710</small>
+          </div>
         </div>
+      </marquee>
     </div>
     <!-- Topbar End -->
 
-
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h1 class="m-0 text-primary"><i class="far fa-hospital me-3"></i>Klinik</h1>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
+      <div class="nav-bar-container">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-lg-5 my-2">
+          <img class="logo" src="img/Logo.png" />
         </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
+        <button type="button" class="navbar-toggler me-4 my-2" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="service.html" class="nav-item nav-link">Service</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu rounded-0 rounded-bottom m-0">
-                        <a href="feature.html" class="dropdown-item">Feature</a>
-                        <a href="team.html" class="dropdown-item">Our Doctor</a>
-                        <a href="appointment.html" class="dropdown-item">Appointment</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item">404 Page</a>
-                    </div>
-                </div>
-                <a href="contact.html" class="nav-item nav-link active">Contact</a>
+        <div class="collapse navbar-collapse space-around my-2" id="navbarCollapse">
+          <div class="navbar-nav p-4 p-lg-0 mx-xl-5">
+            <div class="nav-item dropdown">
+              <a href="" class="nav-link dropdown-toggle nal-link-text" data-bs-toggle="dropdown">Service</a>
+              <div class="dropdown-menu rounded-0 rounded-bottom m-0">
+                <a href="" class="dropdown-item nal-link-text">Express</a>
+                <a href="" class="dropdown-item nal-link-text">House</a>
+                <a href="" class="dropdown-item nal-link-text">Office</a>
+                <a href="" class="dropdown-item nal-link-text">Intercity</a>
+                <a href="" class="dropdown-item nal-link-text">Packing</a>
+                <a href="" class="dropdown-item nal-link-text">Storage</a>
+                <a href="" class="dropdown-item nal-link-text">Commercial</a>
+              </div>
             </div>
-            <a href="" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Appointment<i class="fa fa-arrow-right ms-3"></i></a>
+            <div class="nav-item dropdown mx-lg-3">
+              <a href="" class="nav-link dropdown-toggle nal-link-text" data-bs-toggle="dropdown">Resources</a>
+              <div class="dropdown-menu rounded-0 rounded-bottom m-0">
+                <a href="" class="dropdown-item nal-link-text">Products</a>
+                <a href="" class="dropdown-item nal-link-text">Carrer</a>
+                <a href="" class="dropdown-item nal-link-text">FAQ</a>
+                <a href="" class="dropdown-item nal-link-text">License</a>
+              </div>
+            </div>
+            <div class="nav-item dropdown">
+              <a href="" class="nav-link dropdown-toggle nal-link-text" data-bs-toggle="dropdown">Company</a>
+              <div class="dropdown-menu rounded-0 rounded-bottom m-0">
+                <a href="about-us.html" class="dropdown-item nal-link-text">About Us</a>
+                <a href="" class="dropdown-item nal-link-text">Contact Us</a>
+                <a href="" class="dropdown-item nal-link-text">Reviews</a>
+                <a href="" class="dropdown-item nal-link-text">Rate</a>
+                <a href="" class="dropdown-item nal-link-text">Blogs</a>
+                <a href="" class="dropdown-item nal-link-text">Reservation</a>
+              </div>
+            </div>
+            <a href="" class="nav-item nav-link nal-link-text">Rates</a>
+          </div>
+          <a href="" class="btn btn-primary rounded-0 py-2 px-lg-3 d-none d-lg-block my-2 mx-lg-3">Get A Free Quote</a>
         </div>
+      </div>
     </nav>
     <!-- Navbar End -->
 
-
-    <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <h1 class="display-3 text-white mb-3 animated slideInDown">Contact Us</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb text-uppercase mb-0">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-primary active" aria-current="page">Contact</li>
-                </ol>
-            </nav>
-        </div>
+    <!-- Cover Start -->
+    <div class="served-box-item-img about-page d-sm-none">
+      <img style="width: 100%" src="img/contact.png" />
     </div>
-    <!-- Page Header End -->
-
-
-    <!-- Contact Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-4">
-                    <div class="h-100 bg-light rounded d-flex align-items-center p-5">
-                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
-                            <i class="fa fa-map-marker-alt text-primary"></i>
-                        </div>
-                        <div class="ms-4">
-                            <p class="mb-2">Address</p>
-                            <h5 class="mb-0">123 Street, New York, USA</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="h-100 bg-light rounded d-flex align-items-center p-5">
-                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
-                            <i class="fa fa-phone-alt text-primary"></i>
-                        </div>
-                        <div class="ms-4">
-                            <p class="mb-2">Call Us Now</p>
-                            <h5 class="mb-0">+012 345 6789</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="h-100 bg-light rounded d-flex align-items-center p-5">
-                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
-                            <i class="fa fa-envelope-open text-primary"></i>
-                        </div>
-                        <div class="ms-4">
-                            <p class="mb-2">Mail Us Now</p>
-                            <h5 class="mb-0">info@example.com</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="bg-light rounded p-5">
-                        <p class="d-inline-block border rounded-pill py-1 px-4">Contact Us</p>
-                        <h1 class="mb-4">Have Any Query? Please Contact Us!</h1>
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                        <label for="name">Your Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                        <label for="email">Your Email</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                        <label for="subject">Subject</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
-                                        <label for="message">Message</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="h-100" style="min-height: 400px;">
-                        <iframe class="rounded w-100 h-100"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
-                        frameborder="0" allowfullscreen="" aria-hidden="false"
-                        tabindex="0"></iframe>
-                    </div>
-                </div>
+    <div
+      class="items-container mx-auto p-container served-box justify-content-between align-items-center wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="served-box-item-text about-page">
+        <h1 class="cover-heading-text"><span class="color-primary">Let’s Get In </span>Touch</h1>
+        <p class="cover-sub-text">
+          We're here to assist you with all your moving needs. Please feel free to reach out to us using the contact
+          information below or fill out the inquiry form, and we'll get back to you promptly.
+        </p>
+        <div class="header-phone-review about-cover-data">
+          <div class="header-phone-review-box">
+            <button href="" class="header-phone"><i class="fa fa-phone-alt"></i>&nbsp;&nbsp;&nbsp;022-340-7710</button>
+          </div>
+          <div class="header-phone-review-box">
+            <div href="" class="header-review">
+              <img src="img/devicon_google.png" /><span class="header-review-rating">&nbsp;&nbsp;4.9/5</span
+              ><img src="img/ic_round-star.png" /><span class="header-review-text">&nbsp;&nbsp;&nbsp;600+ reviews</span>
             </div>
+          </div>
         </div>
+      </div>
+      <div class="served-box-item-img about-page d-none d-sm-flex justify-content-end">
+        <img class="about-image" src="img/contact.png" />
+      </div>
     </div>
-    <!-- Contact End -->
+    <!-- Cover End -->
 
+    <!-- Here For You Start -->
+    <div
+      class="items-container mx-auto p-container served-box justify-content-between align-items-center wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="served-box-item-img about-page about-page-why-us mb-3 d-sm-none">
+        <div class="about-image">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51136.826555676744!2d174.68457264285493!3d-36.769328141032155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d3b308c9efa99%3A0x99875cc501aa448b!2sComfort%20Movers!5e0!3m2!1sen!2sin!4v1725648389403!5m2!1sen!2sin"
+            width="100%"
+            height="380"
+            style="border: 0"
+            loading="lazy"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <div class="served-box-item-text about-page">
+        <h1 class="top-choice-heading d-text-left">We are <span class="color-primary">Here For You</span></h1>
+        <p class="cover-sub-text d-text-left">
+          Affordable air freight solutions that balance cost and quality for every shipment cost for shipment.
+        </p>
+        <div class="about-here-contact">
+          <div>
+            <img height="21" width="21" src="img/phone.png" />
+          </div>
+          <h6>022 340 7710</h6>
+        </div>
+        <div class="about-here-contact">
+          <div>
+            <img height="22" width="27" src="img/mail.png" />
+          </div>
+          <h6>admin@comfortmovers.co.nz</h6>
+        </div>
+        <div class="about-here-contact">
+          <div>
+            <img height="26" width="19" src="img/location.png" />
+          </div>
+          <h6>Albany, Auckland, New Zealand 0632</h6>
+        </div>
+        <p class="cover-sub-text d-text-left mt-4">Follow us on</p>
+        <div class="about-follow-us">
+          <img style="height: 37px" src="img/logos_facebook.png" />
+          <img style="height: 37px" src="img/skill-icons_instagram.png" />
+          <img style="height: 37px" src="img/skill-icons_linkedin.png" />
+        </div>
+      </div>
+      <div class="served-box-item-img about-page about-page-why-us d-none d-sm-flex justify-content-end">
+        <div class="about-image">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51136.826555676744!2d174.68457264285493!3d-36.769328141032155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d3b308c9efa99%3A0x99875cc501aa448b!2sComfort%20Movers!5e0!3m2!1sen!2sin!4v1725648389403!5m2!1sen!2sin"
+            width="100%"
+            height="380"
+            style="border: 0"
+            loading="lazy"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+    <!-- Here For You End -->
+
+    <!-- About Form Start -->
+    <div
+      class="items-container mx-auto p-container served-box justify-content-between align-items-center wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="about-form">
+        <h1 class="about-form-heading text-center">We Want To <span class="color-primary">Hear From You</span></h1>
+        <div class="row">
+          <div class="col-md-4 col-12 mt-4">
+            <input class="form-input" type="text" placeholder="Full Name*" />
+          </div>
+          <div class="col-md-4 col-12 mt-4">
+            <input class="form-input" type="email" placeholder="Email ID*" />
+          </div>
+          <div class="col-md-4 col-12 mt-4">
+            <input class="form-input" type="tel" placeholder="Phone Number*" />
+          </div>
+          <div class="col-md-6 col-12 mt-4">
+            <input class="form-input" type="tel" placeholder="Pickup Address*" />
+          </div>
+          <div class="col-md-6 col-12 mt-4">
+            <input class="form-input" type="tel" placeholder="Delivery Address*" />
+          </div>
+          <div class="col-12 mt-4">
+            <input class="form-textarea" type="tel" placeholder="Message about work*" />
+          </div>
+        </div>
+        <h6 class="fotter-link mt-4">Service*</h6>
+        <div class="mt-2 form-checkboxes">
+          <div class="form-checkbox">
+            <input type="checkbox" />
+            <p>Packing</p>
+          </div>
+          <div class="form-checkbox">
+            <input type="checkbox" />
+            <p>Household</p>
+          </div>
+          <div class="form-checkbox">
+            <input type="checkbox" />
+            <p>Express</p>
+          </div>
+          <div class="form-checkbox">
+            <input type="checkbox" />
+            <p>Intercity</p>
+          </div>
+          <div class="form-checkbox">
+            <input type="checkbox" />
+            <p>Storage</p>
+          </div>
+          <div class="form-checkbox">
+            <input type="checkbox" />
+            <p>Warehouse</p>
+          </div>
+          <div class="form-checkbox">
+            <input type="checkbox" />
+            <p>Office</p>
+          </div>
+          <div class="form-checkbox">
+            <input type="checkbox" />
+            <p>Commercial</p>
+          </div>
+        </div>
+        <button href="" class="home-bolg-read-button mt-4 p-3">Send Message</button>
+      </div>
+    </div>
+    <!-- About Form End -->
+
+    <!-- Floating Bar Start -->
+    <div class="container-fluid p-0 wow fadeIn mt-5" data-wow-delay="0.1s">
+      <marquee scrollamount="15" style="width: fit-content">
+        <div class="px-5 home-floating-item">
+          <h1>Comprehnsive Services</h1>
+          <img src="img/Logo.png" />
+          <h1>Competitive Prices</h1>
+          <img src="img/Logo.png" />
+          <h1>Comprehnsive Services</h1>
+          <img src="img/Logo.png" />
+          <h1>Competitive Prices</h1>
+          <img src="img/Logo.png" />
+        </div>
+      </marquee>
+    </div>
+    <!-- Floating Bar End -->
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Address</h5>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Services</h5>
-                    <a class="btn btn-link" href="">Cardiology</a>
-                    <a class="btn btn-link" href="">Pulmonary</a>
-                    <a class="btn btn-link" href="">Neurology</a>
-                    <a class="btn btn-link" href="">Orthopedics</a>
-                    <a class="btn btn-link" href="">Laboratory</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Quick Links</h5>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Newsletter</h5>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
-                </div>
+    <div class="items-container p-container footer wow fadeIn mx-auto" data-wow-delay="0.1s">
+      <div class="py-5">
+        <div class="row">
+          <div class="row col-lg-5 col-md-6">
+            <div class="col-12">
+              <img class="fotter-logo" src="img/Logo.png" />
             </div>
-        </div>
-        <div class="container">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
-                    </div>
-                </div>
+            <div class="col-12 my-5">
+              <a href="" class="fotter-phone"><i class="fa fa-phone-alt"></i>&nbsp;&nbsp;&nbsp;022-340-7710</a>
             </div>
+            <div class="col-12 bottom-info">
+              <div>
+                <img height="22" width="27" src="img/mail.png" />
+              </div>
+              <p>admin@comfortmovers.co.nz</p>
+            </div>
+            <div class="col-12 bottom-info">
+              <div>
+                <img height="26" width="19" src="img/location.png" />
+              </div>
+              <p>1601 N Gower St Ste 205 Albany, Auckland, New Zealand 0632</p>
+            </div>
+            <div class="col-12 bottom-info">
+              <div>
+                <img height="29" width="29" src="img/user-time.png" />
+              </div>
+              <p>Mon-Fri : 6am - 6pm <br />Sat-Sun : 8am - 4pm</p>
+            </div>
+          </div>
+          <div class="col-lg-1"></div>
+          <div class="row col-lg-6 col-md-6">
+            <div class="col-lg-4 col-md-4 my-3 col-6">
+              <p class="mb-4 fotter-heading">Company</p>
+              <a class="btn fotter-link" href="about-us.html">About Us</a>
+              <a class="btn fotter-link" href="">Contact Us</a>
+              <a class="btn fotter-link" href="">Reviews</a>
+              <a class="btn fotter-link" href="">Rate</a>
+              <a class="btn fotter-link" href="">Blogs</a>
+              <a class="btn fotter-link" href="">Reservation</a>
+            </div>
+            <div class="col-lg-4 col-md-4 my-3 col-6">
+              <p class="mb-4 fotter-heading"><a class="fotter-heading" href="service.html">Services</a></p>
+              <a class="btn fotter-link" href="">Express</a>
+              <a class="btn fotter-link" href="">House</a>
+              <a class="btn fotter-link" href="">Office</a>
+              <a class="btn fotter-link" href="">Intercity</a>
+              <a class="btn fotter-link" href="">Packing</a>
+              <a class="btn fotter-link" href="">Storage</a>
+              <a class="btn fotter-link" href="">Commercial</a>
+            </div>
+            <div class="col-lg-4 col-md-4 my-3 col-6">
+              <p class="mb-4 fotter-heading">Resources</p>
+              <a class="btn fotter-link" href="">Products</a>
+              <a class="btn fotter-link" href="">Carrer</a>
+              <a class="btn fotter-link" href="">FAQ</a>
+              <a class="btn fotter-link" href="">License</a>
+              <a class="btn fotter-link" href="">Get Brochure</a>
+            </div>
+            <div class="col-12 row">
+              <div class="col-lg-4 col-md-4 my-3 col-6">
+                <p class="fotter-heading">Follow us on</p>
+                <div class="footer-links-container">
+                  <img style="height: 37px" src="img/logos_facebook.png" />
+                  <img style="height: 37px" src="img/skill-icons_instagram.png" />
+                  <img style="height: 37px" src="img/skill-icons_linkedin.png" />
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 my-3 col-6">
+                <p class="fotter-heading">License</p>
+                <p class="fotter-link">989CSC98CSKJN</p>
+              </div>
+              <div class="col-lg-4 col-md-4 my-3 col-6">
+                <img style="height: 67px" src="img/image 47.png" />
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="container fotter-end">
+        <div class="copyright">
+          <div class="row">
+            <div class="col-md-6 text-md-start mb-3 mb-md-0 fotter-end-text">
+              Copyright © 2024 Comfort Movers All rights reserved.
+            </div>
+            <div class="col-md-6 text-md-end mb-3 mb-md-0 fotter-bottom">
+              <a class="fotter-end-text me-4">Privacy Policy</a><a class="fotter-end-text">Terms & conditions</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Footer End -->
 
-
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
-
+    <a href="" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -280,6 +407,5 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-</body>
-
+  </body>
 </html>
