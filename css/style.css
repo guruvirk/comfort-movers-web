@@ -944,6 +944,16 @@ body {
     padding-right: 0 !important;
 }
 
+.visible {
+    visibility: visible !important;
+    height: auto !important;
+}
+
+.hidden {
+    visibility: hidden !important;
+    height: 0 !important;
+}
+
 .main-button {
     background-color: #FFFFFF;
     border: 1px solid #2480FD;
@@ -955,6 +965,25 @@ body {
     text-align: left;
     width: fit-content;
     border-radius: 25px;
+    height: fit-content;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.products-button {
+    border-radius: 0;
+    width: 30%;
+    text-align: center;
+    text-wrap: nowrap;
+    background-color: #FFFFFF;
+    border: 1px solid #2480FD;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 450;
+    color: #2480FD;
+    line-height: 27px;
     height: fit-content;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -2052,6 +2081,14 @@ body {
     margin-top: 1.6rem;
 }
 
+.product-types-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.6rem;
+}
+
 .rate-type {
     background: rgba(249, 249, 249, 1);
     padding: 0;
@@ -2236,6 +2273,47 @@ body {
     width: 45%;
     text-align: center;
     background-color: transparent;
+}
+
+.product-image {
+    background-color: rgba(246, 246, 246, 1);
+    text-align: center;
+}
+
+.product-image img {
+    width: 75%;
+    margin: auto;
+}
+
+.product-price {
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: center;
+    margin: 0;
+}
+
+.product-items h4 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24.38px;
+    text-align: left;
+}
+
+.product-items ul {
+    padding-left: 1rem;
+}
+
+.product-items li {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+    color: #000000;
 }
 
 @media (max-width: 992px) {
@@ -3244,6 +3322,24 @@ body {
         background-color: transparent;
     }
 
+    .products-button {
+        border-radius: 0;
+        width: 33%;
+        text-align: center;
+        text-wrap: wrap;
+        background-color: #FFFFFF;
+        border: 1px solid #2480FD;
+        font-family: "Montserrat", sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        color: #2480FD;
+        line-height: 27px;
+        height: 100px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 @media (max-width: 992px) {
@@ -3304,6 +3400,7 @@ body {
     .form-checkbox {
         width: 35%;
     }
+
 
 }
 
