@@ -2036,6 +2036,14 @@ body {
     ;
 }
 
+.old-data-container p {
+    color: #444;
+}
+
+.old-data-container li {
+    color: #444;
+}
+
 .package-wrap-container {
     display: flex;
     flex-wrap: wrap;
@@ -2046,6 +2054,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+.package-wrap-content li {
+    color: #444;
 }
 
 .package-image {
