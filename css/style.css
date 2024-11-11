@@ -689,7 +689,6 @@ body {
     padding-bottom: 10px;
     padding-right: 20px;
     padding-left: 20px;
-    margin: auto;
 }
 
 .header-review {
@@ -703,7 +702,6 @@ body {
     padding-bottom: 10px;
     padding-right: 20px;
     padding-left: 20px;
-    margin: auto;
 }
 
 .header-review-rating {
@@ -1025,6 +1023,12 @@ body {
 
 .p-container {
     padding-top: 9rem !important;
+    padding-right: 3rem;
+    padding-left: 3rem;
+}
+
+.p-container-old {
+    padding-top: 3rem !important;
     padding-right: 3rem;
     padding-left: 3rem;
 }
@@ -2502,6 +2506,12 @@ body {
         padding-left: 1rem;
     }
 
+    .p-container-old {
+        padding-top: 1.5rem !important;
+        padding-right: 3rem;
+        padding-left: 3rem;
+    }
+
     .nav-bar-container {
         height: 60px;
         margin: auto;
@@ -3468,6 +3478,12 @@ body {
         padding-top: 3rem !important;
         padding-right: 1rem;
         padding-left: 1rem;
+    }
+
+    .p-container-old {
+        padding-top: 1.5rem !important;
+        padding-right: 3rem;
+        padding-left: 3rem;
     }
 }
 
