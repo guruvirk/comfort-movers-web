@@ -1,916 +1,1324 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Comfort Movers</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="" name="keywords" />
-    <meta content="" name="description" />
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon" />
+<head>
+  <meta charset="utf-8" />
+  <title>Comfort Movers</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="" name="keywords" />
+  <meta content="" name="description" />
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon" />
 
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet" />
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+  <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet" />
-  </head>
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
 
-  <body style="background: none !important">
-    <!-- Spinner Start -->
-    <div
-      id="spinner"
-      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
-    >
-      <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem" role="status">
-        <span class="sr-only">Loading...</span>
-      </div>
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body style="background: none !important">
+  <!-- Spinner Start -->
+  <div id="spinner"
+    class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem" role="status">
+      <span class="sr-only">Loading...</span>
     </div>
-    <!-- Spinner End -->
+  </div>
+  <!-- Spinner End -->
 
-    <!-- Topbar Start -->
-    <div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
-      <marquee scrollamount="15" class="row gx-0 d-none d-lg-flex">
-        <div class="col-lg-7 px-5 text-start">
-          <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-            <small class="fa fa-map-marker-alt text-primary me-2 top-icon"></small>
-            <small class="top-text">Albany, Auckland, New Zealand 0632</small>
-          </div>
-          <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-            <small class="fa fa-envelope text-primary me-2 top-icon"></small>
-            <small class="top-text">admin@comfortmovers.co.nz</small>
-          </div>
-          <div class="h-100 d-inline-flex align-items-center py-3">
-            <small class="fa fa-phone-alt text-primary me-2 top-icon"></small>
-            <small class="top-text">0223407710</small>
-          </div>
+  <!-- Topbar Start -->
+  <div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
+    <marquee scrollamount="15" class="row gx-0 d-none d-lg-flex">
+      <div class="col-lg-7 px-5 text-start">
+        <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+          <small class="fa fa-map-marker-alt text-primary me-2 top-icon"></small>
+          <small class="top-text">Albany, Auckland, New Zealand 0632</small>
         </div>
-      </marquee>
-    </div>
-    <!-- Topbar End -->
-
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
-      <div class="nav-bar-container">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-lg-5 my-2">
-          <img class="logo" src="img/Logo.png" />
-        </a>
-        <button type="button" class="navbar-toggler me-4 my-2" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse space-around my-2" id="navbarCollapse">
-          <div class="navbar-nav p-4 p-lg-0 mx-xl-5">
-            <div class="nav-item dropdown">
-              <a href="service.html" class="nav-link dropdown-toggle nal-link-text" data-bs-toggle="dropdown">Service</a>
-              <div class="dropdown-menu rounded-0 rounded-bottom m-0">
-                <a href="express-movers.html" class="dropdown-item nal-link-text">Express</a>
-                <a href="house-movers-packers-auckland.html" class="dropdown-item nal-link-text">House</a>
-                <a href="office-movers-auckland.html" class="dropdown-item nal-link-text">Office</a>
-                <a href="intercity-movers.html" class="dropdown-item nal-link-text">Intercity</a>
-                <a href="package-service.html" class="dropdown-item nal-link-text">Packing</a>
-                <a href="storage-service.html" class="dropdown-item nal-link-text">Storage</a>
-                <a href="commercial-movers.html" class="dropdown-item nal-link-text">Commercial</a>
-              </div>
-            </div>
-            <div class="nav-item dropdown mx-lg-3">
-              <a href="" class="nav-link dropdown-toggle nal-link-text" data-bs-toggle="dropdown">Resources</a>
-              <div class="dropdown-menu rounded-0 rounded-bottom m-0">
-                <a href="products.html" class="dropdown-item nal-link-text">Products</a>
-                <a href="career.html" class="dropdown-item nal-link-text">Carrer</a>
-                <a href="faq.html" class="dropdown-item nal-link-text">FAQ</a>
-                <a href="" class="dropdown-item nal-link-text">License</a>
-              </div>
-            </div>
-            <div class="nav-item dropdown">
-              <a href="" class="nav-link dropdown-toggle nal-link-text" data-bs-toggle="dropdown">Company</a>
-              <div class="dropdown-menu rounded-0 rounded-bottom m-0">
-                <a href="about-us.html" class="dropdown-item nal-link-text">About Us</a>
-                <a href="contact.html" class="dropdown-item nal-link-text">Contact Us</a>
-                <a href="reviews.html" class="dropdown-item nal-link-text">Reviews</a>
-                <a href="rates.html" class="dropdown-item nal-link-text">Rate</a>
-                <a href="blogs.html" class="dropdown-item nal-link-text">Blogs</a>
-                <a href="" class="dropdown-item nal-link-text">Reservation</a>
-              </div>
-            </div>
-            <a href="rates.html" class="nav-item nav-link nal-link-text">Rates</a>
-          </div>
-          <a href="" class="btn btn-primary rounded-0 py-2 px-lg-3 d-none d-lg-block my-2 mx-lg-3">Get A Free Quote</a>
+        <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+          <small class="fa fa-envelope text-primary me-2 top-icon"></small>
+          <small class="top-text">admin@comfortmovers.co.nz</small>
+        </div>
+        <div class="h-100 d-inline-flex align-items-center py-3">
+          <small class="fa fa-phone-alt text-primary me-2 top-icon"></small>
+          <small class="top-text">0223407710</small>
         </div>
       </div>
-    </nav>
-    <!-- Navbar End -->
+    </marquee>
+  </div>
+  <!-- Topbar End -->
 
-    <!-- Cover Start -->
-    <div class="served-box-item-img about-page d-sm-none">
-      <img style="width: 100%" src="img/package-cover.png" />
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
+    <div class="nav-bar-container">
+      <a href="index.html" class="navbar-brand d-flex align-items-center px-lg-5 my-2">
+        <img class="logo" src="img/Logo.png" />
+      </a>
+      <button type="button" class="navbar-toggler me-4 my-2" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse space-around my-2" id="navbarCollapse">
+        <div class="navbar-nav p-4 p-lg-0 mx-xl-5">
+          <div class="nav-item dropdown">
+            <a href="service.html" class="nav-link dropdown-toggle nal-link-text" data-bs-toggle="dropdown">Service</a>
+            <div class="dropdown-menu rounded-0 rounded-bottom m-0">
+              <a href="express-movers.html" class="dropdown-item nal-link-text">Express</a>
+              <a href="house-movers-packers-auckland.html" class="dropdown-item nal-link-text">House</a>
+              <a href="office-movers-auckland.html" class="dropdown-item nal-link-text">Office</a>
+              <a href="intercity-movers.html" class="dropdown-item nal-link-text">Intercity</a>
+              <a href="package-service.html" class="dropdown-item nal-link-text">Packing</a>
+              <a href="storage-service.html" class="dropdown-item nal-link-text">Storage</a>
+              <a href="commercial-movers.html" class="dropdown-item nal-link-text">Commercial</a>
+            </div>
+          </div>
+          <div class="nav-item dropdown mx-lg-3">
+            <a href="" class="nav-link dropdown-toggle nal-link-text" data-bs-toggle="dropdown">Resources</a>
+            <div class="dropdown-menu rounded-0 rounded-bottom m-0">
+              <a href="products.html" class="dropdown-item nal-link-text">Products</a>
+              <a href="career.html" class="dropdown-item nal-link-text">Carrer</a>
+              <a href="faq.html" class="dropdown-item nal-link-text">FAQ</a>
+              <a href="" class="dropdown-item nal-link-text">License</a>
+            </div>
+          </div>
+          <div class="nav-item dropdown">
+            <a href="" class="nav-link dropdown-toggle nal-link-text" data-bs-toggle="dropdown">Company</a>
+            <div class="dropdown-menu rounded-0 rounded-bottom m-0">
+              <a href="about-us.html" class="dropdown-item nal-link-text">About Us</a>
+              <a href="contact.html" class="dropdown-item nal-link-text">Contact Us</a>
+              <a href="reviews.html" class="dropdown-item nal-link-text">Reviews</a>
+              <a href="rates.html" class="dropdown-item nal-link-text">Rate</a>
+              <a href="blogs.html" class="dropdown-item nal-link-text">Blogs</a>
+              <a href="" class="dropdown-item nal-link-text">Reservation</a>
+            </div>
+          </div>
+          <a href="rates.html" class="nav-item nav-link nal-link-text">Rates</a>
+        </div>
+        <a href="" class="btn btn-primary rounded-0 py-2 px-lg-3 d-none d-lg-block my-2 mx-lg-3">Get A Free Quote</a>
+      </div>
     </div>
-    <div
-      class="items-container mx-auto p-container served-box justify-content-between align-items-center wow fadeIn"
-      data-wow-delay="0.1s"
-    >
-      <div class="served-box-item-text about-page">
-        <h1 class="cover-heading-text"><span class="color-primary">Office</span> Service</h1>
-        <p class="cover-sub-text">
-          Office move? No sweat! We've got the magic touch to keep your business humming while we handle the heavy lifting.
-          From start to finish, we're all over it!
+  </nav>
+  <!-- Navbar End -->
+
+  <!-- Cover Start -->
+  <div class="served-box-item-img about-page d-sm-none">
+    <img style="width: 100%" src="img/package-cover.png" />
+  </div>
+  <div class="items-container mx-auto p-container served-box justify-content-between align-items-center wow fadeIn"
+    data-wow-delay="0.1s">
+    <div class="served-box-item-text about-page">
+      <h2 class="cover-heading-text">The Office Movers in Auckland</h2>
+      <h4 class="cover-sub-text">
+        Office movers Auckland- Let us help you to move your office
+      </h4>
+      <div class="header-phone-review about-cover-data">
+        <div class="header-phone-review-box">
+          <button class="header-phone"><i class="fa fa-phone-alt"></i>&nbsp;&nbsp;&nbsp;022-340-7710</button>
+        </div>
+        <div class="header-phone-review-box">
+          <div class="header-review">
+            <img src="img/devicon_google.png" /><span class="header-review-rating">&nbsp;&nbsp;4.9/5</span><img
+              src="img/ic_round-star.png" /><span class="header-review-text">&nbsp;&nbsp;&nbsp;600+ reviews</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="served-box-item-img about-page d-none d-sm-flex justify-content-end">
+      <img class="about-image" src="img/office-service.png" />
+    </div>
+  </div>
+  <!-- Cover End -->
+
+  <!-- Wrap It Up Write Block -->
+  <div class="items-container mx-auto p-container served-box justify-content-between align-items-center wow fadeIn"
+    data-wow-delay="0.1s">
+    <div class="container-package row">
+      <div class="mb-5">
+        <h1 class="cover-heading-text text-center">
+          <span>Why Our </span>
+          <span class="color-primary">Office Moving Services Stand Out</span>
+        </h1>
+        <p class="cover-sub-text d-text-left">
+          Smooth moves are our jam! We'll tailor everything to your needs, keep the costs crystal clear, and shower you
+          with top-notch service. Your office relo will be a walk in the park!
         </p>
-        <div class="header-phone-review about-cover-data">
-          <div class="header-phone-review-box">
-            <button href="" class="header-phone"><i class="fa fa-phone-alt"></i>&nbsp;&nbsp;&nbsp;022-340-7710</button>
+      </div>
+      <div class="package-wrap-container mb-3 col-md-4 col-sm-12">
+        <div class="package-wrap-card-container">
+          <div class="package-wrap-card-img">
+            <img class="package-image" src="img/Rectangle 252.png" />
           </div>
-          <div class="header-phone-review-box">
-            <div href="" class="header-review">
-              <img src="img/devicon_google.png" /><span class="header-review-rating">&nbsp;&nbsp;4.9/5</span
-              ><img src="img/ic_round-star.png" /><span class="header-review-text">&nbsp;&nbsp;&nbsp;600+ reviews</span>
-            </div>
+          <div class="package-wrap-content">
+            <h5>Experienced Moving Experts</h5>
+            <p class="cover-sub-text d-text-left">
+              We expertly pack all items, using the right techniques to minimize damage and ensure arrival in excellent
+              condition.
+            </p>
           </div>
         </div>
       </div>
-      <div class="served-box-item-img about-page d-none d-sm-flex justify-content-end">
+      <div class="package-wrap-container mb-3 col-md-4 col-sm-12">
+        <div class="package-wrap-card-container">
+          <div class="package-wrap-card-img">
+            <img class="package-image" src="img/Rectangle 253.png" />
+          </div>
+          <div class="package-wrap-content">
+            <h5>Professional Packing</h5>
+            <p class="cover-sub-text d-text-left">
+              We use premium packing materials, to safeguard your belongings during transport and handling.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="package-wrap-container mb-3 col-md-4 col-sm-12">
+        <div class="package-wrap-card-container">
+          <div class="package-wrap-card-img">
+            <img class="package-image" src="img/Rectangle 254.png" />
+          </div>
+          <div class="package-wrap-content">
+            <h5>Efficient and Timely Relocation</h5>
+            <p class="cover-sub-text d-text-left">
+              By handling the packing process for you, we save you valuable time, allowing you to focus on other aspects
+              of
+              your move.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="package-wrap-container mb-3 col-md-4 col-sm-12">
+        <div class="package-wrap-card-container">
+          <div class="package-wrap-card-img">
+            <img class="package-image" src="img/Rectangle 255.png" />
+          </div>
+          <div class="package-wrap-content">
+            <h5>Comprehensive Services</h5>
+            <p class="cover-sub-text d-text-left">
+              We tailor our packing services to meet your specific needs, whether you have delicate items, large
+              furniture,
+              or unique possessions requiring special attention.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="package-wrap-container mb-3 col-md-4 col-sm-12">
+        <div class="package-wrap-card-container">
+          <div class="package-wrap-card-img">
+            <img class="package-image" src="img/Rectangle 257.png" />
+          </div>
+          <div class="package-wrap-content">
+            <h5>Insurance Coverage</h5>
+            <p class="cover-sub-text d-text-left">
+              Worried about your stuff? Don't be! We've got full insurance coverage. Your valuables are VIPs in our
+              book.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="package-wrap-container mb-3 col-md-4 col-sm-12">
+        <div class="package-wrap-card-container">
+          <div class="package-wrap-card-img">
+            <img class="package-image" src="img/Rectangle 256.png" />
+          </div>
+          <div class="package-wrap-content">
+            <h5>Excellent Customer Support</h5>
+            <p class="cover-sub-text d-text-left">
+              Got questions? Fire away! Our dedicated customer support team is here for you 24/7, before, during, and
+              after
+              your move.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Our Experts Offer Block -->
+  <div class="items-container mx-auto p-container served-box justify-content-between align-items-center wow fadeIn"
+    data-wow-delay="0.1s">
+    <div class="container-package row">
+      <div class="mb-5">
+        <h1 class="cover-heading-text text-center">
+          <span class="color-primary text-center">Mastering</span>
+          <span class="text-center">Office Moves with </span>
+          <span class="color-primary text-center"> Precision</span>
+          <span class="text-center">&</span>
+          <span class="color-primary text-center"> Care</span>
+        </h1>
+      </div>
+      <div class="package-wrap-container mb-3 col-md-4 col-sm-12">
+        <div class="package-wrap-card-container">
+          <div class="align-items-center d-flex gap-4">
+            <img class="package-expert-image" src="img/fa6-solid_truck-fast.png" />
+            <h5>Free Onsite Estimate</h5>
+          </div>
+          <div class="package-wrap-content">
+            <p class="cover-sub-text d-text-left">We'll scope out your needs and cook up a plan that's perfect for you.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="package-wrap-container mb-3 col-md-4 col-sm-12">
+        <div class="package-wrap-card-container">
+          <div class="align-items-center d-flex gap-4">
+            <img class="package-expert-image" src="img/Vector.png" />
+            <h5>Customized Moving Plan</h5>
+          </div>
+          <div class="package-wrap-content">
+            <p class="cover-sub-text d-text-left">
+              We'll work with you to create a moving master plan. No detail is too small!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="package-wrap-container mb-3 col-md-4 col-sm-12">
+        <div class="package-wrap-card-container">
+          <div class="align-items-center d-flex gap-4">
+            <img class="package-expert-image" src="img/Layer_1.png" />
+            <h5>Packing and Labeling</h5>
+          </div>
+          <div class="package-wrap-content">
+            <p class="cover-sub-text d-text-left">
+              We'll wrap and label everything with tender loving care. Finding your stuff later? Piece of cake!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="package-wrap-container mb-3 col-md-4 col-sm-12">
+        <div class="package-wrap-card-container">
+          <div class="align-items-center d-flex gap-4">
+            <img class="package-expert-image" src="img/fa6-solid_truck-fast.png" />
+            <h5>Secure Transportation</h5>
+          </div>
+          <div class="package-wrap-content">
+            <p class="cover-sub-text d-text-left">
+              Your office gear gets the star treatment in our fancy trucks. Safety first, always!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="package-wrap-container mb-3 col-md-4 col-sm-12">
+        <div class="package-wrap-card-container">
+          <div class="align-items-center d-flex gap-4">
+            <img class="package-expert-image" src="img/Vector.png" />
+            <h5>Unpacking and Setup</h5>
+          </div>
+          <div class="package-wrap-content">
+            <p class="cover-sub-text d-text-left">
+              New digs, no drama! We will unpack and set up your office so you can hit the ground running.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ultimate storage Block -->
+  <div class="items-container mx-auto p-container served-box justify-content-between align-items-center wow fadeIn"
+    data-wow-delay="0.1s">
+    <div class="container-package row">
+      <div class="mb-5">
+        <h1 class="cover-heading-text text-center">
+          <span class="text-center">Our </span>
+          <span class="color-primary text-center">moving checklist</span>
+          <span class="text-center">is your new BFF</span>
+        </h1>
+        <p class="cover-sub-text text-center">From planning to post-move pizza party, we've got you covered!</p>
+      </div>
+      <div class="rounded p-3 d-flex align-items-center mb-4" style="border: 1px solid #2480fd">
+        <div class="text-white p-2 rounded me-3">
+          <img class="package-expert-image" src="img/Group 461.png" />
+        </div>
+        <div>
+          <p class="cover-sub-text">
+            Designate someone to oversee the move, coordinate tasks, communicate with employees, and liaise with the
+            moving
+            company.
+          </p>
+        </div>
+      </div>
+      <div class="rounded p-3 d-flex align-items-center mb-4" style="border: 1px solid #2480fd">
+        <div class="text-white p-2 rounded me-3">
+          <img class="package-expert-image" src="img/Group 461.png" />
+        </div>
+        <div>
+          <p class="cover-sub-text">
+            List all items to be moved, including furniture, equipment, and supplies. Dispose of unneeded items to
+            reduce
+            clutter. Verify all items upon arrival at the new location.
+          </p>
+        </div>
+      </div>
+      <div class="rounded p-3 d-flex align-items-center mb-4" style="border: 1px solid #2480fd">
+        <div class="text-white p-2 rounded me-3">
+          <img class="package-expert-image" src="img/Group 461.png" />
+        </div>
+        <div>
+          <p class="cover-sub-text">
+            Label boxes with their destination in the new office for organized unpacking. Start packing non-essential
+            items
+            first and consider hiring professionals for fragile or high-value items.
+          </p>
+        </div>
+      </div>
+      <div class="rounded p-3 d-flex align-items-center mb-4" style="border: 1px solid #2480fd">
+        <div class="text-white p-2 rounded me-3">
+          <img class="package-expert-image" src="img/Group 461.png" />
+        </div>
+        <div>
+          <p class="cover-sub-text">
+            Inform clients, vendors, and service providers of your move. Update business cards, websites, and
+            directories
+            with the new address. Set up mail forwarding with the post office.
+          </p>
+        </div>
+      </div>
+      <div class="rounded p-3 d-flex align-items-center mb-4" style="border: 1px solid #2480fd">
+        <div class="text-white p-2 rounded me-3">
+          <img class="package-expert-image" src="img/Group 461.png" />
+        </div>
+        <div>
+          <p class="cover-sub-text">
+            Manage the disconnection and reconnection of utilities at both locations. Ensure employees have new keys and
+            security passes for the new office.
+          </p>
+        </div>
+      </div>
+      <div class="rounded p-3 d-flex align-items-center mb-4" style="border: 1px solid #2480fd">
+        <div class="text-white p-2 rounded me-3">
+          <img class="package-expert-image" src="img/Group 461.png" />
+        </div>
+        <div>
+          <p class="cover-sub-text">
+            Back up all electronic data securely. Use protective coverings to prevent damage to walls and floors during
+            the
+            move.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- extra block -->
+  <div class="items-container mx-auto p-container served-box justify-content-between align-items-center wow fadeIn"
+    data-wow-delay="0.1s">
+    <div class="container-package row">
+      <div class="mb-5">
+        <h1 class="cover-heading-text text-center">
+          <span class="text-center">Your Office Essential Items </span>
+          <span class="color-primary text-center">Handled with Care</span>
+        </h1>
+        <p class="cover-sub-text text-center">
+          We meticulously handle and transport all these items, ensuring everything arrives at your new office in
+          perfect
+          condition.
+        </p>
+      </div>
+      <div class="served-box-item-img about-page d-none d-sm-flex justify-content-start">
         <img class="about-image" src="img/office-service.png" />
       </div>
-    </div>
-    <!-- Cover End -->
-
-    <!-- Wrap It Up Write Block -->
-    <div
-      class="items-container mx-auto p-container served-box justify-content-between align-items-center wow fadeIn"
-      data-wow-delay="0.1s"
-    >
-      <div class="container-package row">
-        <div class="mb-5">
-          <h1 class="cover-heading-text text-center">
-            <span>Why Our </span>
-            <span class="color-primary">Office Moving Services Stand Out</span>
-          </h1>
-          <p class="cover-sub-text d-text-left">
-            Smooth moves are our jam! We'll tailor everything to your needs, keep the costs crystal clear, and shower you
-            with top-notch service. Your office relo will be a walk in the park!
-          </p>
-        </div>
-        <div class="package-wrap-container mb-3 col-md-4 col-sm-12">
-          <div class="package-wrap-card-container">
-            <div class="package-wrap-card-img">
-              <img class="package-image" src="img/Rectangle 252.png" />
-            </div>
-            <div class="package-wrap-content">
-              <h5>Experienced Moving Experts</h5>
-              <p class="cover-sub-text d-text-left">
-                We expertly pack all items, using the right techniques to minimize damage and ensure arrival in excellent
-                condition.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="package-wrap-container mb-3 col-md-4 col-sm-12">
-          <div class="package-wrap-card-container">
-            <div class="package-wrap-card-img">
-              <img class="package-image" src="img/Rectangle 253.png" />
-            </div>
-            <div class="package-wrap-content">
-              <h5>Professional Packing</h5>
-              <p class="cover-sub-text d-text-left">
-                We use premium packing materials, to safeguard your belongings during transport and handling.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="package-wrap-container mb-3 col-md-4 col-sm-12">
-          <div class="package-wrap-card-container">
-            <div class="package-wrap-card-img">
-              <img class="package-image" src="img/Rectangle 254.png" />
-            </div>
-            <div class="package-wrap-content">
-              <h5>Efficient and Timely Relocation</h5>
-              <p class="cover-sub-text d-text-left">
-                By handling the packing process for you, we save you valuable time, allowing you to focus on other aspects of
-                your move.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="package-wrap-container mb-3 col-md-4 col-sm-12">
-          <div class="package-wrap-card-container">
-            <div class="package-wrap-card-img">
-              <img class="package-image" src="img/Rectangle 255.png" />
-            </div>
-            <div class="package-wrap-content">
-              <h5>Comprehensive Services</h5>
-              <p class="cover-sub-text d-text-left">
-                We tailor our packing services to meet your specific needs, whether you have delicate items, large furniture,
-                or unique possessions requiring special attention.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="package-wrap-container mb-3 col-md-4 col-sm-12">
-          <div class="package-wrap-card-container">
-            <div class="package-wrap-card-img">
-              <img class="package-image" src="img/Rectangle 257.png" />
-            </div>
-            <div class="package-wrap-content">
-              <h5>Insurance Coverage</h5>
-              <p class="cover-sub-text d-text-left">
-                Worried about your stuff? Don't be! We've got full insurance coverage. Your valuables are VIPs in our book.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="package-wrap-container mb-3 col-md-4 col-sm-12">
-          <div class="package-wrap-card-container">
-            <div class="package-wrap-card-img">
-              <img class="package-image" src="img/Rectangle 256.png" />
-            </div>
-            <div class="package-wrap-content">
-              <h5>Excellent Customer Support</h5>
-              <p class="cover-sub-text d-text-left">
-                Got questions? Fire away! Our dedicated customer support team is here for you 24/7, before, during, and after
-                your move.
-              </p>
-            </div>
-          </div>
-        </div>
+      <div class="served-box-item-text about-page justify-content-end cover-sub-text lh-3"
+        style="font-size: 15px; font-weight: 500; line-height: 48px">
+        Desks, chairs, conference tables, cubicles, and filing cabinets.
+        <br />
+        Computers, printers, copiers, and servers. <br />
+        Stationery, office décor, and small appliances. <br />
+        Important papers, records, and archival materials. <br />
+        Paintings, sculptures, and other office embellishments <br />
+        Safes, heavy machinery, or any unique equipment. <br />
       </div>
     </div>
+  </div>
 
-    <!-- Our Experts Offer Block -->
-    <div
-      class="items-container mx-auto p-container served-box justify-content-between align-items-center wow fadeIn"
-      data-wow-delay="0.1s"
-    >
-      <div class="container-package row">
-        <div class="mb-5">
-          <h1 class="cover-heading-text text-center">
-            <span class="color-primary text-center">Mastering</span>
-            <span class="text-center">Office Moves with </span>
-            <span class="color-primary text-center"> Precision</span>
-            <span class="text-center">&</span>
-            <span class="color-primary text-center"> Care</span>
-          </h1>
-        </div>
-        <div class="package-wrap-container mb-3 col-md-4 col-sm-12">
-          <div class="package-wrap-card-container">
-            <div class="align-items-center d-flex gap-4">
-              <img class="package-expert-image" src="img/fa6-solid_truck-fast.png" />
-              <h5>Free Onsite Estimate</h5>
-            </div>
-            <div class="package-wrap-content">
-              <p class="cover-sub-text d-text-left">We'll scope out your needs and cook up a plan that's perfect for you.</p>
-            </div>
-          </div>
-        </div>
-        <div class="package-wrap-container mb-3 col-md-4 col-sm-12">
-          <div class="package-wrap-card-container">
-            <div class="align-items-center d-flex gap-4">
-              <img class="package-expert-image" src="img/Vector.png" />
-              <h5>Customized Moving Plan</h5>
-            </div>
-            <div class="package-wrap-content">
-              <p class="cover-sub-text d-text-left">
-                We'll work with you to create a moving master plan. No detail is too small!
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="package-wrap-container mb-3 col-md-4 col-sm-12">
-          <div class="package-wrap-card-container">
-            <div class="align-items-center d-flex gap-4">
-              <img class="package-expert-image" src="img/Layer_1.png" />
-              <h5>Packing and Labeling</h5>
-            </div>
-            <div class="package-wrap-content">
-              <p class="cover-sub-text d-text-left">
-                We'll wrap and label everything with tender loving care. Finding your stuff later? Piece of cake!
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="package-wrap-container mb-3 col-md-4 col-sm-12">
-          <div class="package-wrap-card-container">
-            <div class="align-items-center d-flex gap-4">
-              <img class="package-expert-image" src="img/fa6-solid_truck-fast.png" />
-              <h5>Secure Transportation</h5>
-            </div>
-            <div class="package-wrap-content">
-              <p class="cover-sub-text d-text-left">
-                Your office gear gets the star treatment in our fancy trucks. Safety first, always!
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="package-wrap-container mb-3 col-md-4 col-sm-12">
-          <div class="package-wrap-card-container">
-            <div class="align-items-center d-flex gap-4">
-              <img class="package-expert-image" src="img/Vector.png" />
-              <h5>Unpacking and Setup</h5>
-            </div>
-            <div class="package-wrap-content">
-              <p class="cover-sub-text d-text-left">
-                New digs, no drama! We will unpack and set up your office so you can hit the ground running.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Ultimate storage Block -->
-    <div
-      class="items-container mx-auto p-container served-box justify-content-between align-items-center wow fadeIn"
-      data-wow-delay="0.1s"
-    >
-      <div class="container-package row">
-        <div class="mb-5">
-          <h1 class="cover-heading-text text-center">
-            <span class="text-center">Our </span>
-            <span class="color-primary text-center">moving checklist</span>
-            <span class="text-center">is your new BFF</span>
-          </h1>
-          <p class="cover-sub-text text-center">From planning to post-move pizza party, we've got you covered!</p>
-        </div>
-        <div class="rounded p-3 d-flex align-items-center mb-4" style="border: 1px solid #2480fd">
-          <div class="text-white p-2 rounded me-3">
-            <img class="package-expert-image" src="img/Group 461.png" />
-          </div>
-          <div>
-            <p class="cover-sub-text">
-              Designate someone to oversee the move, coordinate tasks, communicate with employees, and liaise with the moving
-              company.
-            </p>
-          </div>
-        </div>
-        <div class="rounded p-3 d-flex align-items-center mb-4" style="border: 1px solid #2480fd">
-          <div class="text-white p-2 rounded me-3">
-            <img class="package-expert-image" src="img/Group 461.png" />
-          </div>
-          <div>
-            <p class="cover-sub-text">
-              List all items to be moved, including furniture, equipment, and supplies. Dispose of unneeded items to reduce
-              clutter. Verify all items upon arrival at the new location.
-            </p>
-          </div>
-        </div>
-        <div class="rounded p-3 d-flex align-items-center mb-4" style="border: 1px solid #2480fd">
-          <div class="text-white p-2 rounded me-3">
-            <img class="package-expert-image" src="img/Group 461.png" />
-          </div>
-          <div>
-            <p class="cover-sub-text">
-              Label boxes with their destination in the new office for organized unpacking. Start packing non-essential items
-              first and consider hiring professionals for fragile or high-value items.
-            </p>
-          </div>
-        </div>
-        <div class="rounded p-3 d-flex align-items-center mb-4" style="border: 1px solid #2480fd">
-          <div class="text-white p-2 rounded me-3">
-            <img class="package-expert-image" src="img/Group 461.png" />
-          </div>
-          <div>
-            <p class="cover-sub-text">
-              Inform clients, vendors, and service providers of your move. Update business cards, websites, and directories
-              with the new address. Set up mail forwarding with the post office.
-            </p>
-          </div>
-        </div>
-        <div class="rounded p-3 d-flex align-items-center mb-4" style="border: 1px solid #2480fd">
-          <div class="text-white p-2 rounded me-3">
-            <img class="package-expert-image" src="img/Group 461.png" />
-          </div>
-          <div>
-            <p class="cover-sub-text">
-              Manage the disconnection and reconnection of utilities at both locations. Ensure employees have new keys and
-              security passes for the new office.
-            </p>
-          </div>
-        </div>
-        <div class="rounded p-3 d-flex align-items-center mb-4" style="border: 1px solid #2480fd">
-          <div class="text-white p-2 rounded me-3">
-            <img class="package-expert-image" src="img/Group 461.png" />
-          </div>
-          <div>
-            <p class="cover-sub-text">
-              Back up all electronic data securely. Use protective coverings to prevent damage to walls and floors during the
-              move.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- extra block -->
-    <div
-      class="items-container mx-auto p-container served-box justify-content-between align-items-center wow fadeIn"
-      data-wow-delay="0.1s"
-    >
-      <div class="container-package row">
-        <div class="mb-5">
-          <h1 class="cover-heading-text text-center">
-            <span class="text-center">Your Office Essential Items </span>
-            <span class="color-primary text-center">Handled with Care</span>
-          </h1>
-          <p class="cover-sub-text text-center">
-            We meticulously handle and transport all these items, ensuring everything arrives at your new office in perfect
-            condition.
-          </p>
-        </div>
-        <div class="served-box-item-img about-page d-none d-sm-flex justify-content-start">
-          <img class="about-image" src="img/office-service.png" />
-        </div>
-        <div
-          class="served-box-item-text about-page justify-content-end cover-sub-text lh-3"
-          style="font-size: 15px; font-weight: 500; line-height: 48px"
-        >
-          Desks, chairs, conference tables, cubicles, and filing cabinets.
-          <br />
-          Computers, printers, copiers, and servers. <br />
-          Stationery, office décor, and small appliances. <br />
-          Important papers, records, and archival materials. <br />
-          Paintings, sculptures, and other office embellishments <br />
-          Safes, heavy machinery, or any unique equipment. <br />
-        </div>
-      </div>
-    </div>
-
-    <!-- FAQ Start -->
-    <div class="items-container mx-auto p-container text-center wow fadeIn row" data-wow-delay="0.1s">
-      <div class="col-md-5 col-12">
-        <h2 class="home-faq-heading mt-2">Frequently Asked <span class="color-primary">Questions</span></h2>
-        <p class="home-faq-sub-heading mt-2">Got questions about moving with Comfort Movers? We've got answers!</p>
-        <h6 class="d-none home-faq-text mt-5">Still have more questions? ping us at</h6>
-        <div class="d-none d-sm-flex home-faq-info mt-3">
-          <div>
-            <img height="21" width="21" src="img/phone.png" />
-          </div>
-          <p>022-340-7710</p>
-        </div>
-        <div class="d-none d-sm-flex home-faq-info">
-          <div>
-            <img height="22" width="27" src="img/mail.png" />
-          </div>
-          <p>admin@comfortmovers.co.nz</p>
-        </div>
-      </div>
-      <div class="col-md-7 col-12">
-        <button class="faq-collapsible">What services do you offer? <img src="img/chevron-down.png" /></button>
-        <div class="faq-content">
+  <!-- Old Content Start -->
+  <div class="items-container mx-auto p-container served-box justify-content-between align-items-center wow fadeIn"
+    data-wow-delay="0.1s">
+    <div class="old-data-container">
+      <p>
+        Are you looking for a smooth office relocation? Relocation to a new commercial place is the biggest
+        hassle, but when you are with us, we make it a little easier for you! <a href="index.html"><b>Comfort Movers</b></a> recognizes the
+        time-sensitive aspect of corporate relocations and attempts to create a move plan with as little
+        disruption to your operations as possible during your office transfer. Our expert office movers in
+        Auckland, from the company owners to the managers and, relocators and drivers, have all undergone
+        training in the latest efficient and safe techniques of handling your goods - and this education is
+        constantly examined and enhanced.
+      </p>
+      <p>
+        Whether you're relocating to a workplace, warehouse, or factory, our professional movers have the
+        skills and know-how to ensure your relocation is meticulously planned and executed to the highest
+        standards.
+      </p>
+      <p>
+        Our staff of seasoned specialists who specialize in office moving is one of their most notable
+        skills. They are well-versed in the complexities of disassembling, packing, transferring, and
+        setting up corporate devices and furniture. Our team of Movers handles every item with care and
+        accuracy, from printers and computers to meeting room furniture and ergonomic seats.
+      </p>
+      <p>
+        When you hire our office movers Auckland team during your workplace move, you are committing to
+        punctuality as well as efficiency. We promise to minimize downtime and interruptions to your company
+        operations. Our staff collaborates with you to develop a customized moving plan that takes your
+        timetable and personal needs into consideration, guaranteeing a smooth transfer from one place to
+        another.
+      </p>
+      <h5 class="cover-sub-text">
+        <a href="index.html"><b>Comfort Movers</b></a> offer expert office movers in Auckland
+      </h5>
+      <p>
+        It is critical to make sure our experienced office movers understand your
+        requirements. This ensures that they can plan and employ the proper
+        packaging supplies for your office furnishings and corporate objects. Our
+        professional Office Movers Manager has over 15 years of expertise in the
+        furniture shifting industry. Our office removalists will save clients time
+        and guarantee that the task is done correctly.
+      </p>
+      <p>
+        Another benefit of using our Mover for your workplace relocation is their
+        attention to the organization. We supply packaging supplies, labeling, and
+        rigorous inventory control to guarantee that all items arrive at their
+        destination. This methodical technique speeds up the unloading process and
+        keeps your new working area organized.
+      </p>
+      <p>
+        By selecting us as the Auckland office movers, you are selecting a partner
+        who appreciates straightforward communication and great service. Throughout
+        the relocation process, our pleasant and experienced team is accessible to
+        answer any inquiries or problems you may have. Our business stands out as a
+        dependable and customer-focused option because of this degree of
+        personalized care.
+      </p>
+      <h5 class="cover-sub-text">
+        Office moving service- Zero Stress, Zero Hassle Office Relocation
+      </h5>
+      <p>
+        We take pleasure in always providing a suitable office moving service for
+        our consumers. Reach out to <a href="index.html"><b>Comfort Movers</b></a> Auckland if you need something
+        relocated. Our customer service professionals will answer any queries you
+        have about our professional moving as well as transportation truck and van
+        services.
+      </p>
+      <ul>
+        <li><a href="index.html"><b>Comfort Movers</b></a> will protect all of your office
+          equipment.</li>
+        <li>All of your company's products will be
+          transported safely.</li>
+        <li>Allow <a href="index.html"><b>Comfort Movers</b></a> to handle all of the
+          packing along with moving.
+        </li>
+        <li>Request that you personally supervise the
+          packaging.</li>
+      </ul>
+      <h4 class="cover-sub-text">Reasons to Choose <a href="index.html"><b>Comfort Mover</b></a> for Office Moving in Auckland</h4>
+      <p>You've discovered the ideal location, and it's time to get started with office movers in New Zealand.
+        Comfort movers will make the process far less difficult and more seamless. We are imperative for
+        your business, as we offer you:
+      </p>
+      <ul>
+        <li>
+          <b>Professional & Experienced Team</b>
           <p>
-            We offer a range of services including local and long-distance moving, packing and unpacking, storage solutions,
-            and special item handling.
+            We take all pride in having professionals, as we are the finest at what we do. We
+            have the appropriate credentials and training to pack and transport your equipment.
+            Our office movers in Auckland know how to move anything with care and make it appear
+            simple. They employ specialized equipment such as lifting straps, dollies, ramps,
+            and other items. This ensures that they have every one of the required tools to do
+            the job securely.
           </p>
-        </div>
-        <button class="faq-collapsible">
-          How do you ensure the safety of my belongings during the move?
-          <img src="img/chevron-down.png" />
-        </button>
-        <div class="faq-content">
+        </li>
+        <li>
+          <b>Wallet-Friendly</b>
           <p>
-            We offer a range of services including local and long-distance moving, packing and unpacking, storage solutions,
-            and special item handling.
+            One of the major benefits of choosing <a href="index.html"><b>Comfort Movers</b></a> is that you will save money on
+            your relocation. We, as the name implies, are cost-effective without losing service
+            quality. On the other hand, if you dig a little more into the moving process, you
+            will discover that engaging professional movers is more cost-effective than
+            relocating yourself. But we come in your budget. It is difficult to accomplish
+            everything on your own, and even if you have a large group of friends to assist you,
+            relocating on your own may be quite stressful. We take the stress and offer you
+            comfort.
           </p>
-        </div>
-        <button class="faq-collapsible">
-          Can you provide an estimate for my move?
-          <img src="img/chevron-down.png" />
-        </button>
-        <div class="faq-content">
+        </li>
+        <li>
+          <b>Customer Support</b>
           <p>
-            We offer a range of services including local and long-distance moving, packing and unpacking, storage solutions,
-            and special item handling.
+            Our office movers in Auckland and delivery personnel have extensive expertise. There
+            is no work that we cannot assist you with. We have a huge delivery van and moving
+            vehicle fleet. All are well prepared to transport and secure your belongings. Our
+            helpful customer service representatives can guide you on what you require. Each
+            month of the year, our firm completes more than 500 relocation and delivery
+            operations. You can reach our Head Office from 7 a.m. to 7 p.m. on weekdays and
+            weekends.
           </p>
-        </div>
-        <button class="faq-collapsible">Are you insured and licensed? <img src="img/chevron-down.png" /></button>
-        <div class="faq-content">
+        </li>
+        <li>
+          <b>Instant quotes</b>
           <p>
-            We offer a range of services including local and long-distance moving, packing and unpacking, storage solutions,
-            and special item handling.
+            You can compare the prices and yet you will find us surprising. We offer you an
+            instant Office moving service quote based on your items and movement that helps you
+            compare and choose the best.
           </p>
-        </div>
-        <button class="faq-collapsible">
-          What should I do to prepare for the move?
-          <img src="img/chevron-down.png" />
-        </button>
-        <div class="faq-content">
+        </li>
+        <li>
+          <b>No-stress moving experience</b>
           <p>
-            We offer a range of services including local and long-distance moving, packing and unpacking, storage solutions,
-            and special item handling.
+            One of the main reasons to hire our experienced movers is for larger objects. When
+            you, as well as your staff, attempt to move these goods, you risk causing damage or
+            harm.
           </p>
-        </div>
-        <button class="faq-collapsible">
-          Do you offer packing supplies and services?
-          <img src="img/chevron-down.png" />
-        </button>
-        <div class="faq-content">
+        </li>
+      </ul>
+      <p>Heavy goods, such as machinery or computers, might be risky to handle. Our professional office movers
+        in New Zealand understand how to accomplish this without causing oneself harm. We do not only manage
+        them effectively, but we also transport everything. Don't worry about the big issues; leave them to
+        us.
+      </p>
+      <h4 class="cover-sub-text">Items That We Move as Office Movers in Auckland</h4>
+      <ul>
+        <li>
+          <b>Furniture</b>
           <p>
-            We offer a range of services including local and long-distance moving, packing and unpacking, storage solutions,
-            and special item handling.
+            When you hire our office movers Auckland team, they pack all your furniture in a
+            sealed box and wrap them to relocate to your new place. The furniture includes a
+            table, chairs, cupboards, etc.
           </p>
-        </div>
-        <h6 class="d-sm-none home-faq-text mt-5">Still have more questions? ping us at</h6>
-        <div class="d-sm-none home-faq-info mt-3">
-          <div>
-            <img height="21" width="21" src="img/phone.png" />
-          </div>
-          <p>022-340-7710</p>
-        </div>
-        <div class="d-sm-none home-faq-info">
-          <div>
-            <img height="22" width="27" src="img/mail.png" />
-          </div>
-          <p>admin@comfortmovers.co.nz</p>
-        </div>
-      </div>
-    </div>
-    <script>
-      var coll = document.getElementsByClassName('faq-collapsible');
-      let i;
-
-      for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener('click', function () {
-          this.classList.toggle('faq-active');
-          var content = this.nextElementSibling;
-          if (content.style.maxHeight) {
-            this.firstElementChild.src = 'img/chevron-down.png';
-            content.style.maxHeight = null;
-            content.style.borderWidth = 0;
-            content.style.borderTopWidth = 0;
-            content.style.borderLeftWidth = 0;
-          } else {
-            this.firstElementChild.src = 'img/chevron-up.png';
-            content.style.maxHeight = content.scrollHeight + 'px';
-            content.style.borderWidth = '1px';
-            content.style.borderTopWidth = 0;
-            content.style.borderLeftWidth = '10px';
-          }
-        });
-      }
-    </script>
-    <!-- FAQ End -->
-
-    <!-- Floating Bar Start -->
-    <div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
-      <marquee scrollamount="15" style="width: fit-content">
-        <div class="px-5 home-floating-item">
-          <h1>Comprehnsive Services</h1>
-          <img src="img/Logo.png" />
-          <h1>Competitive Prices</h1>
-          <img src="img/Logo.png" />
-          <h1>Comprehnsive Services</h1>
-          <img src="img/Logo.png" />
-          <h1>Competitive Prices</h1>
-          <img src="img/Logo.png" />
-        </div>
-      </marquee>
-    </div>
-    <!-- Floating Bar End -->
-
-    <!-- Other Service We provide Start -->
-    <div class="items-container mx-auto p-container text-center wow fadeIn" data-wow-delay="0.1s">
-      <h1 class="our-services-heading">Other Services <span class="color-primary">we provide</span></h1>
-      <div class="row mt-4">
-        <div class="col-md-4 col-12 home-blog-item">
-          <div class="home-blog-box p-3" style="background-color: #f5f5f5">
-            <div class="home-bolg-img">
-              <img src="img/Rectangle 230.png" />
-            </div>
-            <div class="d-flex align-items-center gap-3 mt-2">
-              <p class="m-0 cover-sub-text">Express Service</p>
-              <img style="height: 14px" src="img/chevron-right.png" alt="Read more" />
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-12 home-blog-item">
-          <div class="home-blog-box p-3" style="background-color: #f5f5f5">
-            <div class="home-bolg-img">
-              <img src="img/Rectangle 231.png" />
-            </div>
-            <div class="d-flex align-items-center gap-3 mt-2">
-              <p class="m-0 cover-sub-text">House Hold Service</p>
-              <img style="height: 14px" src="img/chevron-right.png" alt="Read more" />
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-12 home-blog-item">
-          <div class="home-blog-box p-3" style="background-color: #f5f5f5">
-            <div class="home-bolg-img">
-              <img src="img/Rectangle 232.png" />
-            </div>
-            <div class="d-flex align-items-center gap-3 mt-2">
-              <p class="m-0 cover-sub-text">Office</p>
-              <img style="height: 14px" src="img/chevron-right.png" alt="Read more" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- ther Service We provide End -->
-
-    <!-- Blogs Start -->
-    <div class="items-container mx-auto p-container text-center wow fadeIn" data-wow-delay="0.1s">
-      <h1 class="our-services-heading">Our <span class="color-primary">Blogs</span></h1>
-      <h4 class="our-services-text">
-        Gain insights into how we provide top-tier service at competitive prices, ensuring affordability without compromising
-        on quality or customer satisfaction.
+        </li>
+        <li>
+          <b>Electronic appliances</b>
+          <p>
+            We will help you to relocate your electrical appliances like computers, laptops,
+            CPUs, printers and others. All the electronic items we pick will be reached to your
+            new location safely without any damage. We guarantee to offer zero-hassle
+            relocations at affordable costs.
+          </p>
+        </li>
+        <li>
+          <b>Sensitive documents</b>
+          <p>
+            Our team keeps your sensitive documents safe when carrying out the office relocation
+            procedure. With us, all your documents will be safe and secured. We have been
+            handling this business over the years, so you can completely rely on us. We don’t
+            hamper your business credibility.
+          </p>
+        </li>
+        <li>
+          <b>Office decorative items</b>
+          <p>
+            We also relocate all the decorative items present in your office. We safely pack all
+            the sensitive items so that they can reach the new place without any breakage.
+          </p>
+        </li>
+        <li>
+          <b>IT migrations</b>
+          <p>
+            We can also relocate the IT and telecoms tools, including all the business complex
+            data centers, server rooms, etc
+          </p>
+        </li>
+        <li>
+          <b>Post-move support</b>
+          <p>
+            We also provide post-move support to our customers. You can address any problems
+            which don’t arise immediately. These services can be unpacking, minor changes,
+            inventory or furniture movement, etc. Our team will be there to help you in just one
+            call.
+          </p>
+        </li>
+      </ul>
+      <h4 class="cover-sub-text">Our Office Moving Process</h4>
+      <ul>
+        <li>
+          <b>We create a layout</b>
+          <p>
+            We determine where the workstations and furnishings will go, as well as where
+            workers will sit and the common spaces. If feasible, we will sketch down the
+            location of the Ethernet connections as well as power outlets so you know where to
+            place the tech equipment.
+          </p>
+        </li>
+        <li>
+          <b>We make arrangements for off-site storage</b>
+          <p>
+            If you don't have space for items like old files, Christmas decorations, and office
+            furniture that you don't need now but may require in the future, we rent a
+            commercial storage facility near your new location.
+          </p>
+        </li>
+        <li>
+          <b>We create a company-wide labeling system</b>
+          <p>
+            We use the labeling system. We use labels like numbers, colors, and shapes so that
+            it's consistent around the office and everyone uses them.
+          </p>
+        </li>
+        <li>
+          <b>Begin packing</b>
+          <p>
+            Non-essentials that will not be needed in the few days leading up to the transfer
+            will get packed by us now. We get it done and out of its place immediately so you
+            can focus on more vital duties like packing.
+          </p>
+        </li>
+        <li>
+          <b>Set up address change orders</b>
+          <p>
+            We begin updating papers with the latest location sooner, so you get fresh
+            business-related cards, the letterhead, envelopes to use, return labels, and so on
+            as soon as you know the new location. It's far preferable to have all your recently
+            updated documentation on hand ahead of your move rather than risk being without them
+            for days or weeks in your new location.
+          </p>
+        </li>
+        <li>
+          <b>Examine the new office</b>
+          <p>
+            Is it in need of cleaning? We start examining the new location first. If it needs
+            cleaning, we start cleaning and sanitizing it first. So, it would be non-hazardous
+            for your employees.
+          </p>
+        </li>
+        <li>
+          <b>Understand the rules of construction</b>
+          <p>
+            Unless your company owns the tower from which you are relocating, you must get a
+            thorough list of every building's regulations regulating relocation. It's possible
+            that you can only relocate during non-business hours or that you must make a
+            particular request to utilize the service lift. We get these regulations from the
+            management of the building as soon as possible because they will govern all aspects
+            of moving day.
+          </p>
+        </li>
+        <li>
+          <b>First, try to relocate some unnecessary items on your
+            own</b>
+          <p>
+            We simplify the day of moving by hauling as little as possible, assuming there is a
+            time overlap with the new lease. We move goods like plants and big office equipment
+            on your behalf, making the entire process easier, particularly if you can have them
+            installed in their new places before you formally move in.
+          </p>
+        </li>
+        <li>
+          <b>Conduct a last walk-through of your office space</b>
+          <p>
+            This is to determine whether any objects were left unattended and to record any
+            property damage. Unless you've made other arrangements with the owner of the
+            property or management, this is also the moment to give up all keys as well as
+            parking cards. It's an excellent plan to confirm the lease termination at the same
+            time. We conduct a last walk also to make sure all office furnishings are safely in
+            the fleet.
+          </p>
+        </li>
+        <li>
+          <b>Unpack and put your equipment through its paces</b>
+          <p>
+            We unpack the basics and put your phone, computers, servers, printing devices, and
+            other gadgets through their paces. We also troubleshoot as required to avoid losing
+            time while completing business.
+          </p>
+        </li>
+      </ul>
+      <h4 class="cover-sub-text">Contact our office movers and Get Instant Quotes For Office Moving</h4>
+      <p>
+        When it comes to corporate project work, we collaborate closely with our clients to complete
+        one-time projects. These occupations stand out due to their one-of-a-kind characteristics, such as
+        size, timeliness, or the nature of the labor.
+      </p>
+      <p>
+        Whatever your industry, there is a strong possibility we are already performing identical work for
+        another customer. Call us immediately to find out more about how you might benefit from our
+        services. Seven days a week, our Corporate Account Managers are ready to respond to your call
+        and set up a meeting with you.
+      </p>
+      <p>
+        From start to end, our office movers in New Zealand provide one-stop-shop services for all of your
+        business's moving and corporate relocation needs, including:
+      </p>
+      <ul>
+        <li>
+          A move supervisor will visit your office and offer you a detailed cost
+          and relocation strategy.
+        </li>
+        <li>
+          You'll need packing materials such as boxes, adhesive, and bubble wrap
+          if you intend to do it yourself.
+        </li>
+        <li>
+          If you want, we can participate in a pack team to work alongside your
+          personnel.
+        </li>
+        <li>
+          Among other things, we may disassemble desks, shelves, and tables.
+        </li>
+        <li>
+          Reassemble at the new place.
+        </li>
+        <li>
+          Get away from any outdated workplace furniture or equipment.
+        </li>
+      </ul>
+      <p>
+        With expert Office moving service assistance, our skilled movers will ensure that your office
+        transfer goes well. If you are shifting offices or transferring your business, please contact us
+        soon. We can assign one of our experienced Relocating Managers to the place where you work to
+        provide you with a moving quotation.
+      </p>
+      <h4 class="cover-sub-text">
+        Services that make us apart
       </h4>
-      <div class="row mt-4">
-        <div class="col-md-4 col-12 home-blog-item">
-          <div class="home-blog-box">
-            <div class="home-bolg-img">
-              <img src="img/blog-1.png" />
-            </div>
-            <button href="" class="home-bolg-button">Extreme attention</button>
-            <h3 class="home-bolg-heading">Our Home Entertainment has Evolved Significantly</h3>
-            <div class="home-bolg-text">
-              <p>June 01, 2024</p>
-              <p>.</p>
-              <p>5 min read</p>
-            </div>
-          </div>
+      <ul>
+        <li>
+          Customer Service that is beyond 5 Stars
+        </li>
+        <li>
+          We work 7 days a week
+        </li>
+        <li>
+          Trucks ranging in size from 20 to 58 cubic yards
+        </li>
+        <li>
+          Vehicles of the modern era
+        </li>
+        <li>
+          Picking up many points
+        </li>
+        <li>
+          Vehicle monitoring with GPS
+        </li>
+        <li>
+          Communication via an Online Booking Portal
+        </li>
+      </ul>
+      <p>
+        To grab all these benefits under one roof, let’s make a call to us today. You can also mail us & get
+        instant quotes.
+      </p>
+    </div>
+  </div>
+  <!-- Old Content End -->
+
+  <!-- FAQ Start -->
+  <div class="items-container mx-auto p-container text-center wow fadeIn row" data-wow-delay="0.1s">
+    <div class="col-md-5 col-12">
+      <h2 class="home-faq-heading mt-2">Frequently Asked <span class="color-primary">Questions</span></h2>
+      <p class="home-faq-sub-heading mt-2">Got questions about moving with <a href="index.html"><b>Comfort Movers</b></a>? We've got answers!</p>
+      <h6 class="d-none home-faq-text mt-5">Still have more questions? ping us at</h6>
+      <div class="d-none d-sm-flex home-faq-info mt-3">
+        <div>
+          <img height="21" width="21" src="img/phone.png" />
         </div>
-        <div class="col-md-4 col-12 home-blog-item">
-          <div class="home-blog-box">
-            <div class="home-bolg-img">
-              <img src="img/blog-2.png" />
-            </div>
-            <button href="" class="home-bolg-button">Extreme attention</button>
-            <h3 class="home-bolg-heading">Our Home Entertainment has Evolved Significantly</h3>
-            <div class="home-bolg-text">
-              <p>June 01, 2024</p>
-              <p>.</p>
-              <p>5 min read</p>
-            </div>
-          </div>
+        <p>022-340-7710</p>
+      </div>
+      <div class="d-none d-sm-flex home-faq-info">
+        <div>
+          <img height="22" width="27" src="img/mail.png" />
         </div>
-        <div class="col-md-4 col-12 home-blog-item">
-          <div class="home-blog-read-box">
-            <h3 class="home-bolg-read-heading">Exicited to know about the feelings and struggles while moving</h3>
-            <button href="" class="home-bolg-read-button">Read Our Blogs</button>
-          </div>
-        </div>
+        <p>admin@comfortmovers.co.nz</p>
       </div>
     </div>
-    <!-- Blogs End -->
-
-    <!-- Here For You Start -->
-    <div
-      class="items-container mx-auto p-container served-box justify-content-between align-items-center wow fadeIn"
-      data-wow-delay="0.1s"
-    >
-      <div class="served-box-item-img about-page about-page-why-us mb-3 d-sm-none">
-        <div class="about-image">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51136.826555676744!2d174.68457264285493!3d-36.769328141032155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d3b308c9efa99%3A0x99875cc501aa448b!2sComfort%20Movers!5e0!3m2!1sen!2sin!4v1725648389403!5m2!1sen!2sin"
-            width="100%"
-            height="380"
-            style="border: 0"
-            loading="lazy"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </div>
-      <div class="served-box-item-text about-page">
-        <h1 class="top-choice-heading d-text-left">We are <span class="color-primary">Here For You</span></h1>
-        <p class="cover-sub-text d-text-left">
-          Affordable air freight solutions that balance cost and quality for every shipment cost for shipment.
+    <div class="col-md-7 col-12">
+      <button class="faq-collapsible">When is the best time to relocate your office? <img
+          src="img/chevron-down.png" /></button>
+      <div class="faq-content">
+        <p>
+          Weekends are the busiest for Office Removals Companies, with packing and loading on Friday and
+          unloading and putting up over the weekend, ready for business as normal on Monday morning. This
+          is
+          the best time to schedule your Office Removal Company since it minimizes inconvenience to the
+          company during working hours.
         </p>
-        <div class="about-here-contact">
-          <div>
-            <img height="21" width="21" src="img/phone.png" />
-          </div>
-          <h6>022 340 7710</h6>
+      </div>
+      <button class="faq-collapsible">
+        Where can I receive Office Removals Estimates?
+        <img src="img/chevron-down.png" />
+      </button>
+      <div class="faq-content">
+        <p>
+          You must select Office Relocation Companies that are reliable, competent, and have an
+          established
+          history in office relocations. Before deciding on a business, make sure you have at least three
+          workplace removal quotations.
+        </p>
+      </div>
+      <button class="faq-collapsible">
+        What details will the Office Relocation Company require?
+        <img src="img/chevron-down.png" />
+      </button>
+      <div class="faq-content">
+        <p>
+          An appropriate Office Movers Quote can only be provided if the business removals company visits
+          your
+          existing and future offices to determine what goods need to be relocated as well as to obtain a
+          clear idea of access, loading, and unloading. Meeting with an office movers company will also
+          allow
+          you to choose whether or not you want to deal with them. We will also want a full description of
+          your relocating office timeline as well as the new workspace Plan.
+        </p>
+      </div>
+      <button class="faq-collapsible">What information should the Office Relocation Quote contain? <img
+          src="img/chevron-down.png" /></button>
+      <div class="faq-content">
+        <p>
+          All packing, unpacking, and transport to the new workplace should be included. It should also
+          include
+          insurance and liability coverage, as well as a complete inventory of any office objects to be
+          relocated.
+        </p>
+      </div>
+      <button class="faq-collapsible">
+        Do you relocate businesses on weekends?
+        <img src="img/chevron-down.png" />
+      </button>
+      <div class="faq-content">
+        <p>
+          Yes, the majority of our company relocations take place after hours, either in the evenings or
+          on
+          weekends. The overall cost will be reduced, and its effect on your company will be small.
+        </p>
+      </div>
+      <button class="faq-collapsible">
+        Is it more costly to relocate after business hours?
+        <img src="img/chevron-down.png" />
+      </button>
+      <div class="faq-content">
+        <p>
+          No, it's really less expensive. We may charge more per hour, but the cost is kept low by not
+          having
+          to compete for load space and lifts.
+        </p>
+      </div>
+      <button class="faq-collapsible">
+        Do you relocate PCs?
+        <img src="img/chevron-down.png" />
+      </button>
+      <div class="faq-content">
+        <p>
+          Yes, we not only transfer them, but we also assist around 60% of our customers in detaching and
+          reconnecting PCs, allowing our clients' IT personnel to focus on the entire system.
+        </p>
+      </div>
+      <button class="faq-collapsible">
+        Could you relocate the data center or the server room?
+        <img src="img/chevron-down.png" />
+      </button>
+      <div class="faq-content">
+        <p>
+          Yes, we do wish to shift this time-sensitive equipment to save downtime. We frequently deploy a
+          special team and a "hot truck" to carry this fragile equipment efficiently and securely.
+        </p>
+      </div>
+      <button class="faq-collapsible">
+        Can you assist us in relocating the current furnishings?
+        <img src="img/chevron-down.png" />
+      </button>
+      <div class="faq-content">
+        <p>
+          Yes! We can disassemble and reassemble practically any brand of system furniture. Our Move Team
+          will
+          include an install supervisor.
+        </p>
+      </div>
+      <button class="faq-collapsible">
+        Can you securely manage a lot of flat-screen monitors that we recently purchased?
+        <img src="img/chevron-down.png" />
+      </button>
+      <div class="faq-content">
+        <p>
+          Yes, we have devised a method of using wrap bubbles to bubble the monitors before placing them
+          in an
+          IT
+          bin with separators to keep the flat displays stationary during shipment.
+        </p>
+      </div>
+      <h6 class="d-sm-none home-faq-text mt-5">Still have more questions? ping us at</h6>
+      <div class="d-sm-none home-faq-info mt-3">
+        <div>
+          <img height="21" width="21" src="img/phone.png" />
         </div>
-        <div class="about-here-contact">
-          <div>
-            <img height="22" width="27" src="img/mail.png" />
-          </div>
-          <h6>admin@comfortmovers.co.nz</h6>
+        <p>022-340-7710</p>
+      </div>
+      <div class="d-sm-none home-faq-info">
+        <div>
+          <img height="22" width="27" src="img/mail.png" />
         </div>
-        <div class="about-here-contact">
-          <div>
-            <img height="26" width="19" src="img/location.png" />
+        <p>admin@comfortmovers.co.nz</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    var coll = document.getElementsByClassName('faq-collapsible');
+    let i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener('click', function () {
+        this.classList.toggle('faq-active');
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+          this.firstElementChild.src = 'img/chevron-down.png';
+          content.style.maxHeight = null;
+          content.style.borderWidth = 0;
+          content.style.borderTopWidth = 0;
+          content.style.borderLeftWidth = 0;
+        } else {
+          this.firstElementChild.src = 'img/chevron-up.png';
+          content.style.maxHeight = content.scrollHeight + 'px';
+          content.style.borderWidth = '1px';
+          content.style.borderTopWidth = 0;
+          content.style.borderLeftWidth = '10px';
+        }
+      });
+    }
+  </script>
+  <!-- FAQ End -->
+
+  <!-- Floating Bar Start -->
+  <div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
+    <marquee scrollamount="15" style="width: fit-content">
+      <div class="px-5 home-floating-item">
+        <h1>Comprehnsive Services</h1>
+        <img src="img/Logo.png" />
+        <h1>Competitive Prices</h1>
+        <img src="img/Logo.png" />
+        <h1>Comprehnsive Services</h1>
+        <img src="img/Logo.png" />
+        <h1>Competitive Prices</h1>
+        <img src="img/Logo.png" />
+      </div>
+    </marquee>
+  </div>
+  <!-- Floating Bar End -->
+
+  <!-- Other Service We provide Start -->
+  <div class="items-container mx-auto p-container text-center wow fadeIn" data-wow-delay="0.1s">
+    <h1 class="our-services-heading">Other Services <span class="color-primary">we provide</span></h1>
+    <div class="row mt-4">
+      <div class="col-md-4 col-12 home-blog-item">
+        <div class="home-blog-box p-3" style="background-color: #f5f5f5">
+          <div class="home-bolg-img">
+            <img src="img/Rectangle 230.png" />
           </div>
-          <h6>Albany, Auckland, New Zealand 0632</h6>
-        </div>
-        <p class="cover-sub-text d-text-left mt-4">Follow us on</p>
-        <div class="about-follow-us">
-          <img style="height: 37px" src="img/logos_facebook.png" />
-          <img style="height: 37px" src="img/skill-icons_instagram.png" />
-          <img style="height: 37px" src="img/skill-icons_linkedin.png" />
+          <div class="d-flex align-items-center gap-3 mt-2">
+            <p class="m-0 cover-sub-text">Express Service</p>
+            <img style="height: 14px" src="img/chevron-right.png" alt="Read more" />
+          </div>
         </div>
       </div>
-      <div class="served-box-item-img about-page about-page-why-us d-none d-sm-flex justify-content-end">
-        <div class="about-image">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51136.826555676744!2d174.68457264285493!3d-36.769328141032155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d3b308c9efa99%3A0x99875cc501aa448b!2sComfort%20Movers!5e0!3m2!1sen!2sin!4v1725648389403!5m2!1sen!2sin"
-            width="100%"
-            height="380"
-            style="border: 0"
-            loading="lazy"
-            allowfullscreen
-          ></iframe>
+      <div class="col-md-4 col-12 home-blog-item">
+        <div class="home-blog-box p-3" style="background-color: #f5f5f5">
+          <div class="home-bolg-img">
+            <img src="img/Rectangle 231.png" />
+          </div>
+          <div class="d-flex align-items-center gap-3 mt-2">
+            <p class="m-0 cover-sub-text">House Hold Service</p>
+            <img style="height: 14px" src="img/chevron-right.png" alt="Read more" />
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-12 home-blog-item">
+        <div class="home-blog-box p-3" style="background-color: #f5f5f5">
+          <div class="home-bolg-img">
+            <img src="img/Rectangle 232.png" />
+          </div>
+          <div class="d-flex align-items-center gap-3 mt-2">
+            <p class="m-0 cover-sub-text">Office</p>
+            <img style="height: 14px" src="img/chevron-right.png" alt="Read more" />
+          </div>
         </div>
       </div>
     </div>
-    <!-- Here For You End -->
+  </div>
+  <!-- Other Service We provide End -->
 
-    <!-- want to hear from you Start -->
-    <div
-      class="items-container mx-auto p-container served-box justify-content-between align-items-center wow fadeIn"
-      data-wow-delay="0.1s"
-    >
-      <div class="about-form">
-        <h1 class="about-form-heading text-center">We Want To <span class="color-primary">Hear From You</span></h1>
+  <!-- Blogs Start -->
+  <div class="items-container mx-auto p-container text-center wow fadeIn" data-wow-delay="0.1s">
+    <h1 class="our-services-heading">Our <span class="color-primary">Blogs</span></h1>
+    <h4 class="our-services-text">
+      Gain insights into how we provide top-tier service at competitive prices, ensuring affordability without
+      compromising
+      on quality or customer satisfaction.
+    </h4>
+    <div class="row mt-4">
+      <div class="col-md-4 col-12 home-blog-item">
+        <div class="home-blog-box">
+          <div class="home-bolg-img">
+            <img src="img/blog-1.png" />
+          </div>
+          <button class="home-bolg-button">Extreme attention</button>
+          <h3 class="home-bolg-heading">Our Home Entertainment has Evolved Significantly</h3>
+          <div class="home-bolg-text">
+            <p>June 01, 2024</p>
+            <p>.</p>
+            <p>5 min read</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-12 home-blog-item">
+        <div class="home-blog-box">
+          <div class="home-bolg-img">
+            <img src="img/blog-2.png" />
+          </div>
+          <button class="home-bolg-button">Extreme attention</button>
+          <h3 class="home-bolg-heading">Our Home Entertainment has Evolved Significantly</h3>
+          <div class="home-bolg-text">
+            <p>June 01, 2024</p>
+            <p>.</p>
+            <p>5 min read</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-12 home-blog-item">
+        <div class="home-blog-read-box">
+          <h3 class="home-bolg-read-heading">Exicited to know about the feelings and struggles while moving</h3>
+          <button class="home-bolg-read-button">Read Our Blogs</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Blogs End -->
+
+  <!-- Here For You Start -->
+  <div class="items-container mx-auto p-container served-box justify-content-between align-items-center wow fadeIn"
+    data-wow-delay="0.1s">
+    <div class="served-box-item-img about-page about-page-why-us mb-3 d-sm-none">
+      <div class="about-image">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51136.826555676744!2d174.68457264285493!3d-36.769328141032155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d3b308c9efa99%3A0x99875cc501aa448b!2sComfort%20Movers!5e0!3m2!1sen!2sin!4v1725648389403!5m2!1sen!2sin"
+          width="100%" height="380" style="border: 0" loading="lazy" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="served-box-item-text about-page">
+      <h1 class="top-choice-heading d-text-left">We are <span class="color-primary">Here For You</span></h1>
+      <p class="cover-sub-text d-text-left">
+        Affordable air freight solutions that balance cost and quality for every shipment cost for shipment.
+      </p>
+      <div class="about-here-contact">
+        <div>
+          <img height="21" width="21" src="img/phone.png" />
+        </div>
+        <h6>022 340 7710</h6>
+      </div>
+      <div class="about-here-contact">
+        <div>
+          <img height="22" width="27" src="img/mail.png" />
+        </div>
+        <h6>admin@comfortmovers.co.nz</h6>
+      </div>
+      <div class="about-here-contact">
+        <div>
+          <img height="26" width="19" src="img/location.png" />
+        </div>
+        <h6>Albany, Auckland, New Zealand 0632</h6>
+      </div>
+      <p class="cover-sub-text d-text-left mt-4">Follow us on</p>
+      <div class="about-follow-us">
+        <img style="height: 37px" src="img/logos_facebook.png" />
+        <img style="height: 37px" src="img/skill-icons_instagram.png" />
+        <img style="height: 37px" src="img/skill-icons_linkedin.png" />
+      </div>
+    </div>
+    <div class="served-box-item-img about-page about-page-why-us d-none d-sm-flex justify-content-end">
+      <div class="about-image">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51136.826555676744!2d174.68457264285493!3d-36.769328141032155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d3b308c9efa99%3A0x99875cc501aa448b!2sComfort%20Movers!5e0!3m2!1sen!2sin!4v1725648389403!5m2!1sen!2sin"
+          width="100%" height="380" style="border: 0" loading="lazy" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+  <!-- Here For You End -->
+
+  <!-- want to hear from you Start -->
+  <div class="items-container mx-auto p-container served-box justify-content-between align-items-center wow fadeIn"
+    data-wow-delay="0.1s">
+    <div class="about-form">
+      <h1 class="about-form-heading text-center">We Want To <span class="color-primary">Hear From You</span></h1>
+      <div class="row">
+        <div class="col-md-4 col-12 mt-4">
+          <input class="form-input" type="text" placeholder="Full Name*" />
+        </div>
+        <div class="col-md-4 col-12 mt-4">
+          <input class="form-input" type="email" placeholder="Email ID*" />
+        </div>
+        <div class="col-md-4 col-12 mt-4">
+          <input class="form-input" type="tel" placeholder="Phone Number*" />
+        </div>
+        <div class="col-md-6 col-12 mt-4">
+          <input class="form-input" type="tel" placeholder="Pickup Address*" />
+        </div>
+        <div class="col-md-6 col-12 mt-4">
+          <input class="form-input" type="tel" placeholder="Delivery Address*" />
+        </div>
+        <div class="col-12 mt-4">
+          <input class="form-textarea" type="tel" placeholder="Message about work*" />
+        </div>
+      </div>
+      <h6 class="fotter-link mt-4">Service*</h6>
+      <div class="mt-2 form-checkboxes">
+        <div class="form-checkbox">
+          <input type="checkbox" />
+          <p>Packing</p>
+        </div>
+        <div class="form-checkbox">
+          <input type="checkbox" />
+          <p>Household</p>
+        </div>
+        <div class="form-checkbox">
+          <input type="checkbox" />
+          <p>Express</p>
+        </div>
+        <div class="form-checkbox">
+          <input type="checkbox" />
+          <p>Intercity</p>
+        </div>
+        <div class="form-checkbox">
+          <input type="checkbox" />
+          <p>Storage</p>
+        </div>
+        <div class="form-checkbox">
+          <input type="checkbox" />
+          <p>Warehouse</p>
+        </div>
+        <div class="form-checkbox">
+          <input type="checkbox" />
+          <p>Office</p>
+        </div>
+        <div class="form-checkbox">
+          <input type="checkbox" />
+          <p>Commercial</p>
+        </div>
+      </div>
+      <button class="home-bolg-read-button mt-4 p-3">Send Message</button>
+    </div>
+  </div>
+  <!-- want to hear from you End -->
+
+  <!-- Footer Start -->
+  <div class="items-container p-container footer wow fadeIn mx-auto" data-wow-delay="0.1s">
+    <div class="py-5">
+      <div class="row">
+        <div class="row col-lg-5 col-md-6">
+          <div class="col-12">
+            <img class="fotter-logo" src="img/Logo.png" />
+          </div>
+          <div class="col-12 my-5">
+            <a href="" class="fotter-phone"><i class="fa fa-phone-alt"></i>&nbsp;&nbsp;&nbsp;022-340-7710</a>
+          </div>
+          <div class="col-12 bottom-info">
+            <div>
+              <img height="22" width="27" src="img/mail.png" />
+            </div>
+            <p>admin@comfortmovers.co.nz</p>
+          </div>
+          <div class="col-12 bottom-info">
+            <div>
+              <img height="26" width="19" src="img/location.png" />
+            </div>
+            <p>1601 N Gower St Ste 205 Albany, Auckland, New Zealand 0632</p>
+          </div>
+          <div class="col-12 bottom-info">
+            <div>
+              <img height="29" width="29" src="img/user-time.png" />
+            </div>
+            <p>Mon-Fri : 6am - 6pm <br />Sat-Sun : 8am - 4pm</p>
+          </div>
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="row col-lg-6 col-md-6">
+          <div class="col-lg-4 col-md-4 my-3 col-6">
+            <p class="mb-4 fotter-heading">Company</p>
+            <a class="btn fotter-link" href="about-us.html">About Us</a>
+            <a class="btn fotter-link" href="contact.html">Contact Us</a>
+            <a class="btn fotter-link" href="reviews.html">Reviews</a>
+            <a class="btn fotter-link" href="rates.html">Rate</a>
+            <a class="btn fotter-link" href="blogs.html">Blogs</a>
+            <a class="btn fotter-link" href="">Reservation</a>
+          </div>
+          <div class="col-lg-4 col-md-4 my-3 col-6">
+            <p class="mb-4 fotter-heading">
+              <a class="fotter-heading" href="service.html">Services</a>
+            </p>
+            <a class="btn fotter-link" href="express-movers.html">Express</a>
+            <a class="btn fotter-link" href="house-movers-packers-auckland.html">House</a>
+            <a class="btn fotter-link" href="office-movers-auckland.html">Office</a>
+            <a class="btn fotter-link" href="intercity-movers.html">Intercity</a>
+            <a class="btn fotter-link" href="package-service.html">Packing</a>
+            <a class="btn fotter-link" href="storage-service.html">Storage</a>
+            <a class="btn fotter-link" href="commercial-movers.html">Commercial</a>
+          </div>
+          <div class="col-lg-4 col-md-4 my-3 col-6">
+            <p class="mb-4 fotter-heading">Resources</p>
+            <a class="btn fotter-link" href="products.html">Products</a>
+            <a class="btn fotter-link" href="career.html">Carrer</a>
+            <a class="btn fotter-link" href="faq.html">FAQ</a>
+            <a class="btn fotter-link" href="">License</a>
+            <a class="btn fotter-link" href="">Get Brochure</a>
+          </div>
+          <div class="col-12 row">
+            <div class="col-lg-4 col-md-4 my-3 col-6">
+              <p class="fotter-heading">Follow us on</p>
+              <div class="footer-links-container">
+                <img style="height: 37px" src="img/logos_facebook.png" />
+                <img style="height: 37px" src="img/skill-icons_instagram.png" />
+                <img style="height: 37px" src="img/skill-icons_linkedin.png" />
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 my-3 col-6">
+              <p class="fotter-heading">License</p>
+              <p class="fotter-link">989CSC98CSKJN</p>
+            </div>
+            <div class="col-lg-4 col-md-4 my-3 col-6">
+              <img style="height: 67px" src="img/image 47.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container fotter-end">
+      <div class="copyright">
         <div class="row">
-          <div class="col-md-4 col-12 mt-4">
-            <input class="form-input" type="text" placeholder="Full Name*" />
+          <div class="col-md-6 text-md-start mb-3 mb-md-0 fotter-end-text">
+            Copyright © 2024 Comfort Movers All rights reserved.
           </div>
-          <div class="col-md-4 col-12 mt-4">
-            <input class="form-input" type="email" placeholder="Email ID*" />
-          </div>
-          <div class="col-md-4 col-12 mt-4">
-            <input class="form-input" type="tel" placeholder="Phone Number*" />
-          </div>
-          <div class="col-md-6 col-12 mt-4">
-            <input class="form-input" type="tel" placeholder="Pickup Address*" />
-          </div>
-          <div class="col-md-6 col-12 mt-4">
-            <input class="form-input" type="tel" placeholder="Delivery Address*" />
-          </div>
-          <div class="col-12 mt-4">
-            <input class="form-textarea" type="tel" placeholder="Message about work*" />
-          </div>
-        </div>
-        <h6 class="fotter-link mt-4">Service*</h6>
-        <div class="mt-2 form-checkboxes">
-          <div class="form-checkbox">
-            <input type="checkbox" />
-            <p>Packing</p>
-          </div>
-          <div class="form-checkbox">
-            <input type="checkbox" />
-            <p>Household</p>
-          </div>
-          <div class="form-checkbox">
-            <input type="checkbox" />
-            <p>Express</p>
-          </div>
-          <div class="form-checkbox">
-            <input type="checkbox" />
-            <p>Intercity</p>
-          </div>
-          <div class="form-checkbox">
-            <input type="checkbox" />
-            <p>Storage</p>
-          </div>
-          <div class="form-checkbox">
-            <input type="checkbox" />
-            <p>Warehouse</p>
-          </div>
-          <div class="form-checkbox">
-            <input type="checkbox" />
-            <p>Office</p>
-          </div>
-          <div class="form-checkbox">
-            <input type="checkbox" />
-            <p>Commercial</p>
-          </div>
-        </div>
-        <button href="" class="home-bolg-read-button mt-4 p-3">Send Message</button>
-      </div>
-    </div>
-    <!-- want to hear from you End -->
-
-    <!-- Footer Start -->
-    <div class="items-container p-container footer wow fadeIn mx-auto" data-wow-delay="0.1s">
-      <div class="py-5">
-        <div class="row">
-          <div class="row col-lg-5 col-md-6">
-            <div class="col-12">
-              <img class="fotter-logo" src="img/Logo.png" />
-            </div>
-            <div class="col-12 my-5">
-              <a href="" class="fotter-phone"><i class="fa fa-phone-alt"></i>&nbsp;&nbsp;&nbsp;022-340-7710</a>
-            </div>
-            <div class="col-12 bottom-info">
-              <div>
-                <img height="22" width="27" src="img/mail.png" />
-              </div>
-              <p>admin@comfortmovers.co.nz</p>
-            </div>
-            <div class="col-12 bottom-info">
-              <div>
-                <img height="26" width="19" src="img/location.png" />
-              </div>
-              <p>1601 N Gower St Ste 205 Albany, Auckland, New Zealand 0632</p>
-            </div>
-            <div class="col-12 bottom-info">
-              <div>
-                <img height="29" width="29" src="img/user-time.png" />
-              </div>
-              <p>Mon-Fri : 6am - 6pm <br />Sat-Sun : 8am - 4pm</p>
-            </div>
-          </div>
-          <div class="col-lg-1"></div>
-          <div class="row col-lg-6 col-md-6">
-            <div class="col-lg-4 col-md-4 my-3 col-6">
-              <p class="mb-4 fotter-heading">Company</p>
-              <a class="btn fotter-link" href="about-us.html">About Us</a>
-              <a class="btn fotter-link" href="contact.html">Contact Us</a>
-              <a class="btn fotter-link" href="reviews.html">Reviews</a>
-              <a class="btn fotter-link" href="rates.html">Rate</a>
-              <a class="btn fotter-link" href="blogs.html">Blogs</a>
-              <a class="btn fotter-link" href="">Reservation</a>
-            </div>
-            <div class="col-lg-4 col-md-4 my-3 col-6">
-              <p class="mb-4 fotter-heading">
-                <a class="fotter-heading" href="service.html">Services</a>
-              </p>
-              <a class="btn fotter-link" href="express-movers.html">Express</a>
-              <a class="btn fotter-link" href="house-movers-packers-auckland.html">House</a>
-              <a class="btn fotter-link" href="office-movers-auckland.html">Office</a>
-              <a class="btn fotter-link" href="intercity-movers.html">Intercity</a>
-              <a class="btn fotter-link" href="package-service.html">Packing</a>
-              <a class="btn fotter-link" href="storage-service.html">Storage</a>
-              <a class="btn fotter-link" href="commercial-movers.html">Commercial</a>
-            </div>
-            <div class="col-lg-4 col-md-4 my-3 col-6">
-              <p class="mb-4 fotter-heading">Resources</p>
-              <a class="btn fotter-link" href="products.html">Products</a>
-              <a class="btn fotter-link" href="career.html">Carrer</a>
-              <a class="btn fotter-link" href="faq.html">FAQ</a>
-              <a class="btn fotter-link" href="">License</a>
-              <a class="btn fotter-link" href="">Get Brochure</a>
-            </div>
-            <div class="col-12 row">
-              <div class="col-lg-4 col-md-4 my-3 col-6">
-                <p class="fotter-heading">Follow us on</p>
-                <div class="footer-links-container">
-                  <img style="height: 37px" src="img/logos_facebook.png" />
-                  <img style="height: 37px" src="img/skill-icons_instagram.png" />
-                  <img style="height: 37px" src="img/skill-icons_linkedin.png" />
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-4 my-3 col-6">
-                <p class="fotter-heading">License</p>
-                <p class="fotter-link">989CSC98CSKJN</p>
-              </div>
-              <div class="col-lg-4 col-md-4 my-3 col-6">
-                <img style="height: 67px" src="img/image 47.png" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container fotter-end">
-        <div class="copyright">
-          <div class="row">
-            <div class="col-md-6 text-md-start mb-3 mb-md-0 fotter-end-text">
-              Copyright © 2024 Comfort Movers All rights reserved.
-            </div>
-            <div class="col-md-6 text-md-end mb-3 mb-md-0 fotter-bottom">
-              <a class="fotter-end-text me-4" href="privacy-policy.html">Privacy Policy</a
-              ><a href="t&c.html" class="fotter-end-text">Terms & conditions</a>
-            </div>
+          <div class="col-md-6 text-md-end mb-3 mb-md-0 fotter-bottom">
+            <a class="fotter-end-text me-4" href="privacy-policy.html">Privacy Policy</a><a href="t&c.html"
+              class="fotter-end-text">Terms & conditions</a>
           </div>
         </div>
       </div>
     </div>
-    <!-- Footer End -->
+  </div>
+  <!-- Footer End -->
 
-    <!-- Back to Top -->
-    <a href="" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+  <!-- Back to Top -->
+  <a href="" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/tempusdominus/js/moment.min.js"></script>
+  <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+  <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-  </body>
+  <!-- Template Javascript -->
+  <script src="js/main.js"></script>
+</body>
+
 </html>
