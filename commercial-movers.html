@@ -41,7 +41,8 @@
     moving services" />
 
   <!-- Favicon -->
-  <link href="img/favicon.ico" rel="icon" />
+  <link href="img/tabLogo.webp" rel="icon" />
+  <link href="img/tabLogo.webp" rel="apple-touch-icon" />
 
   <!-- Google Web Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -63,6 +64,7 @@
 
   <!-- Template Stylesheet -->
   <link href="css/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" />
 </head>
 
 <body style="background: none !important">
@@ -79,18 +81,19 @@
   <div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
     <marquee scrollamount="15" class="row gx-0 d-none d-lg-flex">
       <div class="col-lg-7 px-5 text-start">
-        <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+        <a href="https://maps.app.goo.gl/q529X6JgKXVSHkWB6" target="_blank"
+          class="h-100 d-inline-flex align-items-center py-3 me-4">
           <small class="fa fa-map-marker-alt text-primary me-2 top-icon"></small>
           <small class="top-text">Albany, Auckland, New Zealand 0632</small>
-        </div>
-        <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+        </a>
+        <a href="mailto:admin@comfortmovers.co.nz" class="h-100 d-inline-flex align-items-center py-3 me-4">
           <small class="fa fa-envelope text-primary me-2 top-icon"></small>
           <small class="top-text">admin@comfortmovers.co.nz</small>
-        </div>
-        <div class="h-100 d-inline-flex align-items-center py-3">
+        </a>
+        <a href="tel:0223407710" class="h-100 d-inline-flex align-items-center py-3">
           <small class="fa fa-phone-alt text-primary me-2 top-icon"></small>
-          <small class="top-text">0223407710</small>
-        </div>
+          <small class="top-text">022 340 7710</small>
+        </a>
       </div>
     </marquee>
   </div>
@@ -125,7 +128,7 @@
               <a href="products.html" class="dropdown-item nal-link-text">Products</a>
               <a href="career.html" class="dropdown-item nal-link-text">Carrer</a>
               <a href="faq.html" class="dropdown-item nal-link-text">FAQ</a>
-              <a href="" class="dropdown-item nal-link-text">License</a>
+
             </div>
           </div>
           <div class="nav-item dropdown">
@@ -136,7 +139,7 @@
               <a href="reviews.html" class="dropdown-item nal-link-text">Reviews</a>
               <a href="rates.html" class="dropdown-item nal-link-text">Rate</a>
               <a href="blogs.html" class="dropdown-item nal-link-text">Blogs</a>
-              <a href="" class="dropdown-item nal-link-text">Reservation</a>
+
             </div>
           </div>
           <a href="rates.html" class="nav-item nav-link nal-link-text">Rates</a>
@@ -489,14 +492,16 @@
         <div>
           <img height="21" width="21" src="img/phone.png" />
         </div>
-        <a href="tel:0223407710"><p>022-340-7710</p></a>
+        <a href="tel:0223407710">
+          <p>022-340-7710</p>
+        </a>
       </div>
-      <div class="d-none d-sm-flex home-faq-info">
+      <a href="mailto:admin@comfortmovers.co.nz" class="d-none d-sm-flex home-faq-info">
         <div>
           <img height="22" width="27" src="img/mail.png" />
         </div>
         <p>admin@comfortmovers.co.nz</p>
-      </div>
+      </a>
     </div>
     <div class="col-md-7 col-12">
       <button class="faq-collapsible">What services do you offer? <img src="img/chevron-down.png" /></button>
@@ -564,14 +569,16 @@
         <div>
           <img height="21" width="21" src="img/phone.png" />
         </div>
-        <a href="tel:0223407710"><p>022-340-7710</p></a>
+        <a href="tel:0223407710">
+          <p>022-340-7710</p>
+        </a>
       </div>
-      <div class="d-sm-none home-faq-info">
+      <a href="mailto:admin@comfortmovers.co.nz" class="d-sm-none home-faq-info">
         <div>
           <img height="22" width="27" src="img/mail.png" />
         </div>
         <p>admin@comfortmovers.co.nz</p>
-      </div>
+      </a>
     </div>
   </div>
   <script>
@@ -720,24 +727,24 @@
       <p class="cover-sub-text d-text-left">
         Affordable air freight solutions that balance cost and quality for every shipment cost for shipment.
       </p>
-      <div class="about-here-contact">
+      <a href="tel:0223407710" class="about-here-contact">
         <div>
           <img height="21" width="21" src="img/phone.png" />
         </div>
         <h6>022 340 7710</h6>
-      </div>
-      <div class="about-here-contact">
+      </a>
+      <a href="mailto:admin@comfortmovers.co.nz" class="about-here-contact">
         <div>
           <img height="22" width="27" src="img/mail.png" />
         </div>
         <h6>admin@comfortmovers.co.nz</h6>
-      </div>
-      <div class="about-here-contact">
+      </a>
+      <a href="https://maps.app.goo.gl/q529X6JgKXVSHkWB6" target="_blank" class="about-here-contact">
         <div>
           <img height="26" width="19" src="img/location.png" />
         </div>
         <h6>Albany, Auckland, New Zealand 0632</h6>
-      </div>
+      </a>
       <p class="cover-sub-text d-text-left mt-4">Follow us on</p>
       <div class="about-follow-us">
         <img style="height: 37px" src="img/logos_facebook.png" />
@@ -762,60 +769,52 @@
       <h1 class="about-form-heading text-center">We Want To <span class="color-primary">Hear From You</span></h1>
       <div class="row">
         <div class="col-md-4 col-12 mt-4">
-          <input class="form-input" type="text" placeholder="Full Name*" />
+          <input id="full-name" class="form-input" type="text" placeholder="Full Name*" />
         </div>
         <div class="col-md-4 col-12 mt-4">
-          <input class="form-input" type="email" placeholder="Email ID*" />
+          <input id="email" class="form-input" type="email" placeholder="Email ID*" />
         </div>
         <div class="col-md-4 col-12 mt-4">
-          <input class="form-input" type="tel" placeholder="Phone Number*" />
+          <input id="phone" class="form-input" type="tel" placeholder="Phone Number*" />
         </div>
         <div class="col-md-6 col-12 mt-4">
-          <input class="form-input" type="tel" placeholder="Pickup Address*" />
+          <input id="pickup-address" class="form-input" type="text" placeholder="Pickup Address*" />
         </div>
         <div class="col-md-6 col-12 mt-4">
-          <input class="form-input" type="tel" placeholder="Delivery Address*" />
+          <input id="delivery-address" class="form-input" type="text" placeholder="Delivery Address*" />
         </div>
         <div class="col-12 mt-4">
-          <input class="form-textarea" type="tel" placeholder="Message about work*" />
+          <input id="message" class="form-textarea" type="text" placeholder="Message about work*" />
         </div>
       </div>
       <h6 class="fotter-link mt-4">Service*</h6>
-      <div class="mt-2 form-checkboxes">
-        <div class="form-checkbox">
-          <input type="checkbox" />
+      <div id="service-checkboxes" class="mt-2 form-checkboxes">
+        <div class="form-checkbox"><input type="checkbox" />
           <p>Packing</p>
         </div>
-        <div class="form-checkbox">
-          <input type="checkbox" />
+        <div class="form-checkbox"><input type="checkbox" />
           <p>Household</p>
         </div>
-        <div class="form-checkbox">
-          <input type="checkbox" />
+        <div class="form-checkbox"><input type="checkbox" />
           <p>Express</p>
         </div>
-        <div class="form-checkbox">
-          <input type="checkbox" />
+        <div class="form-checkbox"><input type="checkbox" />
           <p>Intercity</p>
         </div>
-        <div class="form-checkbox">
-          <input type="checkbox" />
+        <div class="form-checkbox"><input type="checkbox" />
           <p>Storage</p>
         </div>
-        <div class="form-checkbox">
-          <input type="checkbox" />
+        <div class="form-checkbox"><input type="checkbox" />
           <p>Warehouse</p>
         </div>
-        <div class="form-checkbox">
-          <input type="checkbox" />
+        <div class="form-checkbox"><input type="checkbox" />
           <p>Office</p>
         </div>
-        <div class="form-checkbox">
-          <input type="checkbox" />
+        <div class="form-checkbox"><input type="checkbox" />
           <p>Commercial</p>
         </div>
       </div>
-      <button href="" class="home-bolg-read-button mt-4 p-3">Send Message</button>
+      <button class="home-bolg-read-button mt-4 p-3" id="contact-submit">Send Message</button>
     </div>
   </div>
   <!-- want to hear from you End -->
@@ -829,20 +828,21 @@
             <img class="fotter-logo" src="img/Logo.png" />
           </div>
           <div class="col-12 my-5">
-            <a href="tel:0223407710" class="fotter-phone"><i class="fa fa-phone-alt"></i>&nbsp;&nbsp;&nbsp;022-340-7710</a>
+            <a href="tel:0223407710" class="fotter-phone"><i
+                class="fa fa-phone-alt"></i>&nbsp;&nbsp;&nbsp;022-340-7710</a>
           </div>
-          <div class="col-12 bottom-info">
+          <a href="mailto:admin@comfortmovers.co.nz" class="col-12 bottom-info">
             <div>
               <img height="22" width="27" src="img/mail.png" />
             </div>
             <p>admin@comfortmovers.co.nz</p>
-          </div>
-          <div class="col-12 bottom-info">
+          </a>
+          <a href="https://maps.app.goo.gl/q529X6JgKXVSHkWB6" target="_blank" class="col-12 bottom-info">
             <div>
               <img height="26" width="19" src="img/location.png" />
             </div>
             <p>1601 N Gower St Ste 205 Albany, Auckland, New Zealand 0632</p>
-          </div>
+          </a>
           <div class="col-12 bottom-info">
             <div>
               <img height="29" width="29" src="img/user-time.png" />
@@ -859,7 +859,7 @@
             <a class="btn fotter-link" href="reviews.html">Reviews</a>
             <a class="btn fotter-link" href="rates.html">Rate</a>
             <a class="btn fotter-link" href="blogs.html">Blogs</a>
-            <a class="btn fotter-link" href="">Reservation</a>
+
           </div>
           <div class="col-lg-4 col-md-4 my-3 col-6">
             <p class="mb-4 fotter-heading">
@@ -878,8 +878,7 @@
             <a class="btn fotter-link" href="products.html">Products</a>
             <a class="btn fotter-link" href="career.html">Carrer</a>
             <a class="btn fotter-link" href="faq.html">FAQ</a>
-            <a class="btn fotter-link" href="">License</a>
-            <a class="btn fotter-link" href="">Get Brochure</a>
+
           </div>
           <div class="col-12 row">
             <div class="col-lg-4 col-md-4 my-3 col-6">
@@ -932,8 +931,19 @@
   <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
   <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
+  <!-- International Telephone Input -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+
+  <!-- Google Address Autocomplete -->
+  <script src="js/google-address.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCO9AFZPIDwfLkoaPV36NNewB5MfwwYDX4&libraries=places&callback=initAddressAutocomplete"
+    async defer></script>
+
   <!-- Template Javascript -->
   <script src="js/main.js"></script>
+  <script src="js/reviews.js"></script>
+  <script src="js/form.js"></script>
 </body>
 
 </html>
