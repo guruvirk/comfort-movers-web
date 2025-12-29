@@ -3484,6 +3484,37 @@ body {
   .banner-container {
     height: 900px;
   }
+
+  input[type='date'] {
+    text-align: left;
+    -webkit-text-fill-color: #000;
+  }
+
+  input[type='date']::-webkit-datetime-edit {
+    text-align: left;
+    -webkit-text-fill-color: #000 !important;
+    opacity: 1;
+  }
+
+  input[type='date']::-webkit-date-and-time-value {
+    text-align: left !important;
+  }
+
+  #move-size.form-input {
+    color: rgba(0, 0, 0, 0.35) !important;
+  }
+
+  #move-size.form-input.has-value {
+    color: rgba(0, 0, 0, 1) !important;
+  }
+
+  #move-date::-webkit-datetime-edit {
+    color: rgba(0, 0, 0, 0.35) !important;
+  }
+
+  #move-date.has-value::-webkit-datetime-edit {
+    color: rgba(0, 0, 0) !important;
+  }
 }
 
 @media (min-width: 992px) {
@@ -3502,4 +3533,61 @@ body {
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   filter: invert(1); /* keep white arrows */
+}
+
+select.form-input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%230064ff' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 5px center;
+  background-size: 32px;
+}
+
+#move-size.form-input {
+  color: rgba(0, 0, 0, 0.55);
+}
+
+#move-size.form-input.has-value {
+  color: rgba(0, 0, 0, 1);
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+#move-date[type='text'] {
+  background: #fff
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 24 24' fill='none' stroke='%230077FF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'/%3E%3Cline x1='16' y1='2' x2='16' y2='6'/%3E%3Cline x1='8' y1='2' x2='8' y2='6'/%3E%3Cline x1='3' y1='10' x2='21' y2='10'/%3E%3C/svg%3E")
+    no-repeat right 14px center;
+  background-size: 18px;
+  background-position: right 10px center;
+  cursor: pointer;
+}
+
+input[type='date'] {
+  background: #fff
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 24 24' fill='none' stroke='%230077FF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'/%3E%3Cline x1='16' y1='2' x2='16' y2='6'/%3E%3Cline x1='8' y1='2' x2='8' y2='6'/%3E%3Cline x1='3' y1='10' x2='21' y2='10'/%3E%3C/svg%3E")
+    no-repeat right 14px center;
+  background-size: 18px;
+  background-position: right 10px center;
+  cursor: pointer;
+}
+
+#move-date::-webkit-datetime-edit {
+  color: rgba(0, 0, 0, 0.55);
+  opacity: 1;
+}
+
+#move-date.has-value::-webkit-datetime-edit {
+  color: rgba(0, 0, 0);
+  opacity: 1;
+}
+
+.iti {
+  width: 100% !important;
 }

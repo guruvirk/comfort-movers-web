@@ -1,13 +1,51 @@
 document.addEventListener('DOMContentLoaded', function () {
   const submitBtn = document.getElementById('contact-submit');
-  if (!submitBtn) return;
+
+  const quoteSubmitBtn = document.getElementById('quote-submit');
+  if (!quoteSubmitBtn && !submitBtn) return;
 
   const fullNameInput = document.getElementById('full-name');
   const emailInput = document.getElementById('email');
   const phoneInput = document.getElementById('phone');
   const pickupAddressInput = document.getElementById('pickup-address');
   const deliveryAddressInput = document.getElementById('delivery-address');
+  const moveSizeInput = document.getElementById('move-size');
+  const moveDateInput = document.getElementById('move-date');
   const messageInput = document.getElementById('message');
+
+  function updateMoveSizeStyle() {
+    if (!moveSizeInput) return;
+    moveSizeInput.classList.toggle('has-value', !!moveSizeInput.value);
+  }
+
+  if (moveSizeInput) {
+    updateMoveSizeStyle();
+    moveSizeInput.addEventListener('change', updateMoveSizeStyle);
+  }
+
+  function updateDateColor() {
+    if (moveDateInput.value) {
+      moveDateInput.classList.add('has-value');
+    } else {
+      moveDateInput.classList.remove('has-value');
+    }
+  }
+
+  if (moveDateInput) {
+    updateDateColor();
+    moveDateInput.addEventListener('change', updateDateColor);
+    const today = new Date().toISOString().split('T')[0];
+    moveDateInput.setAttribute('min', today);
+  }
+
+  if (moveDateInput && moveDateInput.showPicker) {
+    moveDateInput.addEventListener('click', () => {
+      moveDateInput.showPicker();
+    });
+    moveDateInput.addEventListener('focus', () => {
+      moveDateInput.showPicker();
+    });
+  }
 
   let iti = null;
   if (phoneInput && window.intlTelInput) {
@@ -60,18 +98,32 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function clearForm() {
-    [fullNameInput, emailInput, phoneInput, pickupAddressInput, deliveryAddressInput, messageInput].forEach((i) => {
+    [
+      fullNameInput,
+      emailInput,
+      phoneInput,
+      pickupAddressInput,
+      deliveryAddressInput,
+      moveSizeInput,
+      moveDateInput,
+      ,
+      messageInput,
+    ].forEach((i) => {
       if (i) i.value = '';
     });
     serviceCheckboxes.forEach((cb) => (cb.checked = false));
   }
 
-  submitBtn.addEventListener('click', async function () {
+  let clickFunction = async function (type = 'contact') {
     const name = fullNameInput?.value.trim() || '';
     const email = emailInput?.value.trim() || '';
     const phoneRaw = phoneInput.value.trim();
     const pickup = pickupAddressInput?.value.trim() || '';
     const delivery = deliveryAddressInput?.value.trim() || '';
+
+    const moveSize = moveSizeInput?.value.trim() || '';
+    const moveDate = moveDateInput?.value || '';
+
     const message = messageInput?.value.trim() || '';
     const services = getSelectedServices();
 
@@ -89,10 +141,21 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!delivery) {
       return showError('Please enter a delivery address.');
     }
+
+    if (type === 'quote') {
+      if (!moveSize) {
+        return showError('Please select the size of move.');
+      }
+      if (!moveDate) {
+        return showError('Please select a date for your move.');
+      }
+    }
+
     if (!message) {
       return showError('Please enter a message about the work.');
     }
-    if (services.length === 0) {
+
+    if (type === 'contact' && services.length === 0) {
       return showError('Please select at least one service.');
     }
 
@@ -138,19 +201,39 @@ document.addEventListener('DOMContentLoaded', function () {
       accessToHome: '',
     };
 
-    const body = {
-      name: name,
-      email: email,
-      phone: fullPhoneNumber,
-      size: services,
-      additionalInfo: message,
-      where,
-      to,
-    };
+    const body =
+      type === 'quote'
+        ? {
+            name: name,
+            email: email,
+            phone: fullPhoneNumber,
+            sizeDetails: moveSize,
+            size: services,
+            date: moveDate,
+            additionalInfo: message,
+            where,
+            to,
+          }
+        : {
+            name: name,
+            email: email,
+            phone: fullPhoneNumber,
+            size: services,
+            additionalInfo: message,
+            where,
+            to,
+          };
 
     try {
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Sending...';
+      if (type === 'quote') {
+        quoteSubmitBtn.disabled = true;
+        quoteSubmitBtn.textContent = 'Sending...';
+      } else {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+      }
+
+      console.log('Form submission body:', JSON.stringify(body));
 
       const response = await fetch('https://comfortcare.co.nz/cm/api/create-order', {
         method: 'POST',
@@ -167,13 +250,26 @@ document.addEventListener('DOMContentLoaded', function () {
       } else {
         alert('Thank you! Your request has been submitted. We’ll contact you soon.');
         clearForm();
+        window.location.href = '/';
       }
     } catch (err) {
       console.error(err);
       showError('Network error while submitting the form. Please try again.');
     } finally {
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Send Message';
+      if (type === 'quote') {
+        quoteSubmitBtn.disabled = false;
+        quoteSubmitBtn.textContent = 'Send Message';
+      } else {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
+      }
     }
-  });
+  };
+
+  if (submitBtn) {
+    submitBtn.addEventListener('click', () => clickFunction('contact'));
+  }
+  if (quoteSubmitBtn) {
+    quoteSubmitBtn.addEventListener('click', () => clickFunction('quote'));
+  }
 });
