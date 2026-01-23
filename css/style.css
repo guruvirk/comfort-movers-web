@@ -48,12 +48,16 @@ body {
 #spinner {
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.5s ease-out, visibility 0s linear 0.5s;
+  transition:
+    opacity 0.5s ease-out,
+    visibility 0s linear 0.5s;
   z-index: 99999;
 }
 
 #spinner.show {
-  transition: opacity 0.5s ease-out, visibility 0s linear 0s;
+  transition:
+    opacity 0.5s ease-out,
+    visibility 0s linear 0s;
   visibility: visible;
   opacity: 1;
 }
@@ -494,10 +498,21 @@ body {
 
 .cover {
   height: 700px;
-  background-image: url('../img/cover-cm.jpeg');
   background-size: cover;
   background-position: center;
   border-image: fill 0 linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 1));
+}
+
+.cover-1 {
+  background-image: url('../img/cover-cm.jpeg');
+}
+
+.cover-2 {
+  background-image: url('../img/team-1.png');
+}
+
+.cover-3 {
+  background-image: url('../img/services-2.png');
 }
 
 .nal-link-text {
@@ -1021,7 +1036,7 @@ body {
 }
 
 .p-container {
-  padding-top: 9rem !important;
+  padding-top: 6rem !important;
   padding-right: 3rem;
   padding-left: 3rem;
 }
@@ -2331,9 +2346,48 @@ body {
   color: #000000;
 }
 
-@media (max-width: 992px) {
+.header-icon-box {
+  height: 94px;
+}
 
-    .navbar .dropdown:hover > .dropdown-menu {
+.header-icon-machine {
+  height: 90px;
+}
+
+.header-icon-truck-check {
+  height: 89px;
+}
+
+.header-icon-truck-time {
+  height: 78px;
+}
+
+@media (max-width: 992px) {
+  .our-services-download {
+    min-height: 200px;
+  }
+
+  .flow-header div {
+    height: 55px;
+  }
+
+  .header-icon-box {
+    height: 47px;
+  }
+
+  .header-icon-truck-check {
+    height: 44.5px;
+  }
+
+  .header-icon-truck-time {
+    height: 39px;
+  }
+
+  .header-icon-machine {
+    height: 45px;
+  }
+
+  .navbar .dropdown:hover > .dropdown-menu {
     display: block;
     margin-top: 0; /* remove Bootstrap offset */
   }
@@ -2373,7 +2427,7 @@ body {
 
   .cover-heading-text {
     font-family: 'Montserrat', sans-serif;
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 500;
     line-height: 45px;
     text-align: center;
@@ -2382,7 +2436,7 @@ body {
 
   .cover-heading-text-span {
     font-family: 'Montserrat', sans-serif;
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 500;
     line-height: 45px;
     text-align: center;
@@ -2443,7 +2497,7 @@ body {
 
   .shorts-header-text {
     width: 100%;
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 700;
     line-height: 45px;
     text-align: center;
@@ -2513,7 +2567,7 @@ body {
   }
 
   .p-container {
-    padding-top: 3rem !important;
+    padding-top: 2.5rem !important;
     padding-right: 1rem;
     padding-left: 1rem;
   }
@@ -2604,7 +2658,7 @@ body {
     margin-top: 2rem;
     margin-bottom: 1.5rem;
     font-family: 'Montserrat', sans-serif;
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 500;
     line-height: 45px;
     text-align: left;
@@ -2679,7 +2733,7 @@ body {
 
   .our-services-heading {
     font-family: 'Montserrat', sans-serif;
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 500;
     line-height: 45px;
     text-align: center;
@@ -2757,7 +2811,7 @@ body {
 
   .served-heading {
     font-family: 'Montserrat', sans-serif;
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 500;
     line-height: 45px;
     text-align: left;
@@ -2871,7 +2925,7 @@ body {
 
   .home-floating-item h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 600;
     line-height: 45px;
     color: #2480fd;
@@ -2880,7 +2934,7 @@ body {
 
   .home-faq-heading {
     font-family: 'Montserrat', sans-serif;
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 500;
     line-height: 45px;
     text-align: left;
@@ -2993,7 +3047,7 @@ body {
   .home-subscribe-box-email input {
     margin-top: 2rem;
     font-family: 'Montserrat', sans-serif;
-    height: 50px;
+    height: 42px;
     text-align: left;
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 1);
@@ -3009,7 +3063,7 @@ body {
   .home-subscribe-box-email button {
     margin-top: 2rem;
     font-family: 'Montserrat', sans-serif;
-    height: 50px;
+    height: 42px;
     text-align: center;
     background-color: rgba(255, 255, 255, 1);
     border: 1px solid rgba(255, 255, 255, 1);
@@ -3474,7 +3528,7 @@ body {
 
 @media (max-width: 992px) {
   .banner-container {
-    height: 900px;
+    height: 88vh;
   }
 
   .flow-body {
@@ -3482,7 +3536,7 @@ body {
   }
 
   .p-container {
-    padding-top: 3rem !important;
+    padding-top: 2.5rem !important;
     padding-right: 1rem;
     padding-left: 1rem;
   }
@@ -3496,7 +3550,7 @@ body {
 
 @media (max-width: 768px) {
   .banner-container {
-    height: 900px;
+    height: 88vh;
   }
 
   input[type='date'] {
@@ -3611,7 +3665,7 @@ input[type='date'] {
 }
 
 .offcanvas-header {
-  padding: 19px 14px;
+  padding: 18px 7px;
   justify-content: end;
 }
 
@@ -3638,13 +3692,14 @@ input[type='date'] {
 }
 
 @media (min-width: 992px) {
-
   .navbar .dropdown-menu {
     display: block;
     opacity: 0;
     visibility: hidden;
     transform: translateY(12px);
-    transition: opacity 0.25s ease, transform 0.25s ease;
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease;
     pointer-events: none;
     margin-top: 0;
   }
@@ -3675,10 +3730,9 @@ input[type='date'] {
 
 /* Mobile menu CTA button */
 .custom-cta {
-  background: #1f5eff;
   border: none;
   border-radius: 8px;
-  padding: 8px 16px;
+  padding: 4px 8px;
   font-weight: 600;
   color: #fff;
   display: inline-flex;
@@ -3688,15 +3742,8 @@ input[type='date'] {
   transition: all 0.25s ease;
 }
 
-/* Hover / active */
-.custom-cta:hover,
-.custom-cta:active {
-  background: #1748c8;
-  box-shadow: 0 10px 22px rgba(31, 94, 255, 0.35);
-}
-
 .menu-icon {
-  font-size: 22px;
+  font-size: 26px;
   line-height: 1;
 }
 
@@ -3733,4 +3780,8 @@ input[type='date'] {
 .dropdown-item:hover i {
   transform: translateX(2px);
   transition: transform 0.2s ease;
+}
+
+.flow-header-box {
+  margin-top: 1rem;
 }
