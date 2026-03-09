@@ -96,4 +96,28 @@
       document.getElementById('shorts-container').scrollLeft -= width;
     };
   }
+
+  var reviewCarousel = $('.google-review-carousel');
+
+  reviewCarousel.owlCarousel({
+    autoplay: true,
+    smartSpeed: 800,
+    margin: 20,
+    loop: true,
+    dots: true,
+    nav: false,
+    responsive: {
+      0: { items: 1 },
+      768: { items: 2, dots: false },
+      1200: { items: 3, dots: false },
+    },
+  });
+
+  $('#review-next').click(function () {
+    reviewCarousel.trigger('next.owl.carousel');
+  });
+
+  $('#review-prev').click(function () {
+    reviewCarousel.trigger('prev.owl.carousel');
+  });
 })(jQuery);
