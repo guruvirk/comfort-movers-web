@@ -52,7 +52,7 @@
     rel="stylesheet" />
 
   <!-- Icon Font Stylesheet -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
 
   <!-- Libraries Stylesheet -->
@@ -123,28 +123,6 @@
   </div>
   <!-- Spinner End -->
 
-  <!-- Topbar Start -->
-  <div class="container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
-    <marquee scrollamount="15" class="row gx-0 d-none d-lg-flex">
-      <div class="col-lg-7 px-5 text-start">
-        <a href="https://maps.app.goo.gl/q529X6JgKXVSHkWB6" target="_blank"
-          class="h-100 d-inline-flex align-items-center py-3 me-4">
-          <small class="fa fa-map-marker-alt text-primary me-2 top-icon"></small>
-          <small class="top-text">Albany, Auckland, New Zealand 0632</small>
-        </a>
-        <a href="mailto:admin@comfortmovers.co.nz" class="h-100 d-inline-flex align-items-center py-3 me-4">
-          <small class="fa fa-envelope text-primary me-2 top-icon"></small>
-          <small class="top-text">admin@comfortmovers.co.nz</small>
-        </a>
-        <a href="tel:0223407710" class="h-100 d-inline-flex align-items-center py-3">
-          <small class="fa fa-phone-alt text-primary me-2 top-icon"></small>
-          <small class="top-text">022 340 7710</small>
-        </a>
-      </div>
-    </marquee>
-  </div>
-  <!-- Topbar End -->
-
   <!-- Navbar Start -->
   <nav class="navbar navbar-expand-lg navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
     <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="mobileMenu">
@@ -195,8 +173,8 @@
 
 
           <li class="nav-item mt-3">
-            <a href="quote.html" class="btn btn-primary w-100 rounded-0">
-              Get A Free Quote
+            <a href="quote.html" class="btn btn-primary w-100 rounded-10">
+              Get A Quote
             </a>
           </li>
 
@@ -207,10 +185,15 @@
       <a href="index.html" class="navbar-brand d-flex align-items-center px-lg-5 my-2">
         <img class="logo" src="img/Logo.png" />
       </a>
-      <button class="mobile-menu-btn custom-cta btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
-        aria-label="Open menu">
-        <i class="bi bi-list menu-icon"></i>
-      </button>
+      <div class="nav-right-buttons">
+        <a href="quote.html" class="btn rounded-10 py-1 px-2 my-2 btn-nav-small"
+          style="font-weight:400;">Get A
+          Quote</a>
+        <button class="mobile-menu-btn custom-cta btn-primary" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#mobileMenu" aria-label="Open menu">
+          <i class="bi bi-list menu-icon"></i>
+        </button>
+      </div>
       <div class="collapse navbar-collapse space-around my-2 d-none d-lg-flex" id="navbarCollapse">
         <div class="navbar-nav p-4 p-lg-0 mx-xl-5">
           <div class="nav-item dropdown">
@@ -296,8 +279,13 @@
 
           <!-- <a href="rates.html" class="nav-item nav-link nal-link-text">Rates</a> -->
         </div>
-        <a href="quote.html" class="btn btn-primary rounded-0 py-2 px-lg-3 d-none d-lg-block my-2 mx-lg-3">Get A Free
-          Quote</a>
+        <div class="nav-right-buttons">
+          <a href="quote.html" class="btn btn-custom-light rounded-10 py-2 px-lg-3 d-none d-lg-block my-2"><i
+              class="fa-regular fa-phone-volume me-2"></i></i>022-340-7710</a>
+          <a href="quote.html" class="btn btn-primary rounded-10 py-2 px-lg-3 d-none d-lg-block my-2"
+            style="font-weight:400;">Get A
+            Quote</a>
+        </div>
       </div>
     </div>
   </nav>
@@ -315,25 +303,12 @@
           <div class="col-lg-12 wow fadeIn cover cover-1" data-wow-delay="0.5s">
             <div class="cover-heading">
               <h2 class="cover-heading-text">
-                Stress free
-                <span class="cover-heading-text-span">house moving</span>
+                <span class="cover-heading-text-span">Moving?</span><br>
+                Let’s Make It Easy & Stress-Free!
               </h2>
               <p class="cover-sub-text">
-                Comfort Movers is your local moving company based in Albany on Auckland’s North Shore
+                Our expert team has a variety of truck sizes, ensuring you get the perfect fit for your move.
               </p>
-
-              <div class="header-phone-review">
-                <a href="tel:0223407710" class="header-phone">
-                  <i class="fa fa-phone-alt"></i>&nbsp;&nbsp;&nbsp;022-340-7710
-                </a>
-                <div class="header-review">
-                  <img src="img/devicon_google.png" alt="Comfort Movers Rating">
-                  <span class="header-review-rating">&nbsp;&nbsp;4.9/5</span>
-                  <img src="img/ic_round-star.png" alt="Comfort Movers Rating">
-                  <span class="header-review-text">&nbsp;&nbsp;&nbsp;600+ reviews</span>
-                </div>
-              </div>
-
             </div>
           </div>
         </div>
@@ -342,28 +317,15 @@
       <!-- Slide 2 -->
       <div class="carousel-item">
         <div style="height: 700px" class="row g-0 align-items-center flex-column-reverse flex-lg-row">
-          <div class="col-lg-12 wow fadeIn cover cover-2" data-wow-delay="0.5s">
+          <div class="col-lg-12 wow fadeIn cover cover-1" data-wow-delay="0.5s">
             <div class="cover-heading">
               <h2 class="cover-heading-text">
-                Our <span class="cover-heading-text-span">team</span> and our <span
-                  class="cover-heading-text-span">service</span>
+                <span class="cover-heading-text-span">Moving?</span><br>
+                Let’s Make It Easy & Stress-Free!
               </h2>
               <p class="cover-sub-text">
-                We have a range of truck sizes and a hard working, smoke free and honest team serving all of northland
+                Our expert team has a variety of truck sizes, ensuring you get the perfect fit for your move.
               </p>
-
-              <div class="header-phone-review">
-                <a href="tel:0223407710" class="header-phone">
-                  <i class="fa fa-phone-alt"></i>&nbsp;&nbsp;&nbsp;022-340-7710
-                </a>
-                <div class="header-review">
-                  <img src="img/devicon_google.png" alt="Comfort Movers Rating">
-                  <span class="header-review-rating">&nbsp;&nbsp;4.9/5</span>
-                  <img src="img/ic_round-star.png" alt="Comfort Movers Rating">
-                  <span class="header-review-text">&nbsp;&nbsp;&nbsp;600+ reviews</span>
-                </div>
-              </div>
-
             </div>
           </div>
         </div>
@@ -372,28 +334,15 @@
       <!-- Slide 3 -->
       <div class="carousel-item">
         <div style="height: 700px" class="row g-0 align-items-center flex-column-reverse flex-lg-row">
-          <div class="col-lg-12 wow fadeIn cover cover-3" data-wow-delay="0.5s">
+          <div class="col-lg-12 wow fadeIn cover cover-1" data-wow-delay="0.5s">
             <div class="cover-heading">
               <h2 class="cover-heading-text">
-                Service with <span class="cover-heading-text-span">comfort</span>
+                <span class="cover-heading-text-span">Moving?</span><br>
+                Let’s Make It Easy & Stress-Free!
               </h2>
               <p class="cover-sub-text">
-                We are happy to move anything from a single item, right through to fully furnished homes, offices or
-                apartments
+                Our expert team has a variety of truck sizes, ensuring you get the perfect fit for your move.
               </p>
-
-              <div class="header-phone-review">
-                <a href="tel:0223407710" class="header-phone">
-                  <i class="fa fa-phone-alt"></i>&nbsp;&nbsp;&nbsp;022-340-7710
-                </a>
-                <div class="header-review">
-                  <img src="img/devicon_google.png" alt="Comfort Movers Rating">
-                  <span class="header-review-rating">&nbsp;&nbsp;4.9/5</span>
-                  <img src="img/ic_round-star.png" alt="Comfort Movers Rating">
-                  <span class="header-review-text">&nbsp;&nbsp;&nbsp;600+ reviews</span>
-                </div>
-              </div>
-
             </div>
           </div>
         </div>
@@ -401,69 +350,123 @@
 
     </div>
 
-    <!-- Carousel Controls -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#headerCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#headerCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
+    <div class="carousel-indicators custom-indicators">
+      <button type="button" data-bs-target="#headerCarousel" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#headerCarousel" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#headerCarousel" data-bs-slide-to="2"></button>
+    </div>
+
+    <div class="container p-0 position-relative quote-widget-container wow fadeIn" data-wow-delay="0.1s">
+      <div class="booking-widget mx-auto">
+        <div class="tab">
+          <h2>Get Instant Moving Quote</h2>
+        </div>
+        <div class="form-container">
+
+          <div class="input-group">
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter name">
+          </div>
+
+          <div class="input-group">
+            <label>Phone number</label>
+            <input type="text" placeholder="+64">
+          </div>
+
+          <div class="input-group">
+            <label>Email</label>
+            <input type="email" placeholder="comfortmove@example.com">
+          </div>
+
+          <div class="input-group">
+            <label>Service</label>
+            <select class="form-select form-input">
+              <option selected disabled>Select Service</option>
+              <option value="express">Express Moving</option>
+              <option value="house">House Moving</option>
+              <option value="office">Office Moving</option>
+            </select>
+          </div>
+
+          <button class="submit-btn btn btn-primary">Send Quote</button>
+        </div>
+      </div>
+    </div>
+
   </div>
   <!-- Header End -->
 
+  <!-- Ratings header Start -->
+  <div class="p-container">
+    <div class="header-phone-review">
+      <div class="header-review-wrapper">
+        <img height="45" src="img/Google_2015_logo 1.png" alt="Comfort Movers Rating">
+        <div>
+          <div class="header-review">
+            <span class="header-review-rating">4.9/5</span>
+            <img src="img/ic_round-star.png" alt="Comfort Movers Rating">
+          </div>
+          <span class="header-review-text">600+ reviews</span>
+        </div>
+      </div>
+      <div class="header-review-wrapper">
+        <img height="60" src="img/ac_review.png" alt="Comfort Movers Rating">
+        <div>
+          <div class="header-review">
+            <span class="header-review-rating">A+</span>
+          </div>
+          <span class="header-review-text">BBB Rated</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Ratings header End -->
 
   <!-- How We Work Start -->
   <div class="row g-5 items-container p-container work-steps-container">
     <div class="col-xl-3 col-md-6 col-12 wow fadeIn flow-header-box" data-wow-delay="0.1s">
-      <div class="flow-header">
-        <div>
-          <img class="header-icon-box" src="img/box.png" />
-          <img class="step-icon" src="img/step-1.png" />
+      <div class="flow-header-box-inner">
+        <div class="header-steps-icon">
+          <i class="fa-regular fa-clipboard-list"></i>
         </div>
+        <div class="flow-body">
+          <span class="flow-body-heading">01. Share Your Details</span>
+        </div>
+        <p class="flow-text">Provide specifics about your moving needs for accurate planning.</p>
       </div>
-      <div class="flow-body">
-        <span class="flow-body-step">01</span>
-        <span class="flow-body-heading">Share Your Details</span>
-      </div>
-      <p class="flow-text">Provide specifics about your moving needs for accurate planning.</p>
     </div>
     <div class="col-xl-3 col-md-6 col-12 wow fadeIn flow-header-box" data-wow-delay="0.1s">
-      <div class="flow-header">
-        <div>
-          <img class="header-icon-machine" src="img/machine.png" />
-          <img class="step-icon" src="img/step-2.png" />
+      <div class="flow-header-box-inner">
+        <div class="header-steps-icon">
+          <i class="fa-solid fa-phone"></i>
         </div>
+        <div class="flow-body">
+          <span class="flow-body-heading">02. Receive Your Quote</span>
+        </div>
+        <p class="flow-text">Transparent pricing tailored to your unique relocation requirements.</p>
       </div>
-      <div class="flow-body">
-        <span class="flow-body-step">02</span>
-        <span class="flow-body-heading">Receive Your Quote</span>
-      </div>
-      <p class="flow-text">Transparent pricing tailored to your unique relocation requirements.</p>
     </div>
     <div class="col-xl-3 col-md-6 col-12 wow fadeIn flow-header-box" data-wow-delay="0.1s">
-      <div class="flow-header">
-        <div>
-          <img class="header-icon-truck-check" src="img/truck-check.png" />
-          <img class="step-icon" src="img/step-3.png" />
+      <div class="flow-header-box-inner">
+        <div class="header-steps-icon">
+          <i class="fa-regular fa-calendar-check"></i>
         </div>
+        <div class="flow-body">
+          <span class="flow-body-heading">03. Confirm Your Moving Date</span>
+        </div>
+        <p class="flow-text">Schedule your move at a convenient time that suits you best.</p>
       </div>
-      <div class="flow-body">
-        <span class="flow-body-step">03</span>
-        <span class="flow-body-heading">Confirm Your Moving Date</span>
-      </div>
-      <p class="flow-text">Schedule your move at a convenient time that suits you best.</p>
     </div>
     <div class="col-xl-3 col-md-6 col-12 wow fadeIn flow-header-box" data-wow-delay="0.1s">
-      <div class="flow-header">
-        <div>
-          <img class="header-icon-truck-time" src="img/truck-time.png" />
+      <div class="flow-header-box-inner">
+        <div class="header-steps-icon">
+          <i class="fa-regular fa-truck-arrow-right"></i>
         </div>
+        <div class="flow-body">
+          <span class="flow-body-heading">04. Enjoy Stress-Free Move</span>
+        </div>
+        <p class="flow-text">Effortless relocation with our dedicated team and reliable services.</p>
       </div>
-      <div class="flow-body">
-        <span class="flow-body-step">04</span>
-        <span class="flow-body-heading">Enjoy Stress-Free Move</span>
-      </div>
-      <p class="flow-text">Effortless relocation with our dedicated team and reliable services.</p>
     </div>
   </div>
   <!-- How We Work End -->
@@ -928,7 +931,7 @@
           </div>
           <div class="col-12 my-5">
             <a href="tel:0223407710" class="fotter-phone"><i
-                class="fa fa-phone-alt"></i>&nbsp;&nbsp;&nbsp;022-340-7710</a>
+                class="fa-regular fa-phone-alt"></i>&nbsp;&nbsp;&nbsp;022-340-7710</a>
           </div>
           <a href="mailto:admin@comfortmovers.co.nz" class="col-12 bottom-info">
             <div>
