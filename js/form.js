@@ -141,7 +141,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     progress.forEach((seg, index) => {
-      seg.classList.toggle('active', index <= stepIndex);
+      seg.classList.toggle('active', index === stepIndex);
+      seg.classList.toggle('completed', index < stepIndex);
     });
 
     const prevBtn = document.getElementById('prev-step');
@@ -151,16 +152,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (nextBtn) {
       const isLast = stepIndex === total - 1;
+      const communicsationConsent = document.getElementById('communicsation-consent');
+      const communicsationConsentMobile = document.getElementById('communicsation-consent-mobile');
+      if (isLast) {
+        communicsationConsent.classList.add('active');
+        communicsationConsentMobile.classList.add('active');
+      } else {
+        communicsationConsent.classList.remove('active');
+        communicsationConsentMobile.classList.remove('active');
+      }
+      if (quoteWizard && typeof quoteWizard.scrollIntoView === 'function') {
+        quoteWizard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
       nextBtn.textContent = isLast
         ? 'Get My Quote'
-        : `Next : ${['Move Date', 'Experience', 'Home Type', 'How much stuff', 'Additional service', 'Contact information'][stepIndex]}`;
+        : `Next : ${['Move Date', 'Experience', 'Home Type', 'Move Info', 'Additional Service', 'Contact Information'][stepIndex]}`;
     }
 
     currentStepIndex = stepIndex;
     try {
       localStorage.setItem('quoteStepIndex', String(stepIndex));
-    } catch (e) {
-    }
+    } catch (e) {}
   }
 
   function validateCurrentStep() {
@@ -222,8 +234,12 @@ document.addEventListener('DOMContentLoaded', function () {
           showError('Please select how many bedrooms.');
           return false;
         }
-        if (homeType === 'Apartment' && (!aptSuite || !floorNo)) {
-          showError('Please enter your apartment number and floor.');
+        if (homeType === 'Apartment' && !aptSuite) {
+          showError('Please enter your apartment suite.');
+          return false;
+        }
+        if (homeType === 'Apartment' && !floorNo) {
+          showError('Please enter your apartment floor number.');
           return false;
         }
         return true;
@@ -234,10 +250,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         return true;
       case 6:
-        if (services.length === 0) {
-          showError('Please select at least one additional service.');
-          return false;
-        }
         return true;
       case 7:
         if (!firstName) {
@@ -256,7 +268,14 @@ document.addEventListener('DOMContentLoaded', function () {
           showError('Please enter a valid phone number.');
           return false;
         }
-        return true;
+
+        const consentChecked = !!document.querySelector('input[name="consent"]:checked');
+        if (!consentChecked) {
+          showError('Please agree to receive communications from Comfort Movers.');
+          return false;
+        }
+
+        return false;
       default:
         return true;
     }
@@ -328,8 +347,7 @@ document.addEventListener('DOMContentLoaded', function () {
         alert('Thank you! Your request has been submitted. We’ll contact you soon.');
         try {
           localStorage.removeItem('quoteStepIndex');
-        } catch (e) {
-        }
+        } catch (e) {}
         window.location.href = '/';
       }
     } catch (err) {
@@ -381,8 +399,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentStepIndex = 0;
     try {
       localStorage.removeItem('quoteStepIndex');
-    } catch (e) {
-    }
+    } catch (e) {}
 
     showStep(currentStepIndex);
   }

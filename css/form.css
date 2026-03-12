@@ -1,8 +1,7 @@
 .quote-step-form {
-  background: rgba(255, 255, 255, 1);
+  background: rgba(246, 248, 255, 1);
   border-radius: 16px;
   padding: 2.5rem 2rem;
-  max-width: 960px;
   width: 100%;
   margin: auto;
   box-shadow: 0 25px 45px rgba(0, 0, 0, 0.08);
@@ -14,7 +13,7 @@
 
 .quote-progress-bar {
   display: flex;
-  gap: 0.75rem;
+  gap: 1px;
 }
 
 .quote-progress-segment {
@@ -25,12 +24,17 @@
   transition: background 0.2s ease;
 }
 
+.quote-progress-segment.completed {
+  background: rgba(52, 168, 83, 1);
+}
+
 .quote-progress-segment.active {
-  background: var(--primary, #2480fd);
+  background: var(--primary);
 }
 
 .quote-step {
   display: none;
+  min-height: 40vh;
 }
 
 .quote-step.active {
@@ -38,18 +42,37 @@
 }
 
 .quote-step-title {
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 1.15;
-  margin-bottom: 0.5rem;
-  color: rgba(34, 34, 34, 1);
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+  color: rgba(51, 51, 51, 1);
+  margin-bottom: 1.5rem;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .quote-step-subtitle {
-  font-size: 16px;
-  line-height: 1.6;
-  color: rgba(94, 94, 94, 1);
   margin-bottom: 1.5rem;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+  color: rgba(51, 51, 51, 1);
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quote-step-form-box {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .form-label {
@@ -61,10 +84,13 @@
 }
 
 .option-cards {
-  display: flex;
+  display: grid;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 3rem;
+  width: 380px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .option-cards--checkbox .option-card {
@@ -74,23 +100,21 @@
 .option-card {
   flex: 1 1 280px;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 15px;
+  border-radius: 10px;
   padding: 1.2rem 1rem;
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
   gap: 1rem;
   cursor: pointer;
   transition:
     border 0.2s ease,
     box-shadow 0.2s ease;
-  position: relative;
-  min-width: 220px;
   background: #ffffff;
 }
 
 .option-card input {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
+  opacity: 1;
 }
 
 .option-card:hover {
@@ -99,29 +123,41 @@
 }
 
 .option-card.selected {
-  border-color: var(--primary, #2480fd);
+  border-color: var(--primary);
   box-shadow: 0 14px 30px rgba(36, 128, 253, 0.14);
 }
 
 .option-card-title {
-  font-weight: 700;
-  font-size: 18px;
-  margin: 0 0 0.35rem;
-  color: rgba(22, 22, 22, 1);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  margin: 0;
+  color: rgba(51, 51, 51, 1);
 }
 
 .option-card-subtitle {
   margin: 0;
+  margin-top: 0.5rem;
+  font-weight: 400;
   font-size: 14px;
-  line-height: 1.5;
-  color: rgba(107, 107, 107, 1);
+  line-height: 100%;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: rgba(51, 51, 51, 0.5);
+}
+
+.option-card-select {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .bedroom-count {
   display: flex;
-  gap: 0.75rem;
+  gap: 0.5rem;
   flex-wrap: wrap;
-  margin-top: 0.75rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .bedroom-count button {
@@ -140,31 +176,81 @@
 }
 
 .bedroom-count button.selected {
-  border-color: var(--primary, #2480fd);
-  background: rgba(36, 128, 253, 0.12);
+  background: var(--primary);
+  color: #ffffff;
+  border: 1px solid var(--primary);
 }
 
 .apartment-details {
   display: none;
-  margin-top: 1.5rem;
 }
 
 .apartment-details.active {
   display: block;
 }
 
+.payer-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.payer-option span {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: rgba(51, 51, 51, 1);
+}
+
 .quote-step-actions {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
-  margin-top: 2.5rem;
   flex-wrap: wrap;
 }
 
+.quote-contact-form {
+  width: 595px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.communicsation-consent-desktop {
+  width: 595px;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  text-align: left;
+  padding-bottom: 0.5rem;
+}
+
+.communicsation-consent-desktop.active {
+  display: flex;
+}
+
+.communicsation-consent-mobile {
+  width: 595px;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  text-align: left;
+  padding-bottom: 0.5rem;
+}
+
 .quote-step-actions .btn {
-  min-width: 200px;
-  padding: 0.95rem 1.4rem;
+  width: 595px;
   font-size: 16px;
+  height: 56px !important;
 }
 
 .quote-step-notice {
@@ -174,13 +260,141 @@
   color: rgba(94, 94, 94, 1);
 }
 
-@media (max-width: 767px) {
+.quote-contact-form .form-label {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: rgba(119, 119, 119, 1);
+}
+
+.footer {
+  margin-top: 6rem !important;
+}
+
+.form-input {
+  height: 52px !important;
+}
+
+.p-container {
+  padding-top: 2rem !important;
+}
+
+@media (max-width: 992px) {
+  .quote-step-form {
+    border-radius: 0 !important;
+  }
+
   .option-card {
     flex: 1 1 100%;
+  }
+
+  .quote-step-title {
+    width: 100%;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+  }
+
+  .quote-step-subtitle {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .quote-step-form-box {
+    width: 100%;
+  }
+
+  .quote-step-form-box div {
+    padding: 0 !important;
   }
 
   .quote-step-actions {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .quote-step-actions .btn {
+    width: 100%;
+    font-size: 20px;
+  }
+
+  .form-label {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    vertical-align: middle;
+    color: rgba(119, 119, 119, 1);
+  }
+
+  .option-cards {
+    width: 100%;
+  }
+
+  .payer-info {
+    display: grid;
+    gap: 5px;
+  }
+
+  .payer-option {
+    margin-left: -1.5rem;
+  }
+
+  .payer-option span {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    vertical-align: middle;
+    color: rgba(51, 51, 51, 1);
+  }
+
+  .apartment-details .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .quote-contact-form {
+    width: 100%;
+  }
+
+  .footer {
+    margin-top: 6rem !important;
+  }
+
+  .communicsation-consent-desktop {
+    text-align: left !important;
+    display: none !important;
+  }
+
+  .communicsation-consent-mobile.active {
+    display: flex !important;
+    text-align: left !important;
+  }
+
+  .quote-step {
+    padding-bottom: 0 !important;
+  }
+
+  .quote-progress-bar {
+    gap: 1px;
+  }
+
+  .p-container {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
   }
 }

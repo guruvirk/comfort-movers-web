@@ -313,7 +313,7 @@
       <div class="quote-step" data-step="1">
         <h2 class="quote-step-title">Where are you moving?</h2>
         <p class="quote-step-subtitle">* indicates required field</p>
-        <div class="row">
+        <div class="quote-step-form-box row">
           <div class="col-md-6 col-12 mt-4">
             <label class="form-label" for="move-from">Moving from*</label>
             <input id="move-from" class="form-input" type="text" placeholder="Address" />
@@ -329,7 +329,7 @@
         <h2 class="quote-step-title">When are you moving out?</h2>
         <p class="quote-step-subtitle">Select a range of dates for when you are planning to move out. Simply choose your
           earliest and latest move out dates below.</p>
-        <div class="row">
+        <div class="quote-step-form-box row">
           <div class="col-md-6 col-12 mt-4">
             <label class="form-label" for="date-earliest">Earliest date*</label>
             <input id="date-earliest" class="form-input" type="date" />
@@ -372,7 +372,7 @@
 
       <div class="quote-step" data-step="4">
         <h2 class="quote-step-title">What type of home are you moving from?</h2>
-        <p class="quote-step-subtitle">* indicates required field</p>
+        <p class="quote-step-subtitle">Please select one of the responses below.</p>
         <div class="option-cards">
           <label class="option-card">
             <input type="radio" name="homeType" value="House" />
@@ -389,25 +389,36 @@
             </div>
           </label>
         </div>
-        <div class="home-details">
-          <p class="quote-step-subtitle">Bedroom Count</p>
+        <div class="home-details mt-4">
+          <p class="quote-step-subtitle mb-3">House: Bedroom Count</p>
           <div class="bedroom-count" id="bedroom-count">
             <button type="button" data-value="1">1</button>
             <button type="button" data-value="2">2</button>
             <button type="button" data-value="3">3</button>
             <button type="button" data-value="4+">4+</button>
           </div>
-          <div id="apartment-details" class="apartment-details">
+          <div id="apartment-details" class="apartment-details quote-step-form-box">
             <div class="row">
               <div class="col-md-6 col-12 mt-4">
                 <label class="form-label" for="apt-suite">Apt., Suite No.*</label>
-                <input id="apt-suite" class="form-input" type="text" placeholder="Apt, Suite, Unit" />
+                <input id="apt-suite" class="form-input" type="text" placeholder="" />
               </div>
               <div class="col-md-6 col-12 mt-4">
                 <label class="form-label" for="floor-no">Floor No.*</label>
-                <input id="floor-no" class="form-input" type="text" placeholder="Floor No" />
+                <input id="floor-no" class="form-input" type="text" placeholder="" />
               </div>
             </div>
+          </div>
+          <p class="quote-step-subtitle mt-6 mb-3">Who is paying for your move?*</p>
+          <div class="payer-info" id="payer-info">
+            <label class="payer-option">
+              <input type="radio" name="payer" value="me" checked />
+              <span>I'm Paying</span>
+            </label>
+            <label class="payer-option">
+              <input type="radio" name="payer" value="company" />
+              <span>Company is Paying</span>
+            </label>
           </div>
         </div>
       </div>
@@ -451,38 +462,37 @@
 
       <div class="quote-step" data-step="6">
         <h2 class="quote-step-title">Do you need additional services?</h2>
-        <p class="quote-step-subtitle">Please select the responses below.</p>
         <div class="option-cards option-cards--checkbox">
           <label class="option-card">
-            <input type="checkbox" name="services" value="Packing" />
+            <input class="option-card-select" type="checkbox" name="services" value="Packing" />
             <div>
               <p class="option-card-title">Packing</p>
               <p class="option-card-subtitle">We pack and box your belongings.</p>
             </div>
           </label>
           <label class="option-card">
-            <input type="checkbox" name="services" value="Car Shipping" />
+            <input class="option-card-select" type="checkbox" name="services" value="Car Shipping" />
             <div>
               <p class="option-card-title">Car Shipping</p>
               <p class="option-card-subtitle">We move your vehicles.</p>
             </div>
           </label>
           <label class="option-card">
-            <input type="checkbox" name="services" value="Unpacking" />
+            <input class="option-card-select" type="checkbox" name="services" value="Unpacking" />
             <div>
               <p class="option-card-title">Unpacking</p>
               <p class="option-card-subtitle">We unpack and unwrap your belongings.</p>
             </div>
           </label>
           <label class="option-card">
-            <input type="checkbox" name="services" value="Debris Removal" />
+            <input class="option-card-select" type="checkbox" name="services" value="Debris Removal" />
             <div>
               <p class="option-card-title">Debris Removal</p>
               <p class="option-card-subtitle">We remove all supplied packing material.</p>
             </div>
           </label>
           <label class="option-card">
-            <input type="checkbox" name="services" value="Storage" />
+            <input class="option-card-select" type="checkbox" name="services" value="Storage" />
             <div>
               <p class="option-card-title">Storage</p>
               <p class="option-card-subtitle">We temporarily store your belongings.</p>
@@ -493,38 +503,53 @@
 
       <div class="quote-step" data-step="7">
         <h2 class="quote-step-title">How can we contact you?</h2>
-        <p class="quote-step-subtitle">* Fill the required field</p>
-        <div class="row">
-          <div class="col-md-6 col-12 mt-4">
+        <p class="quote-step-subtitle">* indicates required field</p>
+        <div class="quote-contact-form">
+          <div class="mt-4">
             <label class="form-label" for="first-name">First Name*</label>
             <input id="first-name" class="form-input" type="text" />
           </div>
-          <div class="col-md-6 col-12 mt-4">
+          <div class="mt-4">
             <label class="form-label" for="last-name">Last Name*</label>
             <input id="last-name" class="form-input" type="text" />
           </div>
-          <div class="col-md-6 col-12 mt-4">
+          <div class="mt-4">
             <label class="form-label" for="quote-email">Email Address*</label>
             <input id="quote-email" class="form-input" type="email" />
           </div>
-          <div class="col-md-6 col-12 mt-4">
+          <div class="mt-4">
             <label class="form-label" for="quote-phone">Phone Number*</label>
             <input id="quote-phone" class="form-input" type="tel" />
           </div>
         </div>
-        <p class="quote-step-notice">This experience is secured by Comfort Movers® | We never selling your information
+        <p id="communicsation-consent-mobile" class="quote-step-subtitle mt-4 communicsation-consent-mobile">
+          <label class="d-flex align-items-start">
+            <input id="consent-mobile" name="consent" type="checkbox" class="me-2" />
+            <span>I agree to receive communications from Comfort Movers, its agents, or authorized partners at the
+              contact information provided above.</span>
+          </label>
         </p>
       </div>
 
+
+      <p class="quote-step-subtitle mt-8">This experience is secured by Comfort Movers®&nbsp;|&nbsp;We never selling your
+        information</p>
+      <p id="communicsation-consent" class="quote-step-subtitle mt-4 communicsation-consent-desktop">
+        <label class="d-flex align-items-start">
+          <input id="consent-desktop" name="consent" type="checkbox" class="me-2" />
+          <span>I agree to receive communications from Comfort Movers, its agents, or authorized partners at the contact
+            information provided above.</span>
+        </label>
+      </p>
       <div class="quote-step-actions">
-        <button type="button" id="prev-step" class="btn btn-outline-secondary" onclick="goToPrevStep()">Back</button>
+        <!-- <button type="button" id="prev-step" class="btn btn-outline-secondary" onclick="goToPrevStep()">Back</button> -->
         <button type="button" id="next-step" class="btn btn-primary" onclick="goToNextStep()">Next : Move Date</button>
       </div>
     </div>
   </div>
   <!-- Step Form End -->
 
-    <!-- Footer Start -->
+  <!-- Footer Start -->
   <div class="footer wow fadeIn mx-auto" style="padding-top: 0 !important;" data-wow-delay="0.1s">
     <div class="items-container footer-container" style="padding-top: 0 !important;">
       <div class="col-md-6 text-md-end mb-3 mb-md-0 fotter-bottom d-md-none d-sm-block">
@@ -565,6 +590,12 @@
 
   <!-- International Telephone Input -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+
+  <!-- Google Address Autocomplete -->
+  <script src="js/google-address.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCO9AFZPIDwfLkoaPV36NNewB5MfwwYDX4&libraries=places&callback=initAddressAutocomplete"
+    async defer></script>
 
   <!-- Template Javascript -->
   <script src="js/main.js"></script>
