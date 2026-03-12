@@ -594,6 +594,35 @@ body {
   z-index: 1;
 }
 
+.cover-single {
+  height: 700px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-size: 75% 100%;
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-color: #dce7f7; /* sky color on left */
+}
+
+.cover-single::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to right,
+    #dce7f7 0%,
+    #dce7f7 25%,
+    rgba(220, 231, 247, 0.85) 35%,
+    rgba(220, 231, 247, 0.5) 45%,
+    rgba(220, 231, 247, 0.15) 55%,
+    rgba(220, 231, 247, 0) 65%
+  );
+
+  z-index: 1;
+}
+
 .cover-1 {
   background-image: url('../img/hero-cover.jpeg');
 }
@@ -1843,7 +1872,7 @@ body {
 .home-subscribe-box {
   width: 75%;
   margin: auto;
-  margin-top: 9rem !important;
+  margin-top: 6rem !important;
   padding-top: 40px !important;
   padding-bottom: 40px;
 }
@@ -1980,7 +2009,7 @@ body {
 .long-distance-box {
   width: 85%;
   margin: auto;
-  margin-top: 9rem !important;
+  margin-top: 6rem !important;
   padding-top: 40px !important;
   padding-bottom: 40px;
 }
@@ -1990,7 +2019,7 @@ body {
   width: 55%;
   z-index: 99;
   left: 10%;
-  top: -7rem;
+  top: -8rem;
   border-radius: 10px;
 }
 
@@ -1998,7 +2027,7 @@ body {
   position: absolute;
   width: 55%;
   left: 45%;
-  top: -12rem;
+  top: -13rem;
   border-radius: 10px;
 }
 
@@ -3284,7 +3313,7 @@ body {
 
   .home-subscribe-box {
     width: 100% !important;
-    margin-top: 2.5rem !important;
+    margin-top: 1.5rem !important;
   }
 
   .home-subscribe-box-heading {
@@ -3355,6 +3384,10 @@ body {
     width: 100%;
   }
 
+  .about-journey-wrapper {
+    margin-top: 1.5rem !important;
+  }
+
   .about-page-why-us {
     justify-content: flex-end !important;
     margin-bottom: 2rem;
@@ -3396,7 +3429,7 @@ body {
 
   .long-distance-box {
     width: 100% !important;
-    margin-top: 2.5rem !important;
+    margin-top: 1.5rem !important;
   }
 
   .long-distance-img-box {
@@ -3835,6 +3868,10 @@ body {
     height: 88vh;
   }
 
+  .cover-single {
+    height: 80vh;
+  }
+
   .banner-container-single {
     height: 80vh;
   }
@@ -4166,6 +4203,20 @@ input[type='date'] {
 @media (max-width: 768px) {
   .cover-1 {
     background-image: url('../img/hero-cover-mobile.jpeg');
+  }
+
+  /* Remove gradient overlay */
+  .cover-single::before {
+    display: none;
+  }
+
+  /* Make image behave like mobile design */
+  .cover-single {
+    height: 80vh;
+    background-size: cover !important;
+    background-position: center bottom !important;
+    align-items: flex-start;
+    padding-top: 80px;
   }
 
   /* Remove gradient overlay */
