@@ -203,6 +203,10 @@ body {
   height: 700px;
 }
 
+.banner-container-single {
+  height: 700px;
+}
+
 /*** Header ***/
 .header-carousel .owl-carousel-text {
   position: absolute;
@@ -3819,6 +3823,10 @@ body {
     height: 88vh;
   }
 
+  .banner-container-single {
+    height: 80vh;
+  }
+
   .flow-body {
     width: 100%;
   }
@@ -3839,6 +3847,10 @@ body {
 @media (max-width: 768px) {
   .banner-container {
     height: 88vh;
+  }
+
+  .banner-container-single {
+    height: 80vh;
   }
 
   input[type='date'] {

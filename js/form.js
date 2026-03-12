@@ -1,71 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
   const submitBtn = document.getElementById('contact-submit');
+  const quoteWizard = document.querySelector('.quote-step-form');
 
-  const quoteSubmitBtn = document.getElementById('quote-submit');
-  if (!quoteSubmitBtn && !submitBtn) return;
-
-  const fullNameInput = document.getElementById('full-name');
-  const emailInput = document.getElementById('email');
-  const phoneInput = document.getElementById('phone');
-  const pickupAddressInput = document.getElementById('pickup-address');
-  const deliveryAddressInput = document.getElementById('delivery-address');
-  const moveSizeInput = document.getElementById('move-size');
-  const moveDateInput = document.getElementById('move-date');
-  const messageInput = document.getElementById('message');
-
-  function updateMoveSizeStyle() {
-    if (!moveSizeInput) return;
-    moveSizeInput.classList.toggle('has-value', !!moveSizeInput.value);
-  }
-
-  if (moveSizeInput) {
-    updateMoveSizeStyle();
-    moveSizeInput.addEventListener('change', updateMoveSizeStyle);
-  }
-
-  function updateDateColor() {
-    if (moveDateInput.value) {
-      moveDateInput.classList.add('has-value');
-    } else {
-      moveDateInput.classList.remove('has-value');
-    }
-  }
-
-  if (moveDateInput) {
-    updateDateColor();
-    moveDateInput.addEventListener('change', updateDateColor);
-    const today = new Date().toISOString().split('T')[0];
-    moveDateInput.setAttribute('min', today);
-  }
-
-  if (moveDateInput && moveDateInput.showPicker) {
-    moveDateInput.addEventListener('click', () => {
-      moveDateInput.showPicker();
-    });
-    moveDateInput.addEventListener('focus', () => {
-      moveDateInput.showPicker();
-    });
-  }
-
-  let iti = null;
-  if (phoneInput && window.intlTelInput) {
-    iti = window.intlTelInput(phoneInput, {
-      initialCountry: 'nz',
-      onlyCountries: ['nz', 'au'],
-      separateDialCode: true,
-      nationalMode: false,
-      utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js',
-    });
-
-    phoneInput.addEventListener('input', function () {
-      this.value = this.value.replace(/[^\d\s()+-]/g, '');
-    });
-  }
-
-  const serviceCheckboxContainer = document.getElementById('service-checkboxes');
-  const serviceCheckboxes = serviceCheckboxContainer
-    ? serviceCheckboxContainer.querySelectorAll("input[type='checkbox']")
-    : [];
+  let phoneIti = null;
 
   function showError(msg) {
     alert(msg);
@@ -75,101 +12,28 @@ document.addEventListener('DOMContentLoaded', function () {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
 
-  function validatePhone() {
-    const raw = phoneInput.value.trim();
+  function normalizePhoneInput(inputEl) {
+    if (!inputEl) return '';
+    return inputEl.value.trim();
+  }
 
-    if (iti) {
-      return iti.isValidNumber();
+  function validatePhone(phoneInput, itiInstance) {
+    const raw = normalizePhoneInput(phoneInput);
+    if (!raw) return false;
+
+    if (itiInstance) {
+      return itiInstance.isValidNumber();
     }
 
     const digits = raw.replace(/\D/g, '');
     return digits.length >= 7;
   }
 
-  function getSelectedServices() {
-    const selected = [];
-    serviceCheckboxes.forEach((cb) => {
-      if (cb.checked) {
-        const label = cb.parentElement.querySelector('p');
-        if (label) selected.push(label.textContent.trim());
-      }
-    });
-    return selected.toString() || '';
-  }
-
-  function clearForm() {
-    [
-      fullNameInput,
-      emailInput,
-      phoneInput,
-      pickupAddressInput,
-      deliveryAddressInput,
-      moveSizeInput,
-      moveDateInput,
-      ,
-      messageInput,
-    ].forEach((i) => {
-      if (i) i.value = '';
-    });
-    serviceCheckboxes.forEach((cb) => (cb.checked = false));
-  }
-
-  let clickFunction = async function (type = 'contact') {
-    const name = fullNameInput?.value.trim() || '';
-    const email = emailInput?.value.trim() || '';
-    const phoneRaw = phoneInput.value.trim();
-    const pickup = pickupAddressInput?.value.trim() || '';
-    const delivery = deliveryAddressInput?.value.trim() || '';
-
-    const moveSize = moveSizeInput?.value.trim() || '';
-    const moveDate = moveDateInput?.value || '';
-
-    const message = messageInput?.value.trim() || '';
-    const services = getSelectedServices();
-
-    if (!name) {
-      return showError('Please enter your full name.');
-    }
-    if (!email || !validateEmail(email)) {
-      return showError('Please enter a valid email address.');
-    }
-    if (!phoneRaw) return alert('Please enter your phone number.');
-    if (!validatePhone()) return alert('Please enter a valid NZ or AU phone number.');
-    if (!pickup) {
-      return showError('Please enter a pickup address.');
-    }
-    if (!delivery) {
-      return showError('Please enter a delivery address.');
-    }
-
-    if (type === 'quote') {
-      if (!moveSize) {
-        return showError('Please select the size of move.');
-      }
-      if (!moveDate) {
-        return showError('Please select a date for your move.');
-      }
-    }
-
-    if (!message) {
-      return showError('Please enter a message about the work.');
-    }
-
-    if (type === 'contact' && services.length === 0) {
-      return showError('Please select at least one service.');
-    }
-
-    const fullPhoneNumber = iti ? iti.getNumber() : phoneRaw;
-
-    const pickupInput = document.getElementById('pickup-address');
-    const deliveryInput = document.getElementById('delivery-address');
-
-    const pickupText = pickupInput.value.trim();
-    const deliveryText = deliveryInput.value.trim();
-
-    const where = (window.orderAddresses && window.orderAddresses.where) || {
-      special: pickupText,
-      line1: pickupText,
+  function buildAddressObject(addressText) {
+    const trimmed = (addressText || '').trim();
+    return {
+      special: trimmed,
+      line1: trimmed,
       line2: '',
       district: '',
       suburb: '',
@@ -183,58 +47,271 @@ document.addEventListener('DOMContentLoaded', function () {
       vehicleAccess: '',
       accessToHome: '',
     };
+  }
 
-    const to = (window.orderAddresses && window.orderAddresses.to) || {
-      special: deliveryText,
-      line1: deliveryText,
-      line2: '',
-      district: '',
-      suburb: '',
-      city: '',
-      state: '',
-      pinCode: '',
-      country: '',
-      floor: '',
-      isParkingAway: false,
-      isElevator: false,
-      vehicleAccess: '',
-      accessToHome: '',
+  function getRadioValue(name) {
+    const input = document.querySelector(`input[name="${name}"]:checked`);
+    return input ? input.value : '';
+  }
+
+  function getCheckboxValues(name) {
+    const checked = Array.from(document.querySelectorAll(`input[name="${name}"]:checked`));
+    return checked.map((c) => c.value);
+  }
+
+  function attachRadioCardHandlers() {
+    const radios = document.querySelectorAll('.option-card input[type="radio"]');
+    radios.forEach((radio) => {
+      radio.addEventListener('change', () => {
+        const groupName = radio.name;
+        const siblings = document.querySelectorAll(`.option-card input[name="${groupName}"]`);
+        siblings.forEach((sibling) => {
+          const parent = sibling.closest('.option-card');
+          if (parent) parent.classList.toggle('selected', sibling.checked);
+        });
+      });
+    });
+  }
+
+  function attachCheckboxCardHandlers() {
+    const checkboxes = document.querySelectorAll('.option-card input[type="checkbox"]');
+    checkboxes.forEach((checkbox) => {
+      checkbox.addEventListener('change', () => {
+        const parent = checkbox.closest('.option-card');
+        if (parent) parent.classList.toggle('selected', checkbox.checked);
+      });
+    });
+  }
+
+  function setupBedroomCount() {
+    const buttons = Array.from(document.querySelectorAll('#bedroom-count button'));
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => {
+        buttons.forEach((b) => b.classList.remove('selected'));
+        button.classList.add('selected');
+      });
+    });
+  }
+
+  function setupHomeTypeToggle() {
+    const homeTypeRadios = document.querySelectorAll('input[name="homeType"]');
+    const apartmentDetails = document.getElementById('apartment-details');
+
+    const toggle = () => {
+      const homeType = getRadioValue('homeType');
+      if (homeType === 'Apartment') {
+        apartmentDetails.classList.add('active');
+      } else {
+        apartmentDetails.classList.remove('active');
+      }
     };
 
-    const body =
-      type === 'quote'
-        ? {
-            name: name,
-            email: email,
-            phone: fullPhoneNumber,
-            sizeDetails: moveSize,
-            size: services,
-            date: moveDate,
-            additionalInfo: message,
-            where,
-            to,
-          }
-        : {
-            name: name,
-            email: email,
-            phone: fullPhoneNumber,
-            size: services,
-            additionalInfo: message,
-            where,
-            to,
-          };
+    homeTypeRadios.forEach((radio) => radio.addEventListener('change', toggle));
+    toggle();
+  }
+
+  function initIntlTelInput(inputId) {
+    const input = document.getElementById(inputId);
+    if (!input || !window.intlTelInput) return null;
+
+    const iti = window.intlTelInput(input, {
+      initialCountry: 'nz',
+      onlyCountries: ['nz', 'au'],
+      separateDialCode: true,
+      nationalMode: false,
+      showFlags: false,
+      utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js',
+    });
+
+    input.addEventListener('input', function () {
+      this.value = this.value.replace(/[^\d\s()+-]/g, '');
+    });
+
+    return iti;
+  }
+
+  function showStep(stepIndex) {
+    const steps = Array.from(document.querySelectorAll('.quote-step'));
+    const progress = Array.from(document.querySelectorAll('.quote-progress-segment'));
+    const total = steps.length;
+    if (stepIndex < 0 || stepIndex >= total) return;
+
+    steps.forEach((step, index) => {
+      step.classList.toggle('active', index === stepIndex);
+    });
+
+    progress.forEach((seg, index) => {
+      seg.classList.toggle('active', index <= stepIndex);
+    });
+
+    const prevBtn = document.getElementById('prev-step');
+    const nextBtn = document.getElementById('next-step');
+
+    if (prevBtn) prevBtn.style.visibility = stepIndex === 0 ? 'hidden' : 'visible';
+
+    if (nextBtn) {
+      const isLast = stepIndex === total - 1;
+      nextBtn.textContent = isLast
+        ? 'Get My Quote'
+        : `Next : ${['Move Date', 'Experience', 'Home Type', 'How much stuff', 'Additional service', 'Contact information'][stepIndex]}`;
+    }
+
+    currentStepIndex = stepIndex;
+    try {
+      localStorage.setItem('quoteStepIndex', String(stepIndex));
+    } catch (e) {
+    }
+  }
+
+  function validateCurrentStep() {
+    const step = currentStepIndex + 1;
+
+    const movingFrom = document.getElementById('move-from')?.value.trim();
+    const movingTo = document.getElementById('move-to')?.value.trim();
+    const earliest = document.getElementById('date-earliest')?.value;
+    const latest = document.getElementById('date-latest')?.value;
+    const experience = getRadioValue('experience');
+    const homeType = getRadioValue('homeType');
+    const bedroom = document.querySelector('#bedroom-count button.selected')?.getAttribute('data-value');
+    const aptSuite = document.getElementById('apt-suite')?.value.trim();
+    const floorNo = document.getElementById('floor-no')?.value.trim();
+    const moveSize = getRadioValue('moveSize');
+    const services = getCheckboxValues('services');
+    const firstName = document.getElementById('first-name')?.value.trim();
+    const lastName = document.getElementById('last-name')?.value.trim();
+    const email = document.getElementById('quote-email')?.value.trim();
+    const phoneInput = document.getElementById('quote-phone');
+
+    switch (step) {
+      case 1:
+        if (!movingFrom) {
+          showError('Please enter your moving from address.');
+          return false;
+        }
+        if (!movingTo) {
+          showError('Please enter your moving to address.');
+          return false;
+        }
+        return true;
+      case 2:
+        if (!earliest) {
+          showError('Please select your earliest move date.');
+          return false;
+        }
+        if (!latest) {
+          showError('Please select your latest move date.');
+          return false;
+        }
+        if (earliest > latest) {
+          showError('Earliest date cannot be after latest date.');
+          return false;
+        }
+        return true;
+      case 3:
+        if (!experience) {
+          showError('Please select your moving experience.');
+          return false;
+        }
+        return true;
+      case 4:
+        if (!homeType) {
+          showError('Please select the type of home.');
+          return false;
+        }
+        if (!bedroom) {
+          showError('Please select how many bedrooms.');
+          return false;
+        }
+        if (homeType === 'Apartment' && (!aptSuite || !floorNo)) {
+          showError('Please enter your apartment number and floor.');
+          return false;
+        }
+        return true;
+      case 5:
+        if (!moveSize) {
+          showError('Please select how much stuff is moving.');
+          return false;
+        }
+        return true;
+      case 6:
+        if (services.length === 0) {
+          showError('Please select at least one additional service.');
+          return false;
+        }
+        return true;
+      case 7:
+        if (!firstName) {
+          showError('Please enter your first name.');
+          return false;
+        }
+        if (!lastName) {
+          showError('Please enter your last name.');
+          return false;
+        }
+        if (!email || !validateEmail(email)) {
+          showError('Please enter a valid email address.');
+          return false;
+        }
+        if (!validatePhone(phoneInput, phoneIti)) {
+          showError('Please enter a valid phone number.');
+          return false;
+        }
+        return true;
+      default:
+        return true;
+    }
+  }
+
+  async function submitQuote() {
+    const movingFrom = document.getElementById('move-from')?.value.trim();
+    const movingTo = document.getElementById('move-to')?.value.trim();
+    const earliest = document.getElementById('date-earliest')?.value;
+    const latest = document.getElementById('date-latest')?.value;
+    const experience = getRadioValue('experience');
+    const homeType = getRadioValue('homeType');
+    const bedroom = document.querySelector('#bedroom-count button.selected')?.getAttribute('data-value');
+    const aptSuite = document.getElementById('apt-suite')?.value.trim();
+    const floorNo = document.getElementById('floor-no')?.value.trim();
+    const moveSize = getRadioValue('moveSize');
+    const services = getCheckboxValues('services');
+    const servicesText = services.join(', ');
+    const firstName = document.getElementById('first-name')?.value.trim();
+    const lastName = document.getElementById('last-name')?.value.trim();
+    const email = document.getElementById('quote-email')?.value.trim();
+    const phoneInput = document.getElementById('quote-phone');
+
+    const fullName = [firstName, lastName].filter(Boolean).join(' ');
+    const fullPhoneNumber = phoneIti ? phoneIti.getNumber() : normalizePhoneInput(phoneInput);
+
+    const body = {
+      name: fullName,
+      email: email,
+      phone: fullPhoneNumber,
+      sizeDetails: moveSize,
+      size: servicesText,
+      date: earliest,
+      additionalInfo: JSON.stringify({
+        movingFrom,
+        movingTo,
+        earliest,
+        latest,
+        experience,
+        homeType,
+        bedroom,
+        aptSuite,
+        floorNo,
+      }),
+      where: buildAddressObject(movingFrom),
+      to: buildAddressObject(movingTo),
+    };
+
+    const nextBtn = document.getElementById('next-step');
+    if (nextBtn) {
+      nextBtn.disabled = true;
+      nextBtn.textContent = 'Sending...';
+    }
 
     try {
-      if (type === 'quote') {
-        quoteSubmitBtn.disabled = true;
-        quoteSubmitBtn.textContent = 'Sending...';
-      } else {
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Sending...';
-      }
-
-      console.log('Form submission body:', JSON.stringify(body));
-
       const response = await fetch('https://comfortcare.co.nz/cm/api/create-order', {
         method: 'POST',
         headers: {
@@ -249,23 +326,68 @@ document.addEventListener('DOMContentLoaded', function () {
         showError('Something went wrong while submitting your request. Please try again.');
       } else {
         alert('Thank you! Your request has been submitted. We’ll contact you soon.');
-        clearForm();
+        try {
+          localStorage.removeItem('quoteStepIndex');
+        } catch (e) {
+        }
         window.location.href = '/';
       }
     } catch (err) {
       console.error(err);
       showError('Network error while submitting the form. Please try again.');
     } finally {
-      if (type === 'quote') {
-        quoteSubmitBtn.disabled = false;
-        quoteSubmitBtn.textContent = 'Send Message';
-      } else {
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Send Message';
+      if (nextBtn) {
+        nextBtn.disabled = false;
+        nextBtn.textContent = 'Get My Quote';
       }
     }
-  };
+  }
 
+  if (quoteWizard) {
+    attachRadioCardHandlers();
+    attachCheckboxCardHandlers();
+    setupBedroomCount();
+    setupHomeTypeToggle();
+
+    phoneIti = initIntlTelInput('quote-phone');
+
+    const dateEarliest = document.getElementById('date-earliest');
+    const dateLatest = document.getElementById('date-latest');
+    const today = new Date().toISOString().split('T')[0];
+    if (dateEarliest) dateEarliest.setAttribute('min', today);
+    if (dateLatest) dateLatest.setAttribute('min', today);
+
+    window.goToPrevStep = () => {
+      const steps = Array.from(document.querySelectorAll('.quote-step'));
+      const activeIndex = steps.findIndex((step) => step.classList.contains('active'));
+      const currentIndex = activeIndex === -1 ? 0 : activeIndex;
+      showStep(currentIndex - 1);
+    };
+
+    window.goToNextStep = async () => {
+      if (!validateCurrentStep()) return;
+      const steps = Array.from(document.querySelectorAll('.quote-step'));
+      const activeIndex = steps.findIndex((step) => step.classList.contains('active'));
+      const currentIndex = activeIndex === -1 ? 0 : activeIndex;
+      const totalSteps = steps.length;
+
+      if (currentIndex === totalSteps - 1) {
+        await submitQuote();
+      } else {
+        showStep(currentIndex + 1);
+      }
+    };
+
+    let currentStepIndex = 0;
+    try {
+      localStorage.removeItem('quoteStepIndex');
+    } catch (e) {
+    }
+
+    showStep(currentStepIndex);
+  }
+
+  const quoteSubmitBtn = document.getElementById('quote-submit');
   if (submitBtn) {
     submitBtn.addEventListener('click', () => clickFunction('contact'));
   }

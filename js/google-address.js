@@ -89,6 +89,6 @@ function attachAutocomplete(inputId, type) {
 }
 
 function initAddressAutocomplete() {
-  attachAutocomplete('pickup-address', 'where');
-  attachAutocomplete('delivery-address', 'to');
+  attachAutocomplete('move-from', 'where');
+  attachAutocomplete('move-to', 'to');
 }
