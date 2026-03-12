@@ -4,9 +4,10 @@
 <head>
   <meta charset="utf-8" />
   <title>Professional Movers and Packers Auckland | Relocate Your Home Easily</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta content="" name="keywords" />
-  
+
+  <link rel="canonical" href="https://comfortmovers.co.nz">
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta
@@ -51,7 +52,7 @@
     rel="stylesheet" />
 
   <!-- Icon Font Stylesheet -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
 
   <!-- Libraries Stylesheet -->
@@ -65,7 +66,51 @@
   <!-- Template Stylesheet -->
   <link href="css/style.css" rel="stylesheet" />
   <link href="css/reviews.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MovingCompany",
+    "name": "Comfort Movers",
+    "image": "https://comfortmovers.co.nz/assets/img/logo.webp",
+    "@id": "https://comfortmovers.co.nz/#business",
+    "url": "https://comfortmovers.co.nz/",
+    "telephone": "+64 22 340 7710",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "294 Wairau Road, Glenfield",
+      "addressLocality": "Auckland",
+      "addressRegion": "Auckland",
+      "postalCode": "0629",
+      "addressCountry": "NZ"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -36.7694031,
+      "longitude": 174.7257721
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "06:00",
+        "closes": "21:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/people/Comfort-Movers/100063953687924/"
+    ]
+  }
+  </script>
+
 </head>
 
 <body>
@@ -78,85 +123,173 @@
   </div>
   <!-- Spinner End -->
 
-  
-
   <!-- Navbar Start -->
   <nav class="navbar navbar-expand-lg navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
+    <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="mobileMenu">
+      <div class="offcanvas-header">
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <ul class="navbar-nav">
+
+          <li class="nav-item">
+            <a class="nav-link" href="service.html">Services</a>
+          </li>
+
+          <a class="nav-link d-flex align-items-center" href="express-movers.html">
+            <i class="bi bi-lightning-charge me-3"></i> Express Movers
+          </a>
+
+          <a class="nav-link d-flex align-items-center" href="house-movers-packers-auckland.html">
+            <i class="bi bi-house-door me-3"></i> House Movers
+          </a>
+
+          <a class="nav-link d-flex align-items-center" href="office-movers-auckland.html">
+            <i class="bi bi-building me-3"></i> Office Movers
+          </a>
+
+          <a class="nav-link d-flex align-items-center" href="intercity-movers.html">
+            <i class="bi bi-truck me-3"></i> Intercity Movers
+          </a>
+
+          <a class="nav-link d-flex align-items-center" href="package-service.html">
+            <i class="bi bi-box-seam me-3"></i> Packing
+          </a>
+
+          <a class="nav-link d-flex align-items-center" href="storage-service.html">
+            <i class="bi bi-archive me-3"></i> Storage
+          </a>
+
+          <hr>
+
+          <a class="nav-link d-flex align-items-center" href="about-us.html">
+            <i class="bi bi-info-circle me-3"></i> About Us
+          </a>
+
+          <a class="nav-link d-flex align-items-center" href="contact.html">
+            <i class="bi bi-envelope me-3"></i> Contact Us
+          </a>
+
+
+          <li class="nav-item mt-3">
+            <a href="quote.html" class="btn btn-primary w-100 rounded-10">
+              Get A Quote
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
     <div class="nav-bar-container">
       <a href="index.html" class="navbar-brand d-flex align-items-center px-lg-5 my-2">
         <img class="logo" src="img/Logo.png" />
       </a>
-      <button type="button" class="navbar-toggler me-4 my-2" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse space-around my-2" id="navbarCollapse">
+      <div class="nav-right-buttons">
+        <a href="quote.html" class="btn rounded-10 py-1 px-2 my-2 btn-nav-small" style="font-weight:400;">Get A
+          Quote</a>
+        <button class="mobile-menu-btn custom-cta btn-primary" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#mobileMenu" aria-label="Open menu">
+          <i class="bi bi-list menu-icon"></i>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse space-around my-2 d-none d-lg-flex" id="navbarCollapse">
         <div class="navbar-nav p-4 p-lg-0 mx-xl-5">
           <div class="nav-item dropdown">
-            <a href="" class="nav-link dropdown-toggle nal-link-text" data-bs-toggle="dropdown">Service</a>
+            <a href="service.html" class="nav-link dropdown-toggle nal-link-text" data-bs-toggle="dropdown">Service</a>
             <div class="dropdown-menu rounded-0 rounded-bottom m-0">
-              <a href="express-movers.html" class="dropdown-item nal-link-text">Express</a>
-              <a href="house-movers-packers-auckland.html" class="dropdown-item nal-link-text">House</a>
-              <a href="office-movers-auckland.html" class="dropdown-item nal-link-text">Office</a>
-              <a href="intercity-movers.html" class="dropdown-item nal-link-text">Intercity</a>
-              <a href="package-service.html" class="dropdown-item nal-link-text">Packing</a>
-              <a href="storage-service.html" class="dropdown-item nal-link-text">Storage</a>
-              <a href="commercial-movers.html" class="dropdown-item nal-link-text">Commercial</a>
+              <a class="dropdown-item nal-link-text" href="express-movers.html">
+                <i class="bi bi-lightning-charge me-2"></i> Express
+              </a>
+
+              <a class="dropdown-item nal-link-text" href="house-movers-packers-auckland.html">
+                <i class="bi bi-house-door me-2"></i> House
+              </a>
+
+              <a class="dropdown-item nal-link-text" href="office-movers-auckland.html">
+                <i class="bi bi-building me-2"></i> Office
+              </a>
+
+              <a class="dropdown-item nal-link-text" href="intercity-movers.html">
+                <i class="bi bi-truck me-2"></i> Intercity
+              </a>
+
+              <a class="dropdown-item nal-link-text" href="package-service.html">
+                <i class="bi bi-box-seam me-2"></i> Packing
+              </a>
+
+              <a class="dropdown-item nal-link-text" href="storage-service.html">
+                <i class="bi bi-archive me-2"></i> Storage
+              </a>
+
+              <a class="dropdown-item nal-link-text" href="commercial-movers.html">
+                <i class="bi bi-briefcase me-2"></i> Commercial
+              </a>
+
             </div>
           </div>
           <div class="nav-item dropdown mx-lg-3">
-            <a href="" class="nav-link dropdown-toggle nal-link-text" data-bs-toggle="dropdown">Resources</a>
+            <a href="" class="nav-link dropdown-toggle nal-link-text" data-bs-toggle="dropdown">
+              Resources
+            </a>
+
             <div class="dropdown-menu rounded-0 rounded-bottom m-0">
-              <a href="products.html" class="dropdown-item nal-link-text">Products</a>
-              <a href="career.html" class="dropdown-item nal-link-text">Carrer</a>
-              <a href="faq.html" class="dropdown-item nal-link-text">FAQ</a>
+
+              <a href="products.html" class="dropdown-item nal-link-text">
+                <i class="bi bi-bag me-2"></i> Products
+              </a>
+
+              <a href="career.html" class="dropdown-item nal-link-text">
+                <i class="bi bi-person me-2"></i> Career
+              </a>
+
+              <a href="faq.html" class="dropdown-item nal-link-text">
+                <i class="bi bi-question-circle me-2"></i> FAQ
+              </a>
 
             </div>
           </div>
+
           <div class="nav-item dropdown">
-            <a href="" class="nav-link dropdown-toggle nal-link-text" data-bs-toggle="dropdown">Company</a>
-            <div class="dropdown-menu rounded-0 rounded-bottom m-0">
-              <a href="" class="dropdown-item nal-link-text">About Us</a>
-              <a href="contact.html" class="dropdown-item nal-link-text">Contact Us</a>
-              <a href="reviews.html" class="dropdown-item nal-link-text">Reviews</a>
-              <!-- <a href="rates.html" class="dropdown-item nal-link-text">Rate</a> -->
-              <a href="blogs.html" class="dropdown-item nal-link-text">Blogs</a>
-
-            </div>
+            <a href="" class="nav-link nal-link-text" data-bs-toggle="dropdown">
+              Rates
+            </a>
           </div>
-          <!-- <!-- <a href="rates.html" class="nav-item nav-link nal-link-text">Rates</a> --> -->
+
+          <!-- <a href="rates.html" class="nav-item nav-link nal-link-text">Rates</a> -->
         </div>
-        <a href="quote.html" class="btn btn-primary rounded-0 py-2 px-lg-3 d-none d-lg-block my-2 mx-lg-3">Get A Free Quote</a>
+        <div class="nav-right-buttons">
+          <a href="quote.html" class="btn btn-custom-light rounded-10 py-2 px-lg-3 d-none d-lg-block my-2"><i
+              class="fa-regular fa-phone-volume me-2"></i>022-340-7710</a>
+          <a href="quote.html" class="btn btn-primary rounded-10 py-2 px-lg-3 d-none d-lg-block my-2"
+            style="font-weight:400;">Get A
+            Quote</a>
+        </div>
       </div>
     </div>
   </nav>
   <!-- Navbar End -->
 
-  <!-- Cover Start -->
-  <div class="served-box-item-img about-page d-sm-none">
-    <img style="width: 100%" src="img/about-cover.png" />
-  </div>
-  <div class="items-container mx-auto p-container served-box justify-content-between align-items-center wow fadeIn"
-    data-wow-delay="0.1s">
-    <div class="served-box-item-text about-page">
-      <h1 class="cover-heading-text"><span class="color-primary">About</span> Us</h1>
-      <p class="cover-sub-text">
-        We customize our service to match your moving needs, ensuring safe transport with our efficient, insured team.
-        We
-        offer packing, loading, unloading, and furniture assembly for all move sizes.
-      </p>
-      <div class="header-phone-review">
-        <a href="tel:0223407710" class="header-phone"><i class="fa fa-phone-alt"></i>&nbsp;&nbsp;&nbsp;022-340-7710</a>
-        <div class="header-review">
-          <img src="img/devicon_google.png" /><span class="header-review-rating">&nbsp;&nbsp;4.9/5</span><img
-            src="img/ic_round-star.png" /><span class="header-review-text">&nbsp;&nbsp;&nbsp;600+ reviews</span>
+  <!-- Header Start -->
+  <div id="heroSection" class="banner-container container-fluid header p-0 mb-1 mb-lg-5" data-bs-interval="4000">
+
+    <div style="height: 700px" class="row g-0 align-items-center flex-column-reverse flex-lg-row">
+      <div class="col-lg-12 wow fadeIn cover cover-1" data-wow-delay="0.5s">
+        <div class="cover-heading">
+          <h2 class="cover-heading-text sm-text-center">
+            About Comfort Movers
+          </h2>
+          <p class="cover-sub-text sm-text-center">
+            We customize our service to match your moving needs, ensuring safe transport with our efficient, insured
+            team. We offer packing, loading, unloading, and furniture assembly for all move sizes.
+          </p>
         </div>
       </div>
+
     </div>
-    <div class="served-box-item-img about-page d-none d-sm-flex justify-content-end">
-      <img class="about-image" src="img/about-cover.png" />
-    </div>
+
   </div>
-  <!-- Cover End -->
+  <!-- Header End -->
 
   <!-- Founder Start -->
   <div class="items-container mx-auto p-container served-box justify-content-between align-items-center wow fadeIn"
@@ -165,18 +298,12 @@
       <img class="about-image" src="img/founder.png" />
     </div>
     <div class="served-box-item-text about-page">
-      <h2 class="top-choice-heading d-text-left pb-2">
-        Meet The Founder <span class="color-primary">Harsimran Singh</span>
+      <h2 class="top-choice-heading about-hero-title pb-2">
+        We Are Serving the Whole Auckland North Shore
       </h2>
-      <p class="served-text fw-medium">
-        <span class="color-primary">Mr Harsimran Singh</span> is the Founder and CEO of Comfort Movers, bringing a
-        wealth
-        of expertise and visionary leadership to the company.
-      </p>
       <p class="served-text">
-        With a deep-rooted commitment to excellence and customer satisfaction, Mr. Singh has steered Comfort Movers
-        towards
-        becoming a trusted name in the moving and logistics industry.
+        Our experienced team at Comfort Movers feel proud to serve the entire Auckland North Shore with comprehensive
+        and personalized moving solutions. Enjoy reliable service and local expertise for a stress-free move.
       </p>
       <div class="served-box-item-img about-page d-sm-none pb-4 pt-1">
         <img class="about-image" src="img/founder.png" />
@@ -184,42 +311,83 @@
       <div class="row">
         <div class="col-md-6 col-12">
           <div class="top-choice-item">
-            <img height="32" width="32" src="img/check.png" />
-            <h3 class="top-choice-item-text">Commitment to Excellence</h3>
+            <img height="60" width="60" src="img/quality_improvement.png" />
+            <h3 class="top-choice-item-text">Quality Improvement</h3>
           </div>
-          <div class="top-choice-item">
-            <img height="32" width="32" src="img/check.png" />
-            <h3 class="top-choice-item-text">Strategic Vision and Innovation</h3>
-          </div>
+          <p class="top-choice-item-bottom-text">
+            We continuously strive to enhance our services through regular training and feedback, ensuring top-notch
+            quality in every move.
+          </p>
         </div>
         <div class="col-md-6 col-12">
           <div class="top-choice-item">
-            <img height="32" width="32" src="img/check.png" />
-            <h3 class="top-choice-item-text">Reliable and Personalized Solutions</h3>
+            <img height="60" width="60" src="img/client_satisfaction.png" />
+            <h3 class="top-choice-item-text">Client Satisfaction</h3>
           </div>
-          <div class="top-choice-item">
-            <img height="32" width="32" src="img/check.png" />
-            <h3 class="top-choice-item-text">Trusted Industry Leader</h3>
-          </div>
+          <p class="top-choice-item-bottom-text">
+            Our commitment to client satisfaction ensures personalized, efficient, and reliable moving solutions,
+            exceeding expectations.
+          </p>
         </div>
       </div>
     </div>
   </div>
   <!-- Founder End -->
 
+  <!-- Long Distance Start -->
+  <div class="long-distance-container">
+    <div class="long-distance-box p-container mx-auto served-box justify-content-between align-items-center wow fadeIn"
+      data-wow-delay="0.1s">
+      <div class="served-box-item-text about-page">
+        <h2 class="top-choice-heading text-left">
+          Offering Both Local and Long Distance Moving
+        </h2>
+        <p class="served-text">
+          Comfort Movers is dedicated to making your move seamless, whether you're relocating within the city or across
+          the country.
+        </p>
+        <div class="about-long-distance-box">
+          <div class="about-long-distance-box-heading">Local Expertise</div>
+          <div class="about-long-distance-box-text">
+            Our team knows the Auckland North Shore inside and out, ensuring efficient and timely local moves.
+          </div>
+        </div>
+        <div class="about-long-distance-box">
+          <div class="about-long-distance-box-heading">Long Distance Moves</div>
+          <div class="about-long-distance-box-text">
+            We provide reliable and secure long-distance moving services, tailored to meet your specific needs.
+          </div>
+        </div>
+        <div class="about-long-distance-box">
+          <div class="about-long-distance-box-heading">Comprehensive Solutions</div>
+          <div class="about-long-distance-box-text">
+            From packing to transportation, we offer complete moving solutions to make your transition as smooth as
+            possible.
+          </div>
+        </div>
+      </div>
+      <div class="served-box-item-img about-page about-page-why-us long-distance-img-box justify-content-center">
+        <div>
+          <img class="long-distance-img-1" src="img/about-3.png" />
+          <img class="long-distance-img-2" src="img/about-3.png" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Long Distance End -->
+
   <!-- Why Comfort Movers Start -->
   <div class="items-container mx-auto p-container served-box justify-content-between align-items-center wow fadeIn"
     data-wow-delay="0.1s">
-    <div class="served-box-item-img about-page about-page-why-us d-sm-none">
-      <img class="why-us-image" src="img/about-1.png" />
-      <img class="moving-soon-banner" src="img/moving-soon-banner.png" />
-    </div>
-    <div class="served-box-item-text about-page">
-      <h2 class="top-choice-heading d-text-left">Why<span class="color-primary"> Comfort Movers</span></h2>
-      <p class="cover-sub-text d-text-left">
+    <div class="served-box-item-text why-comfort-info">
+      <h2 class="top-choice-heading text-left">
+        Why Comfort Movers
+      </h2>
+      <p class="served-text">
         Our team possesses specialized skills and knowledge to assess every detail of your relocation needs, offering
         tailor-made solutions for each unique situation.
       </p>
+      <img class="why-comfort-mobile-image my-1 d-sm-none" src="img/about-1.png" />
       <div class="progress-line-div">
         <div class="progress-line-box">
           <h6 class="served-item-sub-text">Expertise</h6>
@@ -266,455 +434,330 @@
         </div>
       </div>
     </div>
-    <div class="served-box-item-img about-page about-page-why-us d-none d-sm-flex justify-content-end">
+    <div class="served-box-item-img why-comfort-image about-page-why-us d-none d-sm-flex justify-content-end">
       <img class="why-us-image" src="img/about-1.png" />
       <img class="moving-soon-banner" src="img/moving-soon-banner.png" />
     </div>
   </div>
   <!-- Why Comfort Movers End -->
 
-  <!-- North Shore -->
-  <div class="items-container mx-auto p-container served-box justify-content-between align-items-center wow fadeIn"
-    data-wow-delay="0.1s">
-    <div class="served-box-item-img about-page justify-content-start">
-      <img class="about-image" src="img/about-2.png" />
-    </div>
-    <div class="served-box-item-text about-page mt-4">
-      <h2 class="top-choice-heading d-text-left pb-2">
-        We Are Serving the Whole <span class="color-primary">Auckland North Shore</span>
-      </h2>
-      <p class="served-text">
-        Our experienced team at Comfort Movers feel proud to serve the entire Auckland North Shore with comprehensive
-        and
-        personalized moving solutions. Enjoy reliable service and local expertise for a stress-free move.
-      </p>
-      <div class="row">
-        <div class="col-md-6 col-12">
-          <div class="top-choice-item">
-            <img height="60" width="60" src="img/quality.png" />
-            <h3 class="top-choice-item-text">Quality Improvement</h3>
-            <p class="served-text">
-              We continuously strive to enhance our services through regular training and feedback, ensuring top-notch
-              quality in every move.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-6 col-12">
-          <div class="top-choice-item">
-            <img height="60" width="60" src="img/client-satisfaction.png" />
-            <h3 class="top-choice-item-text">Client Satisfaction</h3>
-            <p class="served-text">
-              Our commitment to client satisfaction ensures personalized, efficient, and reliable moving solutions,
-              exceeding expectations.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- North Shore End -->
+  <!-- New Reviews Start -->
+  <div class="reviews-section items-container mx-auto p-container">
 
-  <!-- Long Distance Start -->
-  <div class="items-container mx-auto p-container served-box justify-content-between align-items-center wow fadeIn"
-    data-wow-delay="0.1s">
-    <div class="served-box-item-img about-page about-page-why-us mb-3 d-sm-none">
-      <div>
-        <img class="long-distance-img-1" src="img/about-3.png" />
-        <img class="long-distance-img-2" src="img/about-4.png" />
-        <img class="long-distance-img-3" src="img/about-plane-sky-blue.png" />
-      </div>
-    </div>
-    <div class="served-box-item-text about-page">
-      <h2 class="top-choice-heading d-text-left">
-        Offering Both <span class="color-primary">Local</span> and <span class="color-primary">Long Distance
-          Moving</span>
-      </h2>
-      <p class="cover-sub-text d-text-left">
-        Comfort Movers is dedicated to making your move seamless, whether you're relocating within the city or across
-        the
-        country.
-      </p>
-      <div class="about-long-distance-box">
-        <div class="home-bolg-heading about-long-distance-box-heading">Local Expertise</div>
-        <div class="served-text about-long-distance-box-text">
-          Our team knows the Auckland North Shore inside and out, ensuring efficient and timely local moves.
-        </div>
-      </div>
-      <div class="about-long-distance-box">
-        <div class="home-bolg-heading about-long-distance-box-heading">Local Expertise</div>
-        <div class="served-text about-long-distance-box-text">
-          Our team knows the Auckland North Shore inside and out, ensuring efficient and timely local moves.
-        </div>
-      </div>
-      <div class="about-long-distance-box">
-        <div class="home-bolg-heading about-long-distance-box-heading">Local Expertise</div>
-        <div class="served-text about-long-distance-box-text">
-          Our team knows the Auckland North Shore inside and out, ensuring efficient and timely local moves.
-        </div>
-      </div>
-    </div>
-    <div class="served-box-item-img about-page about-page-why-us d-none d-sm-flex justify-content-end">
-      <div>
-        <img class="long-distance-img-1" src="img/about-3.png" />
-        <img class="long-distance-img-2" src="img/about-4.png" />
-        <img class="long-distance-img-3" src="img/about-plane-sky-blue.png" />
-      </div>
-    </div>
-  </div>
-  <!-- Long Distance End -->
-
-  <div id="about-gallary-container" class="about-gallary-container">
-    <div id="about-gallary-row" class="about-gallary-row">
-      <div class="about-gallary-item">
-        <img src="img/gallary/gallery-1.png" alt="gallery-1" />
-      </div>
-      <div class="about-gallary-item">
-        <img src="img/gallary/gallery-2.png" alt="gallery-2" />
-      </div>
-      <div class="about-gallary-item">
-        <img src="img/gallary/gallery-3.png" alt="gallery-3" />
-      </div>
-      <div class="about-gallary-item">
-        <img src="img/gallary/gallery-4.png" alt="gallery-4" />
-      </div>
-      <div class="about-gallary-item">
-        <img src="img/gallary/gallery-5.png" alt="gallery-5" />
-      </div>
-      <div class="about-gallary-item">
-        <img src="img/gallary/gallery-12.png" alt="gallery-212" />
-      </div>
-      <div class="about-gallary-item">
-        <img src="img/gallary/gallery-13.png" alt="gallery-13" />
-      </div>
-      <div class="about-gallary-item">
-        <img src="img/gallary/gallery-14.png" alt="gallery-14" />
-      </div>
-      <div class="about-gallary-item">
-        <img src="img/gallary/gallery-6.png" alt="gallery-6" />
-      </div>
-      <div class="about-gallary-item">
-        <img src="img/gallary/gallery-7.png" alt="gallery-7" />
-      </div>
-      <div class="about-gallary-item">
-        <img src="img/gallary/gallery-8.png" alt="gallery-8" />
-      </div>
-      <div class="about-gallary-item">
-        <img src="img/gallary/gallery-9.png" alt="gallery-9" />
-      </div>
-      <div class="about-gallary-item">
-        <img src="img/gallary/gallery-10.png" alt="gallery-10" />
-      </div>
-      <div class="about-gallary-item">
-        <img src="img/gallary/gallery-11.png" alt="gallery-11" />
-      </div>
-      <div class="about-gallary-item">
-        <img src="img/gallary/gallery-12.png" alt="gallery-12" />
-      </div>
-    </div>
-    <div class="about-gallary-row">
-      <div class="about-gallary-item">
-        <img src="img/gallary/gallery-7.png" alt="gallery-27" />
-      </div>
-      <div class="about-gallary-item">
-        <img src="img/gallary/gallery-8.png" alt="gallery-28" />
-      </div>
-      <div class="about-gallary-item">
-        <img src="img/gallary/gallery-9.png" alt="gallery-29" />
-      </div>
-      <div class="about-gallary-item">
-        <img src="img/gallary/gallery-10.png" alt="gallery-210" />
-      </div>
-      <div class="about-gallary-item">
-        <img src="img/gallary/gallery-1.png" alt="gallery-1" />
-      </div>
-      <div class="about-gallary-item">
-        <img src="img/gallary/gallery-2.png" alt="gallery-2" />
-      </div>
-      <div class="about-gallary-item">
-        <img src="img/gallary/gallery-3.png" alt="gallery-3" />
-      </div>
-      <div class="about-gallary-item">
-        <img src="img/gallary/gallery-11.png" alt="gallery-211" />
-      </div>
-      <div class="about-gallary-item">
-        <img src="img/gallary/gallery-12.png" alt="gallery-212" />
-      </div>
-      <div class="about-gallary-item">
-        <img src="img/gallary/gallery-13.png" alt="gallery-13" />
-      </div>
-      <div class="about-gallary-item">
-        <img src="img/gallary/gallery-14.png" alt="gallery-14" />
-      </div>
-      <div class="about-gallary-item">
-        <img src="img/gallary/gallery-15.png" alt="gallery-15" />
-      </div>
-      <div class="about-gallary-item">
-        <img src="img/gallary/gallery-16.png" alt="gallery-16" />
-      </div>
-      <div class="about-gallary-item">
-        <img src="img/gallary/gallery-17.png" alt="gallery-17" />
-      </div>
-      <div class="about-gallary-item">
-        <img src="img/gallary/gallery-18.png" alt="gallery-18" />
-      </div>
-    </div>
-  </div>
-  <script>
-    const aboutGallary = document.getElementById('about-gallary-container');
-    const aboutGallaryConent = document.getElementById('about-gallary-row');
-    if (screen.width > 932) {
-      const width = Math.round(aboutGallary.offsetWidth - aboutGallaryConent.offsetWidth);
-      aboutGallary.scrollLeft += width;
-    } else {
-      const width = Math.round(aboutGallaryConent.offsetWidth);
-      aboutGallary.scrollLeft += width;
-    }
-  </script>
-
-  <!-- Reviews Start -->
-  <div class="items-container mx-auto p-container text-center wow fadeIn" data-wow-delay="0.1s">
-    <h2 class="our-services-heading">The <span class="color-primary">Love</span> We Receive</h2>
+    <h2 class="our-services-heading">What Our Customers Say</h2>
     <h4 class="our-services-text">
       Our satisfied customers' praise fuels our drive to achieve industry excellence and guides us to continually
-      improve
-      our service quality.
+      improve our service quality.
     </h4>
-    <div id="dynamic-reviews-container" class="dynamic-reviews-container"></div>
-  </div>
-  <!-- Reviews End -->
 
-  <!-- Floating Bar Start -->
-  <div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
-    <marquee scrollamount="15" style="width: fit-content">
-      <div class="px-5 home-floating-item">
-        <h2>Comprehnsive Services</h2>
-        <img src="img/Logo.png" />
-        <h2>Competitive Prices</h2>
-        <img src="img/Logo.png" />
-        <h2>Comprehnsive Services</h2>
-        <img src="img/Logo.png" />
-        <h2>Competitive Prices</h2>
-        <img src="img/Logo.png" />
+    <div class="reviews-summary-card mt-4">
+      <div class="reviews-summary-info">
+        <div class="reviews-summary-info-header">
+          <img src="img/Google_2015_logo 1.png" class="reviews-google-logo" alt="Google">
+          <div class="review-btn-container-mobile">
+            <a href="https://www.google.com/search?q=comfort+movers+reviews" target="_blank" class="review-btn">
+              Leave a Review
+            </a>
+          </div>
+        </div>
+        <div class="reviews-summary-left">
+          <p class="summary-title">Overall Rating</p>
+          <div class="summary-rating">
+            <span class="rating-score">5/5</span>
+            <div class="rating-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <a href="https://www.google.com/search?q=comfort+movers+reviews" target="_blank" class="review-link">
+              <span>138 Google reviews</span>&nbsp;&nbsp;<i class="bi bi-box-arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
       </div>
-    </marquee>
+      <div class="review-btn-container-desktop">
+        <a href="https://www.google.com/search?q=comfort+movers+reviews" target="_blank" class="review-btn">
+          Leave a Review
+        </a>
+      </div>
+
+    </div>
+
+    <div class="reviews-container">
+      <button id="review-prev" class="review-nav review-prev">
+        <i class="bi bi-chevron-left"></i>
+      </button>
+      <button id="review-next" class="review-nav review-next">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+      <div class="owl-carousel google-review-carousel">
+
+        <!-- Review 1 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-user">
+              <img class="google-user-avatar" alt="" src="img/devicon_google.png">
+              <div>
+                <h4>Juliana Baldessarini</h4>
+                <span>24 October, 2025</span>
+              </div>
+            </div>
+
+            <img class="google-logo" alt="" src="img/devicon_google.png">
+          </div>
+
+          <div class="review-stars">
+            ★★★★★
+          </div>
+
+          <p>
+            If you care about the handling of your things, don’t look further.
+            Simran and his team are your go to. They may not be the cheapest but definitely the best.
+          </p>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-user">
+              <img class="google-user-avatar" alt="" src="img/devicon_google.png">
+              <div>
+                <h4>Juliana Baldessarini</h4>
+                <span>24 October, 2025</span>
+              </div>
+            </div>
+
+            <img class="google-logo" alt="" src="img/devicon_google.png">
+          </div>
+
+          <div class="review-stars">
+            ★★★★★
+          </div>
+
+          <p>
+            If you care about the handling of your things, don’t look further.
+            Simran and his team are your go to. They may not be the cheapest but definitely the best.
+          </p>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-user">
+              <img class="google-user-avatar" alt="" src="img/devicon_google.png">
+              <div>
+                <h4>Juliana Baldessarini</h4>
+                <span>24 October, 2025</span>
+              </div>
+            </div>
+
+            <img class="google-logo" alt="" src="img/devicon_google.png">
+          </div>
+
+          <div class="review-stars">
+            ★★★★★
+          </div>
+
+          <p>
+            If you care about the handling of your things, don’t look further.
+            Simran and his team are your go to. They may not be the cheapest but definitely the best.
+          </p>
+        </div>
+
+      </div>
+    </div>
   </div>
-  <!-- Floating Bar End -->
+  <!-- New Reviews End -->
 
   <!-- Here For You Start -->
-  <div class="items-container mx-auto p-container served-box justify-content-between align-items-center wow fadeIn"
+  <div
+    class="items-container mx-auto p-container justify-content-between align-items-center wow fadeIn contact-journey-wrapper mt-10"
     data-wow-delay="0.1s">
-    <div class="served-box-item-img about-page about-page-why-us mb-3 d-sm-none">
-      <div class="about-image">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51136.826555676744!2d174.68457264285493!3d-36.769328141032155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d3b308c9efa99%3A0x99875cc501aa448b!2sComfort%20Movers!5e0!3m2!1sen!2sin!4v1725648389403!5m2!1sen!2sin"
-          width="100%" height="380" style="border: 0" loading="lazy" allowfullscreen></iframe>
+    <div class="contact-journey-box" style="border-radius: 10px;">
+      <div class="contact-journey-box-item-text about-page">
+        <h2 class="contact-journey-heading">Let’s Begin This Journey Together</h2>
+        <p class="contact-journey-sub-text">
+          Affordable air freight solutions that balance cost and quality for every shipment cost for shipment.
+        </p>
+        <p class="contact-journey-sub-text-bold">
+          We are available 24/7 and all days in the week to serve you better
+        </p>
+        <a href="tel:0223407710" class="about-here-contact">
+          <div>
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <h6>022 340 7710</h6>
+        </a>
+        <a href="mailto:admin@comfortmovers.co.nz" class="about-here-contact">
+          <div>
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <h6>admin@comfortmovers.co.nz</h6>
+        </a>
+        <a href="https://maps.app.goo.gl/q529X6JgKXVSHkWB6" target="_blank" class="about-here-contact">
+          <div>
+            <i class="fa-solid fa-map-marker-alt"></i>
+          </div>
+          <h6>Albany, Auckland, New Zealand 0632</h6>
+        </a>
+        <div class="contact-journey-social">
+          <p class="contact-journey-connect-text d-none d-md-block">Connect With Us :</p>
+          <div class="contact-journey-social-icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
+
       </div>
-    </div>
-    <div class="served-box-item-text about-page">
-      <h2 class="top-choice-heading d-text-left">We are <span class="color-primary">Here For You</span></h2>
-      <p class="cover-sub-text d-text-left">
-        Affordable air freight solutions that balance cost and quality for every shipment cost for shipment.
-      </p>
-      <a href="tel:0223407710" class="about-here-contact">
-        <div>
-          <img height="21" width="21" src="img/phone.png" />
+      <div class="contact-journey-box-form about-page about-page-why-us justify-content-end">
+        <div class="about-form">
+          <h2 class="about-form-heading text-center mt-2">We Want To Hear From You</span></h2>
+          <div class="row">
+            <div class="col-md-6 col-12 mt-4">
+              <input id="full-name" class="form-input" type="text" placeholder="Full Name*" />
+            </div>
+            <div class="col-md-6 col-12 mt-4">
+              <input id="phone" class="form-input" type="tel" placeholder="Phone Number*" />
+            </div>
+            <div class="col-md-6 col-12 mt-4">
+              <input id="email" class="form-input" type="email" placeholder="Email ID*" />
+            </div>
+            <div class="col-md-6 col-12 mt-4">
+              <select class="form-input form-select">
+                <option selected disabled>Select Service</option>
+                <option value="express">Express Moving</option>
+                <option value="house">House Moving</option>
+                <option value="office">Office Moving</option>
+              </select>
+            </div>
+            <div class="col-md-6 col-12 mt-4">
+              <input id="pickup-address" class="form-input" type="text" placeholder="Pickup Address*" />
+            </div>
+            <div class="col-md-6 col-12 mt-4">
+              <input id="delivery-address" class="form-input" type="text" placeholder="Delivery Address*" />
+            </div>
+            <div class="col-12 mt-4">
+              <input id="message" class="form-textarea" type="text" placeholder="Message about work*" />
+            </div>
+          </div>
+          <button class="form-submit mt-4 p-3" id="contact-submit">Book Quote</button>
         </div>
-        <h6>022 340 7710</h6>
-      </a>
-      <a href="mailto:admin@comfortmovers.co.nz" class="about-here-contact">
-        <div>
-          <img height="22" width="27" src="img/mail.png" />
-        </div>
-        <h6>admin@comfortmovers.co.nz</h6>
-      </a>
-      <a href="https://maps.app.goo.gl/q529X6JgKXVSHkWB6" target="_blank" class="about-here-contact">
-        <div>
-          <img height="26" width="19" src="img/location.png" />
-        </div>
-        <h6>Albany, Auckland, New Zealand 0632</h6>
-      </a>
-      <p class="cover-sub-text d-text-left mt-4">Follow us on</p>
-      <div class="about-follow-us">
-        <img style="height: 37px" src="img/logos_facebook.png" />
-        <img style="height: 37px" src="img/skill-icons_instagram.png" />
-        <img style="height: 37px" src="img/skill-icons_linkedin.png" />
-      </div>
-    </div>
-    <div class="served-box-item-img about-page about-page-why-us d-none d-sm-flex justify-content-end">
-      <div class="about-image">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51136.826555676744!2d174.68457264285493!3d-36.769328141032155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d3b308c9efa99%3A0x99875cc501aa448b!2sComfort%20Movers!5e0!3m2!1sen!2sin!4v1725648389403!5m2!1sen!2sin"
-          width="100%" height="380" style="border: 0" loading="lazy" allowfullscreen></iframe>
       </div>
     </div>
   </div>
   <!-- Here For You End -->
 
-  <!-- About Form Start -->
-  <div class="items-container mx-auto p-container served-box justify-content-between align-items-center wow fadeIn"
-    data-wow-delay="0.1s">
-    <div class="about-form">
-      <h2 class="about-form-heading text-center">We Want To <span class="color-primary">Hear From You</span></h2>
-      <div class="row">
-        <div class="col-md-4 col-12 mt-4">
-          <input id="full-name" class="form-input" type="text" placeholder="Full Name*" />
-        </div>
-        <div class="col-md-4 col-12 mt-4">
-          <input id="email" class="form-input" type="email" placeholder="Email ID*" />
-        </div>
-        <div class="col-md-4 col-12 mt-4">
-          <input id="phone" class="form-input" type="tel" placeholder="Phone Number*" />
-        </div>
-        <div class="col-md-6 col-12 mt-4">
-          <input id="pickup-address" class="form-input" type="text" placeholder="Pickup Address*" />
-        </div>
-        <div class="col-md-6 col-12 mt-4">
-          <input id="delivery-address" class="form-input" type="text" placeholder="Delivery Address*" />
-        </div>
-        <div class="col-12 mt-4">
-          <input id="message" class="form-textarea" type="text" placeholder="Message about work*" />
-        </div>
-      </div>
-      <h6 class="fotter-link mt-4">Service*</h6>
-      <div id="service-checkboxes" class="mt-2 form-checkboxes">
-        <div class="form-checkbox"><input type="checkbox" />
-          <p>Packing</p>
-        </div>
-        <div class="form-checkbox"><input type="checkbox" />
-          <p>Household</p>
-        </div>
-        <div class="form-checkbox"><input type="checkbox" />
-          <p>Express</p>
-        </div>
-        <div class="form-checkbox"><input type="checkbox" />
-          <p>Intercity</p>
-        </div>
-        <div class="form-checkbox"><input type="checkbox" />
-          <p>Storage</p>
-        </div>
-        <div class="form-checkbox"><input type="checkbox" />
-          <p>Warehouse</p>
-        </div>
-        <div class="form-checkbox"><input type="checkbox" />
-          <p>Office</p>
-        </div>
-        <div class="form-checkbox"><input type="checkbox" />
-          <p>Commercial</p>
-        </div>
-      </div>
-      <button class="home-bolg-read-button mt-4 p-3" id="contact-submit">Send Message</button>
-    </div>
-  </div>
-  <!-- About Form End -->
-
-  <!-- Partners Start -->
-  <div class="items-container mx-auto p-container text-center wow fadeIn" data-wow-delay="0.1s">
-    <h2 class="our-services-heading">Our <span class="color-primary">Partners</span></h2>
-    <h4 class="our-services-text">
-      Collaborating with trusted partners who share our commitment to quality and customer satisfaction, we deliver
-      seamless solutions across every aspect of moving and storage.
-    </h4>
-    <div class="partner-container">
-      <img src="img/partner-copenhagen.png" />
-      <img src="img/partner-helsinki.png" />
-      <img src="img/parner-lars.png" />
-      <img src="img/partner-sk.png" />
-      <img src="img/partner-hagen.png" />
-    </div>
-  </div>
-  <!-- Partners End -->
-
   <!-- Footer Start -->
-  <div class="items-container p-container footer wow fadeIn mx-auto" data-wow-delay="0.1s">
-    <div class="py-5">
-      <div class="row">
-        <div class="row col-lg-5 col-md-6">
-          <div class="col-12">
-            <img class="fotter-logo" src="img/Logo.png" />
-          </div>
-          <div class="col-12 my-5">
-            <a href="tel:0223407710" class="fotter-phone"><i
-                class="fa fa-phone-alt"></i>&nbsp;&nbsp;&nbsp;022-340-7710</a>
-          </div>
-          <a href="mailto:admin@comfortmovers.co.nz" class="col-12 bottom-info">
-            <div>
-              <img height="22" width="27" src="img/mail.png" />
+  <div class="footer wow fadeIn mx-auto" data-wow-delay="0.1s">
+    <div class="items-container footer-container">
+      <div class="pb-5">
+        <div class="row">
+          <div class="row col-lg-4 col-md-5">
+            <div class="col-12">
+              <img class="fotter-logo" src="img/Logo.png" />
             </div>
-            <p>admin@comfortmovers.co.nz</p>
-          </a>
-          <a href="https://maps.app.goo.gl/q529X6JgKXVSHkWB6" target="_blank" class="col-12 bottom-info">
-            <div>
-              <img height="26" width="19" src="img/location.png" />
+            <div class="col-12 mt-5" style="margin-bottom: 2.2rem;">
+              <p class="fotter-text-info">Just give us a call on</p>
+              <a href="tel:0223407710" class="fotter-phone"><i
+                  class="fa-regular fa-phone-volume"></i>&nbsp;&nbsp;&nbsp;022-340-7710</a>
             </div>
-            <p>1601 N Gower St Ste 205 Albany, Auckland, New Zealand 0632</p>
-          </a>
-          <div class="col-12 bottom-info">
-            <div>
-              <img height="29" width="29" src="img/user-time.png" />
-            </div>
-            <p>Mon-Fri : 6am - 6pm <br />Sat-Sun : 8am - 4pm</p>
-          </div>
-        </div>
-        <div class="col-lg-1"></div>
-        <div class="row col-lg-6 col-md-6">
-          <div class="col-lg-4 col-md-4 my-3 col-6">
-            <p class="mb-4 fotter-heading">Company</p>
-            <a class="btn fotter-link" href="">About Us</a>
-            <a class="btn fotter-link" href="contact.html">Contact Us</a>
-            <a class="btn fotter-link" href="reviews.html">Reviews</a>
-            <!-- <a class="btn fotter-link" href="rates.html">Rate</a> -->
-            <a class="btn fotter-link" href="blogs.html">Blogs</a>
-
-          </div>
-          <div class="col-lg-4 col-md-4 my-3 col-6">
-            <p class="mb-4 fotter-heading">
-              <a class="fotter-heading" href="service.html">Services</a>
-            </p>
-            <a class="btn fotter-link" href="express-movers.html">Express</a>
-            <a class="btn fotter-link" href="house-movers-packers-auckland.html">House</a>
-            <a class="btn fotter-link" href="office-movers-auckland.html">Office</a>
-            <a class="btn fotter-link" href="intercity-movers.html">Intercity</a>
-            <a class="btn fotter-link" href="package-service.html">Packing</a>
-            <a class="btn fotter-link" href="storage-service.html">Storage</a>
-            <a class="btn fotter-link" href="commercial-movers.html">Commercial</a>
-          </div>
-          <div class="col-lg-4 col-md-4 my-3 col-6">
-            <p class="mb-4 fotter-heading">Resources</p>
-            <a class="btn fotter-link" href="products.html">Products</a>
-            <a class="btn fotter-link" href="career.html">Carrer</a>
-            <a class="btn fotter-link" href="faq.html">FAQ</a>
-
-          </div>
-          <div class="col-12 row">
-            <div class="col-lg-4 col-md-4 my-3 col-6">
-              <p class="fotter-heading">Follow us on</p>
-              <div class="footer-links-container">
-                <a href="https://www.facebook.com/Comfort-Movers-105774034843709/" target="_blank"><img
-                    style="height: 37px" src="img/logos_facebook.png" /></a>
-                <!-- <img style="height: 37px" src="img/skill-icons_instagram.png" />
-                <img style="height: 37px" src="img/skill-icons_linkedin.png" /> -->
+            <div class="col-12">
+              <p class="fotter-text-info" style="margin-bottom: .2rem;">Contact email for Queries</p>
+              <div class="bottom-info">
+                <i style="color: #fff; min-width: 20px;" class="fa-regular fa-envelope"></i>
+                <a href="mailto:admin@comfortmovers.co.nz" target="_blank">
+                  <p style="text-decoration: underline;">admin@comfortmovers.co.nz</p>
+                </a>
               </div>
             </div>
-            <div class="col-lg-4 col-md-4 my-3 col-6">
-              <p class="fotter-heading">License</p>
+            <div class="col-12 bottom-info">
+              <i style="color: #fff; min-width: 20px;" class="fa-regular fa-location-dot"></i>
+              <a href="https://maps.app.goo.gl/q529X6JgKXVSHkWB6" target="_blank">
+                <p>1601 N Gower St Ste 205 Albany, Auckland, New Zealand 0632</p>
+              </a>
+            </div>
+            <div class="col-12 bottom-info d-none d-md-flex">
+              <i width="24" style="color: #fff; min-width: 20px;" class="fa-regular fa-clock"></i>
+              <p>Mon-Fri : 6am - 6pm&nbsp;&nbsp;Sat-Sun : 8am - 4pm</p>
+            </div>
+            <div class="col-12 bottom-info d-md-none d-sm-flex">
+              <i style="color: #fff; min-width: 20px;" class="fa-regular fa-clock"></i>
+              <div>
+                <p>Mon-Fri : 6am - 6pm</p>
+                <p>Sat-Sun : 8am - 4pm</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-1"></div>
+          <div class="row col-lg-7 col-md-7 justify-content-end">
+            <div class="col-lg-3 col-md-4 my-3 col-6">
+              <p class="mb-4 fotter-heading">COMPANY</p>
+              <a class="btn fotter-link" href="">Home</a>
+              <a class="btn fotter-link" href="about-us.html">About Us</a>
+              <a class="btn fotter-link" href="contact.html">Contact Us</a>
+              <a class="btn fotter-link" href="career.html">Carrer</a>
+              <a class="btn fotter-link" href="blogs.html">Blogs</a>
+            </div>
+            <div class="col-lg-3 col-md-4 my-3 col-6">
+              <p class="mb-4 fotter-heading">
+                <a class="fotter-heading" href="service.html">SERVICES</a>
+              </p>
+              <a class="btn fotter-link" href="express-movers.html">Express</a>
+              <a class="btn fotter-link" href="house-movers-packers-auckland.html">House</a>
+              <a class="btn fotter-link" href="office-movers-auckland.html">Office</a>
+              <a class="btn fotter-link" href="intercity-movers.html">Intercity</a>
+              <a class="btn fotter-link" href="package-service.html">Packing</a>
+              <a class="btn fotter-link" href="storage-service.html">Storage</a>
+              <a class="btn fotter-link" href="commercial-movers.html">Commercial</a>
+            </div>
+            <div class="col-lg-3 col-md-4 my-3 col-6 d-md-none d-sm-block">
+              <p class="mb-4 fotter-heading">
+                <a class="fotter-heading" href="service.html">FOLLOW US</a>
+              </p>
+              <a class="btn fotter-link" href="https://www.facebook.com/Comfort-Movers-105774034843709/"
+                target="_blank"><i style="width: 16px;"
+                  class="fab fa-facebook-f primary-color"></i>&nbsp;&nbsp;Facebook</a>
+              <a class="btn fotter-link" href="https://www.instagram.com/comfortmovers/" target="_blank"><i
+                  style="width: 16px;" class="fab fa-instagram primary-color"></i>&nbsp;&nbsp;Instagram</a>
+            </div>
+            <div class="col-lg-3 col-md-4 my-3 col-6 d-md-none d-sm-block">
+              <img class="fotter-ac-img" src="img/ac_review.png" alt="">
+            </div>
+            <div class="col-lg-4 col-md-4 my-3 col-6 d-none d-md-block">
+              <p class="mb-4 fotter-heading">CONNECT WITH US</p>
+              <a class="btn fotter-link" href="https://www.facebook.com/Comfort-Movers-105774034843709/"
+                target="_blank"><i style="width: 16px;"
+                  class="fab fa-facebook-f primary-color"></i>&nbsp;&nbsp;Facebook</a>
+              <a class="btn fotter-link" href="https://www.instagram.com/comfortmovers/" target="_blank"><i
+                  style="width: 16px;" class="fab fa-instagram primary-color"></i>&nbsp;&nbsp;Instagram</a>
+
+              <img class="fotter-ac-img" src="img/ac_review.png" alt="">
+              <p class="fotter-heading">License:</p>
               <p class="fotter-link">989CSC98CSKJN</p>
             </div>
-            <div class="col-lg-4 col-md-4 my-3 col-6">
-              <img style="height: 67px" src="img/image 47.png" />
-            </div>
+          </div>
+          <div>
+            <p class="fotter-heading footer-flex d-md-none d-sm-block">License:&nbsp;<span
+                class="fotter-link">989CSC98CSKJN</span></p>
           </div>
         </div>
       </div>
-    </div>
-    <div class="container fotter-end">
-      <div class="copyright">
-        <div class="row">
-          <div class="col-md-6 text-md-start mb-3 mb-md-0 fotter-end-text">
-            Copyright © 2025 Comfort Movers All rights reserved.
-          </div>
-          <div class="col-md-6 text-md-end mb-3 mb-md-0 fotter-bottom">
-            <a class="fotter-end-text me-4" href="privacy-policy.html">Privacy Policy</a><a href="t&c.html"
-              class="fotter-end-text">Terms & conditions</a>
+      <div class="col-md-6 text-md-end mb-3 mb-md-0 fotter-bottom d-md-none d-sm-block">
+        <a class="fotter-end-text me-4" href="privacy-policy.html">Privacy Policy</a><a href="t&c.html"
+          class="fotter-end-text">Terms & conditions</a>
+      </div>
+      <div class="fotter-end">
+        <div class="copyright">
+          <div class="row">
+            <div class="col-md-6 text-md-start mb-3 mb-md-0 fotter-end-text">
+              Copyright © 2025 Comfort Movers All rights reserved.
+            </div>
+            <div class="col-md-6 text-md-end mb-3 mb-md-0 fotter-bottom d-none d-md-block">
+              <a class="fotter-end-text me-4" href="privacy-policy.html">Privacy Policy</a><a href="t&c.html"
+                class="fotter-end-text">Terms & conditions</a>
+            </div>
           </div>
         </div>
       </div>
@@ -736,20 +779,10 @@
   <script src="lib/tempusdominus/js/moment.min.js"></script>
   <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
   <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-  
-  <!-- International Telephone Input -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
-
-  <!-- Google Address Autocomplete -->
-  <script src="js/google-address.js"></script>
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCO9AFZPIDwfLkoaPV36NNewB5MfwwYDX4&libraries=places&callback=initAddressAutocomplete"
-    async defer></script>
 
   <!-- Template Javascript -->
   <script src="js/main.js"></script>
   <script src="js/reviews.js"></script>
-  <script src="js/form.js"></script>
 </body>
 
 </html>
