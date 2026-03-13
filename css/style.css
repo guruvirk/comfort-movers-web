@@ -1062,6 +1062,10 @@ body {
   width: 85% !important;
 }
 
+.narrow-items-container {
+  width: 75% !important;
+}
+
 .w-90 {
   width: 90% !important;
 }
@@ -1776,6 +1780,42 @@ body {
   color: rgba(0, 0, 0, 1);
 }
 
+.type-of-service-item {
+  align-content: center;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.type-of-service-item-box {
+  text-align: left;
+}
+
+.type-of-service-item-img {
+  width: 100%;
+}
+
+.type-of-service-item img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.type-of-service-item-content h5 {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: rgba(51, 51, 51, 1);
+}
+
+.type-of-service-item-content p {
+  width: 100%;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0px;
+  color: rgba(51, 51, 51, 1);
+}
+
 .faq-collapsible {
   background-color: transparent;
   display: flex;
@@ -1871,6 +1911,14 @@ body {
 
 .home-subscribe-box {
   width: 75%;
+  margin: auto;
+  margin-top: 6rem !important;
+  padding-top: 40px !important;
+  padding-bottom: 40px;
+}
+
+.service-page-planning-box {
+  width: 85%;
   margin: auto;
   margin-top: 6rem !important;
   padding-top: 40px !important;
@@ -2008,6 +2056,14 @@ body {
 
 .long-distance-box {
   width: 85%;
+  margin: auto;
+  margin-top: 6rem !important;
+  padding-top: 40px !important;
+  padding-bottom: 40px;
+}
+
+.narrow-long-distance-box {
+  width: 75%;
   margin: auto;
   margin-top: 6rem !important;
   padding-top: 40px !important;
@@ -2245,6 +2301,25 @@ body {
   padding-left: 10px;
 }
 
+.service-page-info-heading {
+  width: 85% !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service-page-info-text {
+  width: 75% !important;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.service-page-info-components-box {
+  width: 75% !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .left-border {
   border-left: 10px solid #2480fd;
   padding-left: 20px !important;
@@ -2329,6 +2404,25 @@ body {
   gap: 1rem;
 }
 
+.package-wrap-card-container h5 {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: rgba(51, 51, 51, 1);
+}
+
+.package-wrap-content p {
+  width: 100%;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 18px;
+  leading-trim: NONE;
+  line-height: 26px;
+  letter-spacing: 0px;
+  color: rgba(51, 51, 51, 1);
+}
+
 .package-wrap-content li {
   color: #444;
 }
@@ -2345,16 +2439,26 @@ body {
   object-fit: cover;
 }
 
+.service-page-checklist-item {
+  margin-top: 2rem;
+}
+
+.service-page-checklist-item p {
+  width: 100%;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0px;
+  color: rgba(51, 51, 51, 1);
+  margin-bottom: 0 !important;
+}
+
 .custom-list li {
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   font-weight: 450;
   line-height: 32px;
   color: rgba(0, 0, 0, 1);
-}
-
-.offer-housing-service {
-  padding: 0rem 10rem;
 }
 
 .rates-cities-buttons {
@@ -2846,6 +2950,10 @@ body {
     width: 100% !important;
   }
 
+  .narrow-items-container {
+    width: 100% !important;
+  }
+
   .step-icon {
     visibility: hidden;
   }
@@ -3316,6 +3424,11 @@ body {
     margin-top: 1.5rem !important;
   }
 
+  .service-page-planning-box {
+    width: 100% !important;
+    margin-top: 1.5rem !important;
+  }
+
   .home-subscribe-box-heading {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
@@ -3425,6 +3538,11 @@ body {
     width: 100% !important;
     margin: 0;
     padding: 0;
+  }
+
+  .narrow-long-distance-box {
+    width: 100% !important;
+    margin-top: 1.5rem !important;
   }
 
   .long-distance-box {
@@ -3539,6 +3657,25 @@ body {
     padding-left: 10px;
   }
 
+  .service-page-info-heading {
+    width: 100% !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .service-page-info-text {
+    width: 100% !important;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center !important;
+  }
+
+  .service-page-info-components-box {
+    width: 100% !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .left-border {
     border-left: 5px solid #2480fd;
     padding-left: 10px !important;
@@ -3617,10 +3754,6 @@ body {
 
   .container-package {
     margin: 0rem;
-  }
-
-  .offer-housing-service {
-    padding: 0rem 0rem;
   }
 
   .rates-cities-buttons {
