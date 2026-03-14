@@ -4423,7 +4423,7 @@ input[type='date'] {
   }
 
   .flow-header-box {
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
 }
 
@@ -4641,6 +4641,19 @@ input[type='date'] {
 
   .header-phone-review {
     margin-top: 45vh;
+  }
+
+  .flow-header-box-left {
+    padding-right: 0 !important;
+  }
+
+  .flow-header-box-center {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .flow-header-box-right {
+    padding-left: 0 !important;
   }
 }
 
@@ -4989,7 +5002,7 @@ input[type='date'] {
   border-radius: 10px;
   background: rgba(246, 248, 255, 1);
   padding-left: 1rem !important;
-  padding-top: .5rem;
+  padding-top: 0.5rem;
 }
 
 .we-handle-item li {
