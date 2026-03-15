@@ -372,7 +372,7 @@
   }
 
   .footer {
-    margin-top: 6rem !important;
+    margin-top: 3rem !important;
   }
 
   .communicsation-consent-desktop {
@@ -394,6 +394,7 @@
   }
 
   .p-container {
+    padding-top: 3rem !important;
     padding-right: 0 !important;
     padding-left: 0 !important;
   }

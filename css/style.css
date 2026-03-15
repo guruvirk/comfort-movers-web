@@ -219,7 +219,7 @@ body {
   height: 700px;
 }
 
-.banner-container-contact {
+.banner-container-short {
   height: 500px;
 }
 
@@ -649,6 +649,31 @@ body {
 
 .cover-contact {
   background-image: url("../img/contact_us_cover.png");
+}
+
+.cover-team {
+  background-image: url("../img/cover-team.png");
+  background-size: 100% 100% !important;
+}
+
+.cover-quote {
+  background-image: url("../img/quote_cover.png");
+  background-size: 100% 100% !important;
+}
+
+.cover-team::before {
+  background: linear-gradient(
+    to right,
+    #dce7f7 0%,
+    #dce7f7 25%,
+    rgba(220, 231, 247, 0.85) 35%,
+    rgba(220, 231, 247, 0.5) 45%,
+    rgba(220, 231, 247, 0.15) 55%,
+    rgba(220, 231, 247, 0) 65%
+  ) !important;
+}
+
+.cover-short {
   height: 500px !important;
 }
 
@@ -2103,18 +2128,18 @@ body {
 
 .long-distance-img-1 {
   position: absolute;
-  width: 55%;
+  width: 50%;
   z-index: 99;
   left: 10%;
-  top: -8rem;
+  top: -10rem;
   border-radius: 10px;
 }
 
 .long-distance-img-2 {
   position: absolute;
-  width: 55%;
+  width: 50%;
   left: 45%;
-  top: -13rem;
+  top: -15rem;
   border-radius: 10px;
 }
 
@@ -4051,12 +4076,24 @@ body {
     height: 80vh;
   }
 
-  .banner-container-contact {
+  .banner-container-short {
     height: 68vh;
   }
 
-  .cover-contact {
+  .cover-short {
     height: 68vh !important;
+  }
+
+  .cover-contact {
+    background-image: url("../img/contact_us_cover.png");
+  }
+
+  .cover-team {
+    background-image: url("../img/cover-team-mobile.png");
+  }
+
+  .cover-quote {
+    background-image: url("../img/quote-cover-mobile.png");
   }
 
   .flow-body {
@@ -4085,7 +4122,7 @@ body {
     height: 80vh;
   }
 
-  .banner-container-contact {
+  .banner-container-short {
     height: 68vh;
   }
 
@@ -4419,10 +4456,21 @@ input[type="date"] {
     padding-top: 80px;
   }
 
-  .cover-contact {
+  .cover-short {
     height: 68vh !important;
-    background-image: url("../img/contact_cover_mobile.png");
     padding-top: 30px !important;
+  }
+
+  .cover-contact {
+    background-image: url("../img/contact_cover_mobile.png");
+  }
+
+  .cover-team {
+    background-image: url("../img/cover-team-mobile.png");
+  }
+
+  .cover-quote {
+    background-image: url("../img/quote-cover-mobile.png");
   }
 
   /* Make text readable on image */
