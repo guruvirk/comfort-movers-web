@@ -1034,8 +1034,8 @@ function normalizeReviews(data) {
   if (!Array.isArray(data)) return [];
   if (Array.isArray(data[0])) {
     const flat = [];
-    data.forEach(group => {
-      if (Array.isArray(group)) group.forEach(r => flat.push(r));
+    data.forEach((group) => {
+      if (Array.isArray(group)) group.forEach((r) => flat.push(r));
     });
     return flat;
   }
@@ -1060,8 +1060,7 @@ function createDynamicReviewCard(r, type) {
   const card = document.createElement('div');
   card.className = 'dynamic-review-card';
 
-  const textClass =
-    type === 'long' ? 'review-text review-text-long' : 'review-text review-text-short';
+  const textClass = type === 'long' ? 'review-text review-text-long' : 'review-text review-text-short';
 
   card.innerHTML = `
     <img src="img/quotes-icon.png" class="quote-icon" />
@@ -1090,9 +1089,7 @@ function renderDynamicReviews(rawData) {
 
   container.innerHTML = '';
 
-  const all = normalizeReviews(rawData).filter(
-    r => r && r.review && String(r.review).trim() !== ''
-  );
+  const all = normalizeReviews(rawData).filter((r) => r && r.review && String(r.review).trim() !== '');
   if (!all.length) return;
 
   const shuffled = shuffleArray(all);
@@ -1103,7 +1100,7 @@ function renderDynamicReviews(rawData) {
   const right = long.slice(LEFT_COUNT, LEFT_COUNT + RIGHT_COUNT);
 
   const used = [...left, ...right];
-  const remaining = shuffled.filter(r => !used.includes(r));
+  const remaining = shuffled.filter((r) => !used.includes(r));
 
   while (left.length < LEFT_COUNT && remaining.length) left.push(remaining.shift());
   while (right.length < RIGHT_COUNT && remaining.length) right.push(remaining.shift());
@@ -1123,11 +1120,78 @@ function renderDynamicReviews(rawData) {
   container.appendChild(middleCol);
   container.appendChild(rightCol);
 
-  left.forEach(r => leftCol.appendChild(createDynamicReviewCard(r, 'long')));
-  middle.forEach(r => middleCol.appendChild(createDynamicReviewCard(r, 'short')));
-  right.forEach(r => rightCol.appendChild(createDynamicReviewCard(r, 'long')));
+  left.forEach((r) => leftCol.appendChild(createDynamicReviewCard(r, 'long')));
+  middle.forEach((r) => middleCol.appendChild(createDynamicReviewCard(r, 'short')));
+  right.forEach((r) => rightCol.appendChild(createDynamicReviewCard(r, 'long')));
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  renderDynamicReviews(reviews);
+  // renderDynamicReviews(reviews);
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  renderReviews();
+});
+
+function getRandomReviews(num) {
+  const allReviews = reviews[0].filter((r) => r.review && r.review.trim().length > 100 && r.review.trim().length < 200);
+  const shuffled = [...allReviews].sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, num);
+}
+
+function renderReviews() {
+  // Use a consistent selector (ID is safer for initialization)
+  const carouselContainer = document.querySelector('.google-review-carousel');
+  if (!carouselContainer) return;
+
+  const randomReviews = getRandomReviews(10);
+  let html = '';
+
+  randomReviews.forEach((review) => {
+    // Owl Carousel works best when each slide is wrapped in its own <div>
+    html += `
+    <div class="item"> 
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-user">
+            <img class="google-user-avatar" src="${review.avatarURL}" alt="">
+            <div>
+              <h4>${review.name}</h4>
+              <span>Recent review</span>
+            </div>
+          </div>
+          <img class="google-logo" src="img/devicon_google.png" alt="">
+        </div>
+        <div class="review-stars">${'★'.repeat(review.rating)}</div>
+        <p>${review.review}</p>
+      </div>
+    </div>`;
+  });
+
+  // 1. Inject HTML
+  carouselContainer.innerHTML = html;
+
+  // 2. Initialize (Make sure this selector matches the ID in your HTML)
+  const $owl = $('.google-review-carousel').owlCarousel({
+    autoplay: true,
+    smartSpeed: 800,
+    margin: 20,
+    loop: true,
+    dots: true,
+    nav: false,
+    responsive: {
+      0: { items: 1 },
+      768: { items: 2 },
+      1200: { items: 3 },
+    },
+  });
+
+  // 3. Custom Navigation (using the $owl variable)
+  $('#review-next').click(function () {
+    $owl.trigger('next.owl.carousel');
+  });
+
+  $('#review-prev').click(function () {
+    $owl.trigger('prev.owl.carousel');
+  });
+}
