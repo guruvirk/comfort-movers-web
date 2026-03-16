@@ -1853,6 +1853,7 @@ body {
 .type-of-service-item img {
   width: 100%;
   border-radius: 6px;
+  height: 260px;
 }
 
 .type-of-service-item-content h5 {
