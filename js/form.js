@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const submitBtn = document.getElementById('contact-submit');
   const quoteWizard = document.querySelector('.quote-step-form');
 
   let phoneIti = null;
@@ -404,11 +403,106 @@ document.addEventListener('DOMContentLoaded', function () {
     showStep(currentStepIndex);
   }
 
-  const quoteSubmitBtn = document.getElementById('quote-submit');
-  if (submitBtn) {
-    submitBtn.addEventListener('click', () => clickFunction('contact'));
-  }
-  if (quoteSubmitBtn) {
-    quoteSubmitBtn.addEventListener('click', () => clickFunction('quote'));
+  // ================= CONTACT FORM =================
+
+  const contactFormBtn = document.getElementById('contact-submit');
+
+  if (contactFormBtn) {
+    const contactPhoneIti = initIntlTelInput('phone');
+
+    contactFormBtn.addEventListener('click', async function () {
+      const name = document.getElementById('full-name')?.value.trim();
+      const email = document.getElementById('email')?.value.trim();
+      const phoneInput = document.getElementById('phone');
+      const pickup = document.getElementById('move-from')?.value.trim();
+      const delivery = document.getElementById('move-to')?.value.trim();
+      const message = document.getElementById('message')?.value.trim();
+      const service = document.getElementById('service')?.value;
+
+      // ===== VALIDATION =====
+      if (!name) {
+        return showError('Please enter your full name.');
+      }
+
+      if (!email || !validateEmail(email)) {
+        return showError('Please enter a valid email.');
+      }
+
+      if (!validatePhone(phoneInput, contactPhoneIti)) {
+        return showError('Please enter a valid phone number.');
+      }
+
+      if (!service || service === 'Select Service') {
+        return showError('Please select a service.');
+      }
+
+      if (window.location.pathname.includes('contact') || window.location.pathname.includes('about')) {
+        if (!pickup) {
+          return showError('Please enter pickup address.');
+        }
+
+        if (!delivery) {
+          return showError('Please enter delivery address.');
+        }
+
+        if (!message) {
+          return showError('Please enter your message.');
+        }
+      }
+
+      // ===== BUILD PHONE =====
+      const fullPhone = contactPhoneIti ? contactPhoneIti.getNumber() : normalizePhoneInput(phoneInput);
+
+      // ===== PAYLOAD =====
+      const body = {
+        name: name,
+        email: email,
+        phone: fullPhone,
+        sizeDetails: service,
+        size: service,
+        date: '',
+        additionalInfo: message || '',
+        where: pickup ? buildAddressObject(pickup) : '',
+        to: delivery ? buildAddressObject(delivery) : '',
+      };
+
+      // ===== LOADING STATE =====
+      contactFormBtn.disabled = true;
+      contactFormBtn.innerText = 'Sending...';
+
+      try {
+        console.log(body);
+        const response = await fetch('https://comfortcare.co.nz/cm/api/create-order', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'x-tenant': 'cm',
+          },
+          body: JSON.stringify(body),
+        });
+
+        if (!response.ok) {
+          showError('Something went wrong. Please try again.');
+        } else {
+          alert('Thank you! We will contact you shortly.');
+
+          document.getElementById('full-name').value = '';
+          document.getElementById('email').value = '';
+          document.getElementById('phone').value = '';
+          document.getElementById('service').selectedIndex = 0;
+          if (window.location.pathname.includes('contact') || window.location.pathname.includes('about')) {
+            document.getElementById('move-from').value = '';
+            document.getElementById('move-to').value = '';
+            document.getElementById('message').value = '';
+          }
+        }
+      } catch (err) {
+        console.error(err);
+        showError('Network error. Please try again.');
+      } finally {
+        contactFormBtn.disabled = false;
+        contactFormBtn.innerText = 'Book Quote';
+      }
+    });
   }
 });

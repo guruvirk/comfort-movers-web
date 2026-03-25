@@ -52,7 +52,6 @@
     rel="stylesheet" />
 
   <!-- Icon Font Stylesheet -->
-  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
 
   <!-- Libraries Stylesheet -->
@@ -183,7 +182,7 @@
       </div>
     </div>
     <div class="nav-bar-container">
-      <a href="index.html" class="navbar-brand d-flex align-items-center px-lg-5 my-2">
+      <a href="index.html" class="navbar-brand align-items-center px-lg-5 my-2 d-md-none d-flex">
         <img class="logo" src="img/Logo.png" />
       </a>
       <div class="nav-right-buttons">
@@ -195,6 +194,9 @@
         </button>
       </div>
       <div class="collapse navbar-collapse space-around my-2 d-none d-lg-flex" id="navbarCollapse">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-lg-5 my-2 nav-bar-side">
+          <img class="logo" src="img/Logo.png" />
+        </a>
         <div class="navbar-nav p-4 p-lg-0 mx-xl-5">
           <div class="nav-item dropdown">
             <a href="service.html" class="nav-link dropdown-toggle nal-link-text" data-bs-toggle="dropdown">Service</a>
@@ -259,10 +261,11 @@
 
           <!-- <a href="rates.html" class="nav-item nav-link nal-link-text">Rates</a> -->
         </div>
-        <div class="nav-right-buttons">
-          <a href="quote.html" class="btn btn-custom-light rounded-10 py-2 px-lg-3 d-none d-lg-block my-2"><i
-              class="fa-regular fa-phone-volume me-2"></i>022-340-7710</a>
-          <a href="quote.html" class="btn btn-primary rounded-10 py-2 px-lg-3 d-none d-lg-block my-2"
+        <div class="nav-right-buttons nav-bar-side">
+          <a href="quote.html"
+            class="btn btn-custom-light rounded-10 py-2 px-lg-3 d-none d-lg-block my-2 header-button"><i
+              class="fa-solid fa-phone-volume me-2"></i>022-340-7710</a>
+          <a href="quote.html" class="btn btn-primary rounded-10 py-2 px-lg-3 d-none d-lg-block my-2 header-button"
             style="font-weight:400;">Get A
             Quote</a>
         </div>
@@ -286,7 +289,7 @@
                 <span class="cover-heading-text-span">Moving?</span><br>
                 Let’s Make It Easy & Stress-Free!
               </h2>
-              <p class="cover-sub-text">
+              <p class="cover-sub-text mt-4">
                 Our expert team has a variety of truck sizes, ensuring you get the perfect fit for your move.
               </p>
             </div>
@@ -303,7 +306,7 @@
                 <span class="cover-heading-text-span">Moving?</span><br>
                 Let’s Make It Easy & Stress-Free!
               </h2>
-              <p class="cover-sub-text">
+              <p class="cover-sub-text mt-4">
                 Our expert team has a variety of truck sizes, ensuring you get the perfect fit for your move.
               </p>
             </div>
@@ -320,7 +323,7 @@
                 <span class="cover-heading-text-span">Moving?</span><br>
                 Let’s Make It Easy & Stress-Free!
               </h2>
-              <p class="cover-sub-text">
+              <p class="cover-sub-text mt-4">
                 Our expert team has a variety of truck sizes, ensuring you get the perfect fit for your move.
               </p>
             </div>
@@ -346,22 +349,22 @@
 
           <div class="input-group">
             <label>Full Name</label>
-            <input type="text" placeholder="Enter name">
+            <input id="full-name" class="form-input" type="text" placeholder="Enter name" />
           </div>
 
           <div class="input-group">
             <label>Phone number</label>
-            <input id="phone" type="text" placeholder="">
+            <input id="phone" class="form-input" type="tel" placeholder="" />
           </div>
 
           <div class="input-group">
             <label>Email</label>
-            <input type="email" placeholder="comfortmove@example.com">
+            <input id="email" class="form-input" type="email" placeholder="comfortmove@example.com" />
           </div>
 
           <div class="input-group">
             <label>Service</label>
-            <select class="form-select form-input">
+            <select id="service" class="form-input form-select">
               <option selected disabled>Select Service</option>
               <option value="express">Express Moving</option>
               <option value="house">House Moving</option>
@@ -369,7 +372,7 @@
             </select>
           </div>
 
-          <button id="quote-submit" class="submit-btn btn btn-primary">Send Quote</button>
+          <button id="contact-submit" class="submit-btn btn btn-primary">Send Quote</button>
         </div>
       </div>
     </div>
@@ -411,7 +414,7 @@
     <div class="col-xl-3 col-md-6 col-12 wow fadeIn flow-header-box flow-header-box-left" data-wow-delay="0.1s">
       <div class="flow-header-box-inner">
         <div class="header-steps-icon">
-          <i class="fa-regular fa-clipboard-list"></i>
+          <i class="fa-solid fa-clipboard-list"></i>
         </div>
         <div class="flow-body">
           <span class="flow-body-heading">01. Share Your Details</span>
@@ -444,7 +447,7 @@
     <div class="col-xl-3 col-md-6 col-12 wow fadeIn flow-header-box flow-header-box-right" data-wow-delay="0.1s">
       <div class="flow-header-box-inner">
         <div class="header-steps-icon">
-          <i class="fa-regular fa-truck-arrow-right"></i>
+          <i class="fa-solid fa-truck-arrow-right"></i>
         </div>
         <div class="flow-body">
           <span class="flow-body-heading">04. Enjoy Stress-Free Move</span>
@@ -519,7 +522,7 @@
         <div>
           <a href="tel:022-340-7710" class="btn btn-outline-primary rounded-10 py-2 px-lg-3 mb-2"
             style="font-weight:400; color: #fff; border-color: #fff;"><i
-              class="fa-regular fa-phone-volume me-2"></i>022-340-7710</a>
+              class="fa-solid fa-phone-volume me-2"></i>022-340-7710</a>
           <p class="home-subscribe-button-span">7 days a week 8AM-6PM</p>
         </div>
         <div>
@@ -736,19 +739,19 @@
             <div class="col-12 mt-5" style="margin-bottom: 2.2rem;">
               <p class="fotter-text-info">Just give us a call on</p>
               <a href="tel:0223407710" class="fotter-phone"><i
-                  class="fa-regular fa-phone-volume"></i>&nbsp;&nbsp;&nbsp;022-340-7710</a>
+                  class="fa-solid fa-phone-volume"></i>&nbsp;&nbsp;&nbsp;022-340-7710</a>
             </div>
             <div class="col-12">
               <p class="fotter-text-info" style="margin-bottom: .2rem;">Contact email for Queries</p>
               <div class="bottom-info">
-                <i style="color: #fff; min-width: 20px;" class="fa-regular fa-envelope"></i>
+                <i style="color: #fff; min-width: 20px;" class="fa-solid fa-envelope"></i>
                 <a href="mailto:admin@comfortmovers.co.nz" target="_blank">
                   <p style="text-decoration: underline;">admin@comfortmovers.co.nz</p>
                 </a>
               </div>
             </div>
             <div class="col-12 bottom-info">
-              <i style="color: #fff; min-width: 20px;" class="fa-regular fa-location-dot"></i>
+              <i style="color: #fff; min-width: 20px;" class="fa-solid fa-location-dot"></i>
               <a href="https://maps.app.goo.gl/q529X6JgKXVSHkWB6" target="_blank">
                 <p>1601 N Gower St Ste 205 Albany, Auckland, New Zealand 0632</p>
               </a>
@@ -758,7 +761,7 @@
               <p>Mon-Fri : 6am - 6pm&nbsp;&nbsp;Sat-Sun : 8am - 4pm</p>
             </div>
             <div class="col-12 bottom-info d-md-none d-sm-flex">
-              <i style="color: #fff; min-width: 20px;" class="fa-regular fa-clock"></i>
+              <i style="color: #fff; min-width: 20px;" class="fa-solid fa-clock"></i>
               <div>
                 <p>Mon-Fri : 6am - 6pm</p>
                 <p>Sat-Sun : 8am - 4pm</p>
@@ -862,6 +865,9 @@
   <script src="js/main.js"></script>
   <script src="js/form.js"></script>
   <script src="js/reviews.js"></script>
+
+  <!-- Fontawesome Kit -->
+  <script src="https://kit.fontawesome.com/4d3fae981b.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
