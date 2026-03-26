@@ -148,10 +148,6 @@ h6 {
   outline: none;
 }
 
-.nav-bar-side {
-  width: 350px !important;
-}
-
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
   color: var(--primary);
@@ -179,6 +175,8 @@ h6 {
   height: 90px;
   margin: auto;
   width: 85%;
+  padding-right: 3rem;
+  padding-left: 3rem;
   flex-direction: row;
   display: flex;
   justify-content: space-between;
@@ -2979,6 +2977,8 @@ h6 {
     height: max-content;
     padding-top: 10px;
     padding-bottom: 10px;
+    padding-right: 0;
+    padding-left: 0;
   }
 
   .navbar.sticky-top {
