@@ -505,4 +505,97 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+
+  // ================= CAREER FORM =================
+
+  const cvInput = document.getElementById('cv');
+  const fileLabel = document.getElementById('file-label');
+
+  if (cvInput) {
+    cvInput.addEventListener('change', function () {
+      fileLabel.innerText = this.files.length > 0 ? this.files[0].name : 'Upload your CV';
+    });
+  }
+
+  const careerBtn = document.getElementById('career-submit');
+
+  if (careerBtn && !careerBtn.dataset.bound) {
+    careerBtn.dataset.bound = 'true';
+
+    const careerPhoneIti = initIntlTelInput('phone');
+
+    careerBtn.addEventListener('click', async function () {
+      const name = document.getElementById('full-name')?.value.trim();
+      const email = document.getElementById('email')?.value.trim();
+      const phoneInput = document.getElementById('phone');
+      const job = document.getElementById('job-profile')?.value.trim();
+      const position = document.getElementById('position')?.value.trim();
+      const experience = document.getElementById('experience')?.value.trim();
+      const cover = document.getElementById('cover-letter')?.value.trim();
+      const fileInput = document.getElementById('cv');
+
+      // ===== VALIDATION =====
+      if (!name) return showError('Enter full name');
+      if (!email || !validateEmail(email)) return showError('Invalid email');
+      if (!validatePhone(phoneInput, careerPhoneIti)) return showError('Invalid phone');
+      if (!job) return showError('Enter job profile');
+
+      const file = fileInput.files[0];
+
+      // ===== FILE VALIDATION =====
+      if (file) {
+        const allowed = [
+          'application/pdf',
+          'application/msword',
+          'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+          'image/jpeg',
+        ];
+
+        if (!allowed.includes(file.type)) {
+          return showError('Only PDF, DOC, DOCX, JPG allowed');
+        }
+      }
+
+      const fullPhone = careerPhoneIti ? careerPhoneIti.getNumber() : normalizePhoneInput(phoneInput);
+
+      // ===== FORM DATA (IMPORTANT for file upload) =====
+      const formData = new FormData();
+
+      formData.append('name', name);
+      formData.append('email', email);
+      formData.append('phone', fullPhone);
+      formData.append('jobProfile', job);
+      formData.append('position', position);
+      formData.append('experience', experience);
+      formData.append('coverLetter', cover);
+
+      if (file) {
+        formData.append('cv', file);
+      }
+
+      careerBtn.disabled = true;
+      careerBtn.innerText = 'Submitting...';
+
+      try {
+        const response = await fetch('https://comfortcare.co.nz/cm/api/submit-profile', {
+          method: 'POST',
+          body: formData,
+        });
+
+        if (!response.ok) {
+          showError('Submission failed. Try again.');
+        } else {
+          alert('Profile submitted successfully!');
+
+          document.querySelector('.career-form').reset?.();
+        }
+      } catch (err) {
+        console.error(err);
+        showError('Network error');
+      } finally {
+        careerBtn.disabled = false;
+        careerBtn.innerText = 'Submit Profile';
+      }
+    });
+  }
 });

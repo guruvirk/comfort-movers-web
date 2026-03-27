@@ -406,7 +406,7 @@
           </div>
         </div>
       </div>
-      <div class="stepper-mobile mt-5">
+      <div class="stepper-mobile">
         <div class="stepper-mobile-item">
           <div>
             <h4>01</h4>
@@ -450,7 +450,7 @@
   <div class="items-container mx-auto p-container served-box justify-content-between align-items-start wow fadeIn"
     data-wow-delay="0.1s">
     <div class="served-box-item-text about-page">
-      <h2 class="top-choice-heading about-hero-title pb-2">
+      <h2 class="top-choice-heading pb-2 text-start">
         Drivers Class 2, 4, 5
         Nationwide
       </h2>
@@ -464,7 +464,7 @@
         </p>
       </div>
     </div>
-    <div class="served-box-item-img about-page d-none d-sm-flex justify-content-start">
+    <div class="served-box-item-img about-page justify-content-start">
       <img class="about-image" src="img/service_moving_soon_truck.png" />
     </div>
   </div>
@@ -491,39 +491,72 @@
       <p class="contact-journey-sub-text w-100 text-center">
         Or
       </p>
-      <div class="about-form">
-        <h2 class="about-form-heading text-center mt-2">Fill the Basic Details</span></h2>
-        <p class="contact-journey-sub-text w-100 text-center">Submit your details and take the next step in your career.
+      <div class="about-form career-form">
+
+        <h2 class="about-form-heading text-center mt-2">
+          Fill the Basic Details
+        </h2>
+
+        <p class="contact-journey-sub-text text-center">
+          Submit your details and take the next step in your career.
         </p>
+
         <div class="row">
-          <div class="col-md-6 col-12 mt-4">
+
+          <div class="col-md-4 col-12 mt-4 carrer-form-input">
             <input id="full-name" class="form-input" type="text" placeholder="Full Name*" />
           </div>
-          <div class="col-md-6 col-12 mt-4">
+
+          <div class="col-md-4 col-12 mt-4 carrer-form-input">
             <input id="phone" class="form-input" type="tel" placeholder="Phone Number*" />
           </div>
-          <div class="col-md-6 col-12 mt-4">
-            <input id="email" class="form-input" type="email" placeholder="Email ID*" />
+
+          <div class="col-md-4 col-12 mt-4 carrer-form-input">
+            <input id="email" class="form-input" type="email" placeholder="Email*" />
           </div>
-          <div class="col-md-6 col-12 mt-4">
-            <select id="service" class="form-input form-select">
-              <option selected disabled>Select Service</option>
-              <option value="express">Express Moving</option>
-              <option value="house">House Moving</option>
-              <option value="office">Office Moving</option>
-            </select>
+
+          <div class="col-md-4 col-12 mt-4 carrer-form-input">
+            <input id="job-profile" class="form-input" type="text" placeholder="Job Profile*" />
           </div>
-          <div class="col-md-6 col-12 mt-4">
-            <input id="move-from" class="form-input" type="text" placeholder="Pickup Address*" />
+
+          <div class="col-md-4 col-12 mt-4 carrer-form-input">
+            <input id="position" class="form-input" type="text" placeholder="Current/Previous Position" />
           </div>
-          <div class="col-md-6 col-12 mt-4">
-            <input id="move-to" class="form-input" type="text" placeholder="Delivery Address*" />
+
+          <div class="col-md-4 col-12 mt-4 carrer-form-input">
+            <input id="experience" class="form-input" type="text" placeholder="Total Experience" />
           </div>
+
+          <div class="col-12 mt-4 carrer-form-input carrer-form-cv-input">
+
+            <div class="carrer-form-cv-input-box">
+              <label for="cv" class="custom-file-upload">
+                <i class="bi bi-upload me-2"></i>
+                <span id="file-label">Upload your CV</span>
+              </label>
+
+              <input id="cv" type="file" hidden />
+            </div>
+            <p class="carrer-form-cv-input-text">
+              *only pdf, doc, docx and jpg are accepted.
+            </p>
+
+          </div>
+
           <div class="col-12 mt-4">
-            <input id="message" class="form-textarea" type="text" placeholder="Message about work*" />
+            <textarea id="cover-letter" class="form-textarea" placeholder="Write cover letter"></textarea>
           </div>
+
         </div>
-        <button class="form-submit mt-4 p-3" id="contact-submit">Book Quote</button>
+
+        <button class="form-submit mt-4 p-3" id="career-submit">
+          Submit Profile
+        </button>
+
+        <p class="text-center mt-3 small carrer-form-fotter">
+          **Applicants must be NZ citizens, residents, or hold valid NZ work visa.
+        </p>
+
       </div>
     </div>
   </div>
