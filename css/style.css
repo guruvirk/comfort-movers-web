@@ -680,6 +680,11 @@ h6 {
   background-image: url('../img/contact_us_cover.png');
 }
 
+.cover-carrer {
+  background-image: url('../img/carrer-cover.jpg');
+  background-size: 100% 100% !important;
+}
+
 .cover-team {
   background-image: url('../img/cover-team.png');
   background-size: 100% 100% !important;
@@ -691,6 +696,16 @@ h6 {
 }
 
 .cover-team::before {
+  background: linear-gradient(to right,
+      #dce7f7 0%,
+      #dce7f7 25%,
+      rgba(220, 231, 247, 0.85) 35%,
+      rgba(220, 231, 247, 0.5) 45%,
+      rgba(220, 231, 247, 0.15) 55%,
+      rgba(220, 231, 247, 0) 65%) !important;
+}
+
+.cover-carrer::before {
   background: linear-gradient(to right,
       #dce7f7 0%,
       #dce7f7 25%,
@@ -3910,6 +3925,10 @@ h6 {
     padding-left: 20px;
     padding-right: 20px;
   }
+
+  .mb-sm-0 {
+    margin-bottom: 0 !important;
+  }
 }
 
 @media (max-width: 992px) {
@@ -4042,6 +4061,10 @@ h6 {
 
   .cover-contact {
     background-image: url('../img/contact_us_cover.png');
+  }
+
+  .cover-carrer {
+    background-image: url('../img/carrer-cover_mobile.png');
   }
 
   .cover-team {
@@ -4421,6 +4444,10 @@ input[type='date'] {
 
   .cover-contact {
     background-image: url('../img/contact_cover_mobile.png');
+  }
+
+  .cover-carrer {
+    background-image: url('../img/carrer-cover_mobile.png');
   }
 
   .cover-team {
