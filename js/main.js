@@ -14,6 +14,14 @@
   // Initiate the wowjs
   new WOW().init();
 
+  new WOW({
+    boxClass: 'wow',
+    animateClass: 'animated',
+    offset: 80, // trigger slightly before visible
+    mobile: true,
+    live: true,
+  }).init();
+
   // Sticky Navbar
   $(window).scroll(function () {
     if ($(this).scrollTop() > 300) {
