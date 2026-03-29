@@ -187,7 +187,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const aptSuite = document.getElementById('apt-suite')?.value.trim();
     const floorNo = document.getElementById('floor-no')?.value.trim();
     const moveSize = getRadioValue('moveSize');
-    const services = getCheckboxValues('services');
     const firstName = document.getElementById('first-name')?.value.trim();
     const lastName = document.getElementById('last-name')?.value.trim();
     const email = document.getElementById('quote-email')?.value.trim();
@@ -407,7 +406,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const contactFormBtn = document.getElementById('contact-submit');
 
-  if (contactFormBtn) {
+  if (contactFormBtn && !contactFormBtn.dataset.bound) {
+    contactFormBtn.dataset.bound = 'true';
     const contactPhoneIti = initIntlTelInput('phone');
 
     contactFormBtn.addEventListener('click', async function () {
@@ -432,21 +432,31 @@ document.addEventListener('DOMContentLoaded', function () {
         return showError('Please enter a valid phone number.');
       }
 
-      if (!service || service === 'Select Service') {
-        return showError('Please select a service.');
-      }
-
-      if (window.location.pathname.includes('contact') || window.location.pathname.includes('about')) {
-        if (!pickup) {
-          return showError('Please enter pickup address.');
-        }
-
+      if (window.location.pathname.includes('products')) {
         if (!delivery) {
-          return showError('Please enter delivery address.');
+          return showError('Please enter address.');
         }
 
         if (!message) {
           return showError('Please enter your message.');
+        }
+      } else {
+        if (!service || service === 'Select Service') {
+          return showError('Please select a service.');
+        }
+
+        if (window.location.pathname.includes('contact') || window.location.pathname.includes('about')) {
+          if (!pickup) {
+            return showError('Please enter pickup address.');
+          }
+
+          if (!delivery) {
+            return showError('Please enter delivery address.');
+          }
+
+          if (!message) {
+            return showError('Please enter your message.');
+          }
         }
       }
 
@@ -489,6 +499,10 @@ document.addEventListener('DOMContentLoaded', function () {
           document.getElementById('email').value = '';
           document.getElementById('phone').value = '';
           document.getElementById('service').selectedIndex = 0;
+          if (window.location.pathname.includes('products')) {
+            document.getElementById('move-to').value = '';
+            document.getElementById('message').value = '';
+          }
           if (window.location.pathname.includes('contact') || window.location.pathname.includes('about')) {
             document.getElementById('move-from').value = '';
             document.getElementById('move-to').value = '';
@@ -510,6 +524,19 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // ================= CAREER FORM =================
+
+  document.addEventListener('click', function (e) {
+    if (e.target.classList.contains('main-button')) {
+      const section = document.getElementById('contact-section');
+
+      if (section) {
+        section.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      }
+    }
+  });
 
   const cvInput = document.getElementById('cv');
   const fileLabel = document.getElementById('file-label');
