@@ -859,6 +859,9 @@ h6 {
   font-size: 18px;
   line-height: 26px;
   letter-spacing: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .fotter-phone:hover {
@@ -1220,6 +1223,10 @@ h6 {
 
 .pr-0 {
   padding-right: 0 !important;
+}
+
+.md-mt-1 {
+  margin-top: 0.25rem !important;
 }
 
 .visible {
@@ -2875,6 +2882,11 @@ h6 {
 }
 
 @media (max-width: 992px) {
+
+  .md-mt-1 {
+    margin-top: 0 !important;
+  }
+
   .sm-text-center {
     text-align: center !important;
   }
