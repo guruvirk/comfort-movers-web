@@ -5197,6 +5197,7 @@ input[type='date'] {
   gap: 10px;
   justify-content: flex-start;
   align-items: center;
+  font-size: x-large;
 }
 
 .contact-journey-social-icons i {
