@@ -485,7 +485,6 @@ document.addEventListener('DOMContentLoaded', function () {
           showError('Something went wrong. Please try again.');
         } else {
           alert('Thank you! We will contact you shortly.');
-
           document.getElementById('full-name').value = '';
           document.getElementById('email').value = '';
           document.getElementById('phone').value = '';
@@ -494,6 +493,10 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('move-from').value = '';
             document.getElementById('move-to').value = '';
             document.getElementById('message').value = '';
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth',
+            });
           }
         }
       } catch (err) {
@@ -577,17 +580,31 @@ document.addEventListener('DOMContentLoaded', function () {
       careerBtn.innerText = 'Submitting...';
 
       try {
-        const response = await fetch('https://comfortcare.co.nz/cm/api/submit-profile', {
+        const response = await fetch('https://comfortcare.co.nz/cm/api/carrers', {
           method: 'POST',
           body: formData,
+          headers: {
+            'x-tenant': 'cm',
+          },
         });
 
         if (!response.ok) {
           showError('Submission failed. Try again.');
         } else {
           alert('Profile submitted successfully!');
-
-          document.querySelector('.career-form').reset?.();
+          document.getElementById('full-name').value = '';
+          document.getElementById('email').value = '';
+          document.getElementById('phone').value = '';
+          document.getElementById('job-profile').value = '';
+          document.getElementById('position').value = '';
+          document.getElementById('experience').value = '';
+          document.getElementById('cover-letter').value = '';
+          document.getElementById('cv').value = '';
+          document.getElementById('file-label').innerText = 'Upload your CV';
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+          });
         }
       } catch (err) {
         console.error(err);

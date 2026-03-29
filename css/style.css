@@ -5479,5 +5479,17 @@ input[type='date'] {
 
   .iti--separate-dial-code .iti__selected-flag {
     background: rgba(255, 255, 255, 1) !important;
+    border-top-left-radius: 6px !important;
+    border-bottom-left-radius: 6px !important;
+  }
+
+  .iti__flag-container {
+    border-top-left-radius: 6px !important;
+    border-bottom-left-radius: 6px !important;
+    left: 1px !important;
+  }
+
+  .career-form {
+    margin-bottom: 3rem;
   }
 }
