@@ -4796,7 +4796,7 @@ input[type='date'] {
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 6px !important;
   outline: none;
-  font-size: 13px;
+  font-size: 16px;
   background-color: #fff;
   height: 48px;
   width: 100%;
@@ -4804,6 +4804,13 @@ input[type='date'] {
 
 .booking-widget .input-group input::placeholder {
   color: #aaa;
+}
+
+@media (min-width: 768px) {
+  .booking-widget .input-group input,
+  .booking-widget .input-group select {
+    font-size: 13px;
+  }
 }
 
 .booking-widget .submit-btn {
