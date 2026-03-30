@@ -69,6 +69,18 @@
   <link href="css/reviews.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" />
 
+  <style>
+    .served-box-item-text {
+      padding-right: 10px;
+    }
+
+    @media (max-width: 991px) {
+      .served-box-item-text {
+        padding-right: 0;
+      }
+    }
+  </style>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -209,8 +221,8 @@
           <i class="bi bi-list menu-icon"></i>
         </button>
       </div>
-      <div class="collapse navbar-collapse space-around my-2 d-none d-lg-flex" id="navbarCollapse">
-        <a href="index.html" class="navbar-brand d-flex align-items-center my-2">
+      <div class="collapse navbar-collapse justify-content-between my-2 d-none d-lg-flex" id="navbarCollapse">
+        <a href="index.html" class="navbar-brand d-flex align-items-center my-2 nav-bar-side">
           <img class="logo" src="img/Logo.png" />
         </a>
         <div class="navbar-nav p-4 p-lg-0 mx-xl-5">
@@ -465,11 +477,13 @@
         Nationwide
       </h2>
       <div>
-        <p class="served-text mb-sm-0">
+        <p class="served-text mb-sm-0 md-font-weight-600">
           Comfort Movers
         </p>
         <p class="served-text mb-0">
           A trusted New Zealand-owned company specializing in both inter-city and international removals, is expanding.
+        </p>
+        <p class="served-text mb-0">
           We are seeking professional drivers nationwide to join our team.
         </p>
       </div>
@@ -598,7 +612,7 @@
   <div class="footer mx-auto">
     <div class="items-container footer-container">
       <div class="pb-5">
-        <div class="row">
+        <div class="row justify-content-between">
           <div class="row col-lg-4 col-md-5">
             <div class="col-12">
               <img class="fotter-logo" src="img/Logo.png" />
