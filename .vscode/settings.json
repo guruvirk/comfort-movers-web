@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^cd /Users/virk/Documents/Code/comfort-movers-web && python3 << 'EOF'\nimport re\n\n# Define scaling mapping for 92% \\(original -> 92%\\)\nscale_map = \\{\n    '75px': '69px',\n    '55px': '51px',\n    '45px': '41px',\n    '40px': '37px',\n    '35px': '32px',\n    '32px': '29px',\n    '30px': '28px',\n    '24px': '22px',\n    '22px': '20px',\n    '20px': '18px',\n    '19px': '17px',\n    '18px': '17px',\n    '16px': '15px',\n    '15px': '14px',\n    '14px': '13px',\n\\}\n\ndef scale_file\\(filepath\\):\n    with open\\(filepath, 'r'\\) as f:\n        content = f\\.read\\(\\)\n    \n    for orig, scaled in scale_map\\.items\\(\\):\n        content = content\\.replace\\(f'font-size: \\{orig\\}', f'font-size: \\{scaled\\}'\\)\n    \n    with open\\(filepath, 'w'\\) as f:\n        f\\.write\\(content\\)\n\nscale_file\\('css/style\\.css'\\)\nscale_file\\('css/form\\.css'\\)\nprint\\(\"Font scaling to 92% completed successfully!\"\\)\nEOF\n$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}

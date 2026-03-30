@@ -43,7 +43,7 @@
 
 .quote-step-title {
   font-weight: 600;
-  font-size: 29px;
+  font-size: 35px;
   line-height: 100%;
   letter-spacing: 0px;
   text-align: center;
@@ -58,7 +58,7 @@
 .quote-step-subtitle {
   margin-bottom: 1.5rem;
   font-weight: 500;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 100%;
   letter-spacing: 0px;
   text-align: center;
@@ -77,7 +77,7 @@
 
 .form-label {
   font-weight: 600;
-  font-size: 13px;
+  font-size: 14px;
   color: rgba(34, 34, 34, 1);
   margin-bottom: 0.4rem;
   display: inline-block;
@@ -129,7 +129,7 @@
 
 .option-card-title {
   font-weight: 600;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 100%;
   letter-spacing: 0px;
   margin: 0;
@@ -140,7 +140,7 @@
   margin: 0;
   margin-top: 0.5rem;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 100%;
   letter-spacing: 0px;
   vertical-align: middle;
@@ -168,7 +168,7 @@
   height: 46px;
   cursor: pointer;
   font-weight: 600;
-  font-size: 13px;
+  font-size: 16px;
   color: rgba(34, 34, 34, 1);
   transition:
     background 0.2s ease,
@@ -198,7 +198,7 @@
 
 .payer-option span {
   font-weight: 500;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 100%;
   letter-spacing: 0px;
   vertical-align: middle;
@@ -249,20 +249,20 @@
 
 .quote-step-actions .btn {
   width: 595px;
-  font-size: 13px;
+  font-size: 16px;
   height: 56px !important;
 }
 
 .quote-step-notice {
   margin-top: 1.6rem;
   text-align: center;
-  font-size: 13px;
+  font-size: 14px;
   color: rgba(94, 94, 94, 1);
 }
 
 .quote-contact-form .form-label {
   font-weight: 600;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 100%;
   letter-spacing: 0px;
   vertical-align: middle;
@@ -293,7 +293,7 @@
   .quote-step-title {
     width: 100%;
     font-weight: 600;
-    font-size: 17px;
+    font-size: 24px;
     line-height: 100%;
     letter-spacing: 0px;
     text-align: center;
@@ -304,7 +304,7 @@
 
   .quote-step-subtitle {
     font-weight: 500;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 100%;
     letter-spacing: 0px;
     text-align: center;
@@ -328,12 +328,12 @@
 
   .quote-step-actions .btn {
     width: 100%;
-    font-size: 17px;
+    font-size: 20px;
   }
 
   .form-label {
     font-weight: 500;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 100%;
     letter-spacing: 0px;
     vertical-align: middle;
@@ -355,7 +355,7 @@
 
   .payer-option span {
     font-weight: 500;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 100%;
     letter-spacing: 0px;
     vertical-align: middle;
