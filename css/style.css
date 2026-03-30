@@ -2584,6 +2584,16 @@ h6 {
   color: #444;
 }
 
+.benefits-image-wrapper {
+  background: rgba(222, 236, 255, 1);
+  min-height: 60px;
+  min-width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
 .package-wrap-container {
   display: flex;
   flex-wrap: wrap;
