@@ -513,38 +513,58 @@
         <div class="row">
 
           <div class="col-md-4 col-12 mt-4 carrer-form-input">
-            <input id="full-name" class="form-input" type="text" placeholder="Full Name*" />
+            <div class="input-group">
+              <label>Full Name</label>
+              <input id="full-name" class="form-input" type="text" placeholder="Enter name" />
+            </div>
           </div>
 
           <div class="col-md-4 col-12 mt-4 carrer-form-input">
-            <input id="phone" class="form-input" type="tel" placeholder="Phone Number*" />
+            <div class="input-group">
+              <label>Phone number</label>
+              <input id="phone" class="form-input" type="tel" placeholder="" />
+            </div>
           </div>
 
           <div class="col-md-4 col-12 mt-4 carrer-form-input">
-            <input id="email" class="form-input" type="email" placeholder="Email*" />
+            <div class="input-group">
+              <label>Email</label>
+              <input id="email" class="form-input" type="email" placeholder="comfortmove@example.com" />
+            </div>
           </div>
 
           <div class="col-md-4 col-12 mt-4 carrer-form-input">
-            <input id="job-profile" class="form-input" type="text" placeholder="Job Profile*" />
+            <div class="input-group">
+              <label>Job Profile</label>
+              <input id="job-profile" class="form-input" type="text" placeholder="" />
+            </div>
           </div>
 
           <div class="col-md-4 col-12 mt-4 carrer-form-input">
-            <input id="position" class="form-input" type="text" placeholder="Current/Previous Position" />
+            <div class="input-group">
+              <label>Current/Previous Position</label>
+              <input id="position" class="form-input" type="text" placeholder="" />
+            </div>
           </div>
 
           <div class="col-md-4 col-12 mt-4 carrer-form-input">
-            <input id="experience" class="form-input" type="text" placeholder="Total Experience" />
+            <div class="input-group">
+              <label>Total Experience</label>
+              <input id="experience" class="form-input" type="text" placeholder="" />
+            </div>
           </div>
 
           <div class="col-12 mt-4 carrer-form-input carrer-form-cv-input">
 
             <div class="carrer-form-cv-input-box">
-              <label for="cv" class="custom-file-upload">
-                <i class="bi bi-upload me-2"></i>
-                <span id="file-label">Upload your CV</span>
-              </label>
-
-              <input id="cv" type="file" hidden />
+              <div class="input-group">
+                <label>Email</label>
+                <label for="cv" class="custom-file-upload w-100">
+                  <i class="bi bi-upload me-2"></i>
+                  <span id="file-label">Upload your CV</span>
+                </label>
+                <input id="cv" type="file" hidden />
+              </div>
             </div>
             <p class="carrer-form-cv-input-text">
               *only pdf, doc, docx and jpg are accepted.
@@ -552,8 +572,11 @@
 
           </div>
 
-          <div class="col-12 mt-4">
-            <textarea id="cover-letter" class="form-textarea" placeholder="Write cover letter"></textarea>
+          <div class="col-12 mt-4 carrer-form-input">
+            <div class="input-group">
+              <label>Write cover letter</label>
+              <textarea id="cover-letter" class="form-textarea" placeholder=""></textarea>
+            </div>
           </div>
 
         </div>

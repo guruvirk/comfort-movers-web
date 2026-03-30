@@ -4839,6 +4839,16 @@ input[type='date'] {
   border: 1px solid rgba(36, 128, 253, 0.3);
 }
 
+.input-group label {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: rgba(119, 119, 119, 1);
+  padding-bottom: .25rem;
+}
+
 /* Mobile Optimization */
 @media (max-width: 991.98px) {
   .quote-widget-container {
@@ -5367,6 +5377,7 @@ input[type='date'] {
   width: 50%;
   text-align: left;
   padding-left: 1rem;
+  padding-top: 1rem;
   font-weight: 500;
   font-size: 14px;
   line-height: 100%;
@@ -5374,6 +5385,13 @@ input[type='date'] {
   vertical-align: middle;
   color: rgba(51, 51, 51, 1);
   margin: 0 !important;
+}
+
+.input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 @media (min-width: 768px) {
@@ -5527,6 +5545,7 @@ input[type='date'] {
 
   .carrer-form-cv-input-text {
     width: 100%;
+    padding-top: 0;
     font-weight: 500;
     font-size: 12px;
     line-height: 100%;
