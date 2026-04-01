@@ -4971,27 +4971,6 @@ input[type='date'] {
   }
 }
 
-/* Mobile Optimization */
-@media (max-width: 600) {
-
-  .about-hero-title {
-    margin-top: 0 !important;
-  }
-
-  .flow-header-box-left {
-    padding-right: 0 !important;
-  }
-
-  .flow-header-box-center {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-
-  .flow-header-box-right {
-    padding-left: 0 !important;
-  }
-}
-
 .reviews-summary-card {
   background: #f6f8ff;
   border-radius: 16px;
@@ -5856,4 +5835,25 @@ input[type='date'] {
     margin-bottom: 3rem;
   }
 
+}
+
+/* Mobile Optimization */
+@media (max-width: 600px) {
+
+  .about-hero-title {
+    margin-top: 0 !important;
+  }
+
+  .flow-header-box-left {
+    padding-right: 0 !important;
+  }
+
+  .flow-header-box-center {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .flow-header-box-right {
+    padding-left: 0 !important;
+  }
 }
