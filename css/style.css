@@ -4221,7 +4221,6 @@ h6 {
 
 @media (max-width: 992px) {
   .banner-container {
-    height: 88vh;
     height: fit-content !important;
   }
 
@@ -5637,11 +5636,224 @@ input[type='date'] {
 }
 
 @media (min-width: 992px) and (max-width: 1100px) {
-  .nav-right-buttons {
-    display: none;
+  .nav-right-buttons> :first-child {
+    display: none !important;
+  }
+
+  .navbar .navbar-nav .nav-link {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
   }
 
   .custom-indicators {
     bottom: 8rem;
   }
+
+  .contact-journey-box-form {
+    width: 100% !important;
+  }
+
+  .contact-journey-box-item-text {
+    width: 100% !important;
+  }
+
+  .carrer-form-wrapper {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .booking-widget {
+    align-items: stretch;
+    /* Makes the tab and form take full width */
+    transform: translateY(-10%);
+  }
+
+  .booking-widget .tab {
+    border-radius: 12px 12px 0 0;
+    /* Rounds both top corners */
+    text-align: center;
+    padding: 12px 20px;
+    background-color: var(--primary);
+  }
+
+  /* IMPORTANT: Hide the cutout curve on mobile */
+  .booking-widget .tab::after {
+    display: none !important;
+  }
+
+  .booking-widget .tab h2 {
+    color: white;
+  }
+
+  .booking-widget .form-container {
+    background-color: var(--primary);
+    flex-direction: column;
+    /* Stacks inputs vertically */
+    align-items: stretch;
+    gap: 12px;
+    padding: 20px;
+    border-radius: 0 0 12px 12px;
+    /* Smooth bottom corners */
+    margin-top: -1px;
+    /* Reset the 1px seal for vertical stack */
+  }
+
+  .booking-widget .input-group label {
+    color: white;
+  }
+
+  .booking-widget .input-group input,
+  .booking-widget .input-group select {
+    border: 1px solid white;
+    background-color: var(--primary);
+    color: white;
+  }
+
+  .booking-widget .input-group {
+    width: 100%;
+  }
+
+  .booking-widget .submit-btn {
+    background-color: white;
+    color: var(--primary);
+    width: 100%;
+    margin-top: 10px;
+    height: 50px;
+    /* Larger touch target for thumbs */
+  }
+
+  .booking-widget .form-select {
+    /* Increase background-size to make the arrow physically larger */
+    background-size: 1rem;
+    /* Adjust position so it doesn't touch the edge */
+    background-position: right 1rem center;
+
+    /* Updated SVG: stroke-width increased to 3 for a bolder look */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    /* Ensure there's enough padding so text doesn't hit the large arrow */
+    padding-right: 3rem;
+  }
+
+  .banner-container {
+    height: fit-content !important;
+  }
+
+  .ratings-header {
+    padding-top: 1rem !important;
+  }
+
+  .custom-indicators {
+    position: relative !important;
+  }
+
+  .contact-journey-wrapper {
+    background: rgba(246, 248, 255, 1);
+    margin-top: 2.5rem;
+  }
+
+  .contact-journey-box {
+    padding: 0 !important;
+    border-radius: 0;
+  }
+
+  .contact-journey-heading {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 120%;
+    letter-spacing: 0px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .contact-journey-sub-text {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .contact-journey-sub-text-bold {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .contact-journey-social {
+    justify-content: center;
+    padding-bottom: 1rem;
+  }
+
+  .about-here-contact {
+    justify-content: center;
+  }
+
+  .about-hero-title {
+    margin-top: 1rem;
+    text-align: center !important;
+  }
+
+  .carrer-form-fotter {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    text-align: center;
+    vertical-align: middle;
+    color: rgba(51, 51, 51, 0.5);
+  }
+
+  .carrer-form-cv-input {
+    flex-wrap: wrap;
+  }
+
+  .carrer-form-cv-input-box {
+    width: 100%;
+  }
+
+  .carrer-form-cv-input-text {
+    width: 100%;
+    padding-top: 0;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    text-align: center;
+    vertical-align: middle;
+    color: rgba(51, 51, 51, .5);
+    margin: 0 !important;
+    margin-top: 1rem !important;
+  }
+
+  .carrer-email-heading {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .iti--separate-dial-code .iti__selected-flag {
+    background: rgba(255, 255, 255, 1) !important;
+    border-top-left-radius: 6px !important;
+    border-bottom-left-radius: 6px !important;
+  }
+
+  .iti__flag-container {
+    border-top-left-radius: 6px !important;
+    border-bottom-left-radius: 6px !important;
+    left: 1px !important;
+  }
+
+  .career-form {
+    margin-bottom: 3rem;
+  }
+
 }
