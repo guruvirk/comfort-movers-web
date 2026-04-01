@@ -759,7 +759,7 @@ h6 {
   width: 45%;
   font-size: 17px;
   font-weight: 450;
-  line-height: 26px;
+  line-height: 24px;
   color: rgba(51, 51, 51, 1);
 }
 
@@ -767,7 +767,7 @@ h6 {
   width: 45%;
   font-size: 17px;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 24px;
   color: rgba(51, 51, 51, 1);
 }
 
@@ -790,7 +790,7 @@ h6 {
   width: 330px;
   font-weight: 500;
   font-size: 17px;
-  line-height: 26px;
+  line-height: 24px;
   letter-spacing: 0px;
   vertical-align: middle;
   text-align: left;
@@ -811,7 +811,7 @@ h6 {
 .fotter-link {
   font-weight: 500;
   font-size: 17px;
-  line-height: 26px;
+  line-height: 24px;
   letter-spacing: 0px;
   vertical-align: middle;
   color: rgba(255, 255, 255, 1);
@@ -852,7 +852,7 @@ h6 {
   padding-right: 20px;
   font-weight: 600;
   font-size: 17px;
-  line-height: 26px;
+  line-height: 24px;
   letter-spacing: 0%;
   display: flex;
   justify-content: center;
@@ -896,7 +896,7 @@ h6 {
 .fotter-end-text {
   font-weight: 400;
   font-size: 13px;
-  line-height: 26px;
+  line-height: 24px;
   letter-spacing: 0px;
   vertical-align: middle;
   text-align: center;
@@ -1036,7 +1036,7 @@ h6 {
   color: rgba(0, 0, 0, 1) !important;
   font-size: 17px;
   font-weight: 500;
-  line-height: 26px;
+  line-height: 24px;
   text-align: left;
   margin-bottom: 0;
 }
@@ -1383,7 +1383,7 @@ h6 {
 .top-choice-text {
   font-weight: 500;
   font-size: 17px;
-  line-height: 26px;
+  line-height: 24px;
   letter-spacing: 0px;
   text-align: center;
   color: rgba(51, 51, 51, 1);
@@ -1423,7 +1423,7 @@ h6 {
 .top-choice-item-bottom-text {
   font-weight: 500;
   font-size: 17px;
-  line-height: 26px;
+  line-height: 24px;
   letter-spacing: 0px;
   vertical-align: middle;
   color: rgba(51, 51, 51, 1);
@@ -1437,7 +1437,7 @@ h6 {
 .top-choice-ul li {
   font-weight: 600;
   font-size: 17px;
-  line-height: 26px;
+  line-height: 24px;
   letter-spacing: 0px;
   vertical-align: middle;
   color: rgba(51, 51, 51, 1);
@@ -1446,7 +1446,7 @@ h6 {
 .why-choose-item-text {
   font-weight: 500;
   font-size: 17px;
-  line-height: 26px;
+  line-height: 24px;
   letter-spacing: 0px;
   vertical-align: middle;
   text-align: left;
@@ -1509,7 +1509,7 @@ h6 {
 .our-services-text {
   font-size: 17px;
   font-weight: 450;
-  line-height: 26px;
+  line-height: 24px;
   text-align: center;
   width: 75%;
   margin: auto;
@@ -1615,7 +1615,7 @@ h6 {
 .our-services-box p {
   font-weight: 500;
   font-size: 17px;
-  line-height: 26px;
+  line-height: 24px;
   letter-spacing: 0px;
   text-align: left;
   color: rgba(51, 51, 51, 1);
@@ -1708,7 +1708,7 @@ h6 {
 .served-text {
   font-size: 17px;
   font-weight: 500;
-  line-height: 26px;
+  line-height: 24px;
   text-align: left;
   color: rgba(51, 51, 51, 1);
 }
@@ -1776,7 +1776,7 @@ h6 {
   font-size: 17px;
   font-style: italic;
   font-weight: 500;
-  line-height: 26px;
+  line-height: 24px;
   text-align: left;
   color: rgba(51, 51, 51, 1);
 }
@@ -1809,7 +1809,7 @@ h6 {
 .review-user-location {
   font-size: 17px;
   font-weight: 450;
-  line-height: 26px;
+  line-height: 24px;
   text-align: left;
   color: rgba(51, 51, 51, 1);
 }
@@ -1856,7 +1856,7 @@ h6 {
 .home-bolg-heading {
   font-size: 17px;
   font-weight: 600;
-  line-height: 26px;
+  line-height: 24px;
   text-align: left;
   color: rgba(51, 51, 51, 1);
 }
@@ -1942,7 +1942,7 @@ h6 {
 .home-faq-sub-heading {
   font-size: 17px;
   font-weight: 450;
-  line-height: 26px;
+  line-height: 24px;
   text-align: left;
   color: rgba(51, 51, 51, 1);
 }
@@ -1987,7 +1987,7 @@ h6 {
   width: 100%;
   font-weight: 500;
   font-size: 17px;
-  line-height: 26px;
+  line-height: 24px;
   letter-spacing: 0px;
   color: rgba(51, 51, 51, 1);
 }
@@ -2109,7 +2109,7 @@ h6 {
 .home-subscribe-box-text {
   font-weight: 500;
   font-size: 17px;
-  line-height: 26px;
+  line-height: 24px;
   letter-spacing: 0px;
   color: rgba(255, 255, 255, 1);
 }
@@ -2134,7 +2134,7 @@ h6 {
 .home-subscribe-buttons-box a {
   font-weight: 600;
   font-size: 17px;
-  line-height: 26px;
+  line-height: 24px;
   letter-spacing: 0%;
   width: 207px !important;
 }
@@ -2218,7 +2218,7 @@ h6 {
   width: 65% !important;
   font-weight: 500;
   font-size: 17px;
-  line-height: 26px;
+  line-height: 24px;
   letter-spacing: 0px;
   color: rgba(51, 51, 51, 1);
 }
@@ -2623,7 +2623,7 @@ h6 {
   font-style: Medium;
   font-size: 17px;
   leading-trim: NONE;
-  line-height: 26px;
+  line-height: 24px;
   letter-spacing: 0px;
   color: rgba(51, 51, 51, 1);
 }
@@ -2652,7 +2652,7 @@ h6 {
   width: 100%;
   font-weight: 500;
   font-size: 17px;
-  line-height: 26px;
+  line-height: 24px;
   letter-spacing: 0px;
   color: rgba(51, 51, 51, 1);
   margin-bottom: 0 !important;
@@ -2661,7 +2661,7 @@ h6 {
 .custom-list li {
   font-size: 17px;
   font-weight: 450;
-  line-height: 26px;
+  line-height: 24px;
   color: rgba(51, 51, 51, 1);
 }
 
@@ -2707,7 +2707,7 @@ h6 {
 .rate-type-heading p {
   font-size: 17px;
   font-weight: 450;
-  line-height: 26px;
+  line-height: 24px;
   text-align: center;
   color: #ffffff;
   margin: 0;
@@ -2736,7 +2736,7 @@ h6 {
 .rate-type-body-item p {
   font-size: 17px;
   font-weight: 450;
-  line-height: 26px;
+  line-height: 24px;
   text-align: left;
   margin: 0;
 }
@@ -2758,7 +2758,7 @@ h6 {
 .take-advantage-item p {
   font-size: 17px;
   font-weight: 450;
-  line-height: 26px;
+  line-height: 24px;
   text-align: left;
 }
 
@@ -2891,7 +2891,7 @@ h6 {
 .product-items li {
   font-size: 17px;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 24px;
   text-align: left;
   color: #000000;
 }
@@ -3107,7 +3107,7 @@ h6 {
   .fotter-link {
     font-weight: 500;
     font-size: 17px;
-    line-height: 26px;
+    line-height: 24px;
     letter-spacing: 0px;
     vertical-align: middle;
     color: rgba(255, 255, 255, 1);
@@ -3572,7 +3572,7 @@ h6 {
   .home-faq-sub-heading {
     font-size: 17px;
     font-weight: 450;
-    line-height: 26px;
+    line-height: 24px;
     text-align: left;
     color: rgba(51, 51, 51, 1);
   }
@@ -3656,7 +3656,7 @@ h6 {
   .home-subscribe-buttons-box a {
     font-weight: 600;
     font-size: 17px;
-    line-height: 26px;
+    line-height: 24px;
     letter-spacing: 0%;
     margin-top: 1.5rem;
   }
@@ -5026,7 +5026,7 @@ input[type='date'] {
   color: rgba(51, 51, 51, 1);
   font-weight: 600;
   font-size: 17px;
-  line-height: 26px;
+  line-height: 24px;
   letter-spacing: 0%;
   text-align: center;
   padding: 10px 20px;
@@ -5151,7 +5151,7 @@ input[type='date'] {
   font-style: Medium;
   font-size: 17px;
   leading-trim: NONE;
-  line-height: 26px;
+  line-height: 24px;
   letter-spacing: 0px;
   color: rgba(51, 51, 51, 0.75);
   height: 150px;
@@ -5225,7 +5225,7 @@ input[type='date'] {
 .contact-journey-sub-text {
   font-weight: 500;
   font-size: 17px;
-  line-height: 26px;
+  line-height: 24px;
   letter-spacing: 0px;
   vertical-align: middle;
   color: rgba(51, 51, 51, 1);
