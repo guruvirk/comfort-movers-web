@@ -2086,16 +2086,16 @@ h6 {
   width: 75%;
   margin: auto;
   margin-top: 6rem !important;
-  padding-top: 40px !important;
-  padding-bottom: 40px;
+  padding-top: 50px !important;
+  padding-bottom: 50px;
 }
 
 .service-page-planning-box {
   width: 85%;
   margin: auto;
   margin-top: 6rem !important;
-  padding-top: 40px !important;
-  padding-bottom: 40px;
+  padding-top: 50px !important;
+  padding-bottom: 50px;
 }
 
 .home-subscribe-box-heading {
@@ -2132,7 +2132,7 @@ h6 {
 }
 
 .home-subscribe-buttons-box a {
-  font-weight: 600;
+  font-weight: 600 !important;
   font-size: 17px;
   line-height: 24px;
   letter-spacing: 0%;
@@ -3654,7 +3654,7 @@ h6 {
   }
 
   .home-subscribe-buttons-box a {
-    font-weight: 600;
+    font-weight: 600 !important;
     font-size: 17px;
     line-height: 24px;
     letter-spacing: 0%;
@@ -5031,7 +5031,7 @@ input[type='date'] {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-top: 4px;
+  margin-top: 8px;
   justify-content: space-between;
 }
 
