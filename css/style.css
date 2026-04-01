@@ -4352,10 +4352,11 @@ select.form-input {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background-image: url("data:image/svg+xml;utf8,<svg fill='%230064ff' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  /* 2. Sleek Primary Color Arrow (stroke-width: 1.5 for elegance) */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
-  background-position: right 5px center;
-  background-size: 32px;
+  background-size: 1rem;
+  background-position: right 1rem center;
 }
 
 #move-size.form-input {
@@ -4842,8 +4843,8 @@ input[type='date'] {
   background-size: 1rem;
   background-position: right 1rem center;
 
-  /* 2. Bold Primary Color Arrow (stroke-width: 3 for thickness) */
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  /* 2. Sleek Primary Color Arrow (stroke-width: 1.5 for elegance) */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
 
   /* 3. Ensure enough space on the right for the larger icon */
   padding-right: 3rem;
@@ -4939,14 +4940,11 @@ input[type='date'] {
   }
 
   .booking-widget .form-select {
-    /* Increase background-size to make the arrow physically larger */
     background-size: 1rem;
-    /* Adjust position so it doesn't touch the edge */
     background-position: right 1rem center;
 
-    /* Updated SVG: stroke-width increased to 3 for a bolder look */
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
-    /* Ensure there's enough padding so text doesn't hit the large arrow */
+    /* 2. Sleek Primary Color Arrow (stroke-width: 1.5 for elegance) */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
     padding-right: 3rem;
   }
 
@@ -5697,14 +5695,11 @@ input[type='date'] {
   }
 
   .booking-widget .form-select {
-    /* Increase background-size to make the arrow physically larger */
     background-size: 1rem;
-    /* Adjust position so it doesn't touch the edge */
     background-position: right 1rem center;
 
-    /* Updated SVG: stroke-width increased to 3 for a bolder look */
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
-    /* Ensure there's enough padding so text doesn't hit the large arrow */
+    /* 2. Sleek Primary Color Arrow (stroke-width: 1.5 for elegance) */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
     padding-right: 3rem;
   }
 
