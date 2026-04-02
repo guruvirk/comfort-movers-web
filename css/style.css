@@ -4147,10 +4147,6 @@ h6 {
     padding: 10px 0;
   }
 
-  .navbar .navbar-nav {
-    border-top: 1px solid #eeeeee;
-  }
-
   .navbar .nav-item .dropdown-menu {
     border: none;
     margin-top: 0;
