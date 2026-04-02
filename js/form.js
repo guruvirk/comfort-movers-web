@@ -273,7 +273,7 @@ document.addEventListener('DOMContentLoaded', function () {
           return false;
         }
 
-        return false;
+        return true;
       default:
         return true;
     }
