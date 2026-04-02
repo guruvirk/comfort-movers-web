@@ -2985,18 +2985,19 @@ h6 {
   .cover-heading-text {
     width: 100%;
     font-size: 28px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 100%;
     text-align: center;
-    color: rgba(0, 0, 0, 1) !important;
+    color: #ffffff !important;
   }
 
   .cover-heading-text-span {
     font-size: 28px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 45px;
     text-align: center;
     color: #2480fd;
+    color: #ffffff !important;
   }
 
   .cover-sub-text {
@@ -4622,7 +4623,7 @@ input[type='date'] {
     background-size: cover !important;
     background-position: center bottom !important;
     align-items: flex-start;
-    padding-top: 80px;
+    padding-top: 20px;
   }
 
   /* Remove gradient overlay */
@@ -4635,7 +4636,7 @@ input[type='date'] {
     background-size: cover !important;
     background-position: center bottom !important;
     align-items: flex-start;
-    padding-top: 80px;
+    padding-top: 20px;
   }
 
   .cover-short {
@@ -4687,7 +4688,7 @@ input[type='date'] {
   }
 
   .cover-sub-text {
-    color: #ffffff;
+    color: #ffffff !important;
     text-align: left;
   }
 
