@@ -356,7 +356,7 @@ h6 {
 }
 
 .page-header {
-  background: url(../img/header-page.jpg) top center no-repeat;
+  background: url(../img/header-page.webp) top center no-repeat;
   background-size: cover;
   text-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
 }
@@ -673,27 +673,27 @@ h6 {
 }
 
 .cover-1 {
-  background-image: url('../img/hero-cover.jpeg');
+  background-image: url('../img/hero-cover.webp');
   background-size: 100% 100% !important;
 }
 
 .cover-contact {
-  background-image: url('../img/contact_us_cover.png');
+  background-image: url('../img/contact_us_cover.webp');
   background-size: 100% 100% !important;
 }
 
 .cover-carrer {
-  background-image: url('../img/carrer-cover.png');
+  background-image: url('../img/carrer-cover.webp');
   background-size: 100% 100% !important;
 }
 
 .cover-team {
-  background-image: url('../img/cover-team.png');
+  background-image: url('../img/cover-team.webp');
   background-size: 100% 100% !important;
 }
 
 .cover-quote {
-  background-image: url('../img/quote_cover.png');
+  background-image: url('../img/quote_cover.webp');
   background-size: 100% 100% !important;
 }
 
@@ -4256,19 +4256,19 @@ h6 {
   }
 
   .cover-contact {
-    background-image: url('../img/contact_us_cover.png');
+    background-image: url('../img/contact_us_cover.webp');
   }
 
   .cover-carrer {
-    background-image: url('../img/carrer-cover_mobile.png');
+    background-image: url('../img/carrer-cover_mobile.webp');
   }
 
   .cover-team {
-    background-image: url('../img/cover-team-mobile.png');
+    background-image: url('../img/cover-team-mobile.webp');
   }
 
   .cover-quote {
-    background-image: url('../img/quote-cover-mobile.png');
+    background-image: url('../img/quote-cover-mobile.webp');
   }
 
   .flow-body {
@@ -4608,7 +4608,7 @@ input[type='date'] {
 /* MOBILE HERO FIX */
 @media (max-width: 768px) {
   .cover-1 {
-    background-image: url('../img/hero-cover-mobile.jpeg');
+    background-image: url('../img/hero-cover-mobile.webp');
   }
 
   /* Remove gradient overlay */
@@ -4658,19 +4658,19 @@ input[type='date'] {
   }
 
   .cover-contact {
-    background-image: url('../img/contact_cover_mobile.png');
+    background-image: url('../img/contact_cover_mobile.webp');
   }
 
   .cover-carrer {
-    background-image: url('../img/carrer-cover_mobile.png');
+    background-image: url('../img/carrer-cover_mobile.webp');
   }
 
   .cover-team {
-    background-image: url('../img/cover-team-mobile.png');
+    background-image: url('../img/cover-team-mobile.webp');
   }
 
   .cover-quote {
-    background-image: url('../img/quote-cover-mobile.png');
+    background-image: url('../img/quote-cover-mobile.webp');
   }
 
   /* Make text readable on image */
