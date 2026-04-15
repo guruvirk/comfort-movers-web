@@ -264,8 +264,6 @@ document.addEventListener('DOMContentLoaded', function () {
         body: JSON.stringify(body),
       });
 
-      debugger;
-
       if (!response.ok) {
         console.error('API error', await response.text());
         showError('Something went wrong while submitting your request. Please try again.');
