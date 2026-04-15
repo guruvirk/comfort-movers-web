@@ -104,23 +104,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  function setupHomeTypeToggle() {
-    const homeTypeRadios = document.querySelectorAll('input[name="homeType"]');
-    const apartmentDetails = document.getElementById('apartment-details');
-
-    const toggle = () => {
-      const homeType = getRadioValue('homeType');
-      if (homeType === 'Apartment') {
-        apartmentDetails.classList.add('active');
-      } else {
-        apartmentDetails.classList.remove('active');
-      }
-    };
-
-    homeTypeRadios.forEach((radio) => radio.addEventListener('change', toggle));
-    toggle();
-  }
-
   function initIntlTelInput(inputId) {
     const input = document.getElementById(inputId);
     if (!input || !window.intlTelInput) return null;
@@ -163,21 +146,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (nextBtn) {
       const isLast = stepIndex === total - 1;
-      const communicsationConsent = document.getElementById('communicsation-consent');
-      const communicsationConsentMobile = document.getElementById('communicsation-consent-mobile');
-      if (isLast) {
-        communicsationConsent.classList.add('active');
-        communicsationConsentMobile.classList.add('active');
-      } else {
-        communicsationConsent.classList.remove('active');
-        communicsationConsentMobile.classList.remove('active');
-      }
       if (quoteWizard && typeof quoteWizard.scrollIntoView === 'function') {
         quoteWizard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }
       nextBtn.textContent = isLast
         ? 'Get My Quote'
-        : `Next : ${['Move Date', 'Home Type', 'Additional Service', 'Contact Information'][stepIndex]}`;
+        : `Next : ${['Home Type', 'Additional Service', 'Contact Information'][stepIndex]}`;
     }
 
     currentStepIndex = stepIndex;
@@ -193,11 +167,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const movingTo = document.getElementById('move-to')?.value.trim();
     const moveDate = document.getElementById('move-date')?.value;
     const homeType = getRadioValue('homeType');
-    const bedroom = document.querySelector('#bedroom-count button.selected')?.getAttribute('data-value');
-    const aptSuite = document.getElementById('apt-suite')?.value.trim();
-    const floorNo = document.getElementById('floor-no')?.value.trim();
-    const firstName = document.getElementById('first-name')?.value.trim();
-    const lastName = document.getElementById('last-name')?.value.trim();
+    const fullName = document.getElementById('full-name')?.value.trim();
     const email = document.getElementById('quote-email')?.value.trim();
     const phoneInput = document.getElementById('quote-phone');
 
@@ -211,40 +181,22 @@ document.addEventListener('DOMContentLoaded', function () {
           showError('Please enter your moving to address.');
           return false;
         }
-        return true;
-      case 2:
         if (!moveDate) {
           showError('Please select your move date.');
           return false;
         }
         return true;
-      case 3:
+      case 2:
         if (!homeType) {
           showError('Please select the type of home.');
-          return false;
-        }
-        if (!bedroom) {
-          showError('Please select how many bedrooms.');
-          return false;
-        }
-        if (homeType === 'Apartment' && !aptSuite) {
-          showError('Please enter your apartment suite.');
-          return false;
-        }
-        if (homeType === 'Apartment' && !floorNo) {
-          showError('Please enter your apartment floor number.');
           return false;
         }
         return true;
       case 4:
         return true;
       case 5:
-        if (!firstName) {
-          showError('Please enter your first name.');
-          return false;
-        }
-        if (!lastName) {
-          showError('Please enter your last name.');
+        if (!fullName) {
+          showError('Please enter your full name.');
           return false;
         }
         if (!email || !validateEmail(email)) {
@@ -274,32 +226,20 @@ document.addEventListener('DOMContentLoaded', function () {
     const moveDate = document.getElementById('move-date')?.value;
     const homeType = getRadioValue('homeType');
     const bedroom = document.querySelector('#bedroom-count button.selected')?.getAttribute('data-value');
-    const aptSuite = document.getElementById('apt-suite')?.value.trim();
-    const floorNo = document.getElementById('floor-no')?.value.trim();
     const services = getCheckboxValues('services');
-    const firstName = document.getElementById('first-name')?.value.trim();
-    const lastName = document.getElementById('last-name')?.value.trim();
+    const fullName = document.getElementById('full-name')?.value.trim();
     const email = document.getElementById('quote-email')?.value.trim();
     const phoneInput = document.getElementById('quote-phone');
 
-    const fullName = [firstName, lastName].filter(Boolean).join(' ');
     const fullPhoneNumber = normalizePhoneForPayload(phoneIti ? phoneIti.getNumber() : normalizePhoneInput(phoneInput));
 
     let additionalInfo = '';
-
-    if (aptSuite.length > 0) {
-      additionalInfo += `Apt/Suite: ${aptSuite}`;
-    }
-
-    if (floorNo.length > 0) {
-      additionalInfo += `, Floor No: ${floorNo}`;
-    }
 
     const body = {
       name: fullName,
       email: email,
       phone: fullPhoneNumber,
-      size: bedroom ? `${bedroom} Bedroom` : 'Not specified',
+      size: bedroom ? `${bedroom} Bedroom` : '',
       date: moveDate,
       sizeDetails: homeType,
       special: services,
@@ -323,6 +263,8 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         body: JSON.stringify(body),
       });
+
+      debugger;
 
       if (!response.ok) {
         console.error('API error', await response.text());
@@ -349,7 +291,6 @@ document.addEventListener('DOMContentLoaded', function () {
     attachRadioCardHandlers();
     attachCheckboxCardHandlers();
     setupBedroomCount();
-    setupHomeTypeToggle();
 
     phoneIti = initIntlTelInput('quote-phone');
 

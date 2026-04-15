@@ -360,12 +360,11 @@
                     <div class="quote-progress-segment"></div>
                     <div class="quote-progress-segment"></div>
                     <div class="quote-progress-segment"></div>
-                    <div class="quote-progress-segment"></div>
                 </div>
             </div>
 
             <div class="quote-step wow fadeIn" data-step="1">
-                <h2 class="quote-step-title">Where are you moving?</h2>
+                <h2 class="quote-step-title">Where and when are you moving?</h2>
                 <p class="quote-step-subtitle">* indicates required field</p>
                 <div class="quote-step-form-box row">
                     <div class="col-md-6 col-12 mt-4">
@@ -376,23 +375,14 @@
                         <label class="form-label" for="move-to">Moving to*</label>
                         <input id="move-to" class="form-input" type="text" placeholder="Full Address" />
                     </div>
-                </div>
-            </div>
-
-            <div class="quote-step" data-step="2">
-                <h2 class="quote-step-title">When are you moving out?</h2>
-                <p class="quote-step-subtitle">Select a range of dates for when you are planning to move out. Simply
-                    choose your
-                    earliest and latest move out dates below.</p>
-                <div class="quote-contact-form">
-                    <div class="mt-4">
+                    <div class="col-12 mt-4">
                         <label class="form-label" for="move-date">Move Date*</label>
                         <input id="move-date" class="form-input" type="date" />
                     </div>
                 </div>
             </div>
 
-            <div class="quote-step" data-step="3">
+            <div class="quote-step" data-step="2">
                 <h2 class="quote-step-title">What type of home are you moving from?</h2>
                 <p class="quote-step-subtitle">Please select one of the responses below.</p>
                 <div class="option-cards">
@@ -400,14 +390,18 @@
                         <input type="radio" name="homeType" value="House" />
                         <div>
                             <p class="option-card-title">House</p>
-                            <p class="option-card-subtitle">Single Family Home</p>
                         </div>
                     </label>
                     <label class="option-card">
                         <input type="radio" name="homeType" value="Apartment" />
                         <div>
                             <p class="option-card-title">Apartment</p>
-                            <p class="option-card-subtitle">Studio, Condo, Townhome</p>
+                        </div>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="homeType" value="Office/Warehouse" />
+                        <div>
+                            <p class="option-card-title">Office/Warehouse</p>
                         </div>
                     </label>
                 </div>
@@ -419,36 +413,25 @@
                         <button type="button" data-value="3">3</button>
                         <button type="button" data-value="4+">4+</button>
                     </div>
-                    <div id="apartment-details" class="apartment-details quote-step-form-box">
-                        <div class="row">
-                            <div class="col-md-6 col-12 mt-4">
-                                <label class="form-label" for="apt-suite">Apt., Suite No.*</label>
-                                <input id="apt-suite" class="form-input" type="text" placeholder="" />
-                            </div>
-                            <div class="col-md-6 col-12 mt-4">
-                                <label class="form-label" for="floor-no">Floor No.*</label>
-                                <input id="floor-no" class="form-input" type="text" placeholder="" />
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
 
-            <div class="quote-step" data-step="4">
+            <div class="quote-step" data-step="3">
                 <h2 class="quote-step-title">Do you need additional services?</h2>
                 <div class="option-cards option-cards--checkbox">
+
+                    <label class="option-card">
+                        <input class="option-card-select" type="checkbox" name="services" checked value="Moving" />
+                        <div>
+                            <p class="option-card-title">Move Only</p>
+                            <p class="option-card-subtitle">Transport your belongings safely.</p>
+                        </div>
+                    </label>
                     <label class="option-card">
                         <input class="option-card-select" type="checkbox" name="services" value="Packing" />
                         <div>
                             <p class="option-card-title">Packing</p>
                             <p class="option-card-subtitle">We pack and box your belongings.</p>
-                        </div>
-                    </label>
-                    <label class="option-card">
-                        <input class="option-card-select" type="checkbox" name="services" value="Car Shipping" />
-                        <div>
-                            <p class="option-card-title">Car Shipping</p>
-                            <p class="option-card-subtitle">We move your vehicles.</p>
                         </div>
                     </label>
                     <label class="option-card">
@@ -459,33 +442,50 @@
                         </div>
                     </label>
                     <label class="option-card">
-                        <input class="option-card-select" type="checkbox" name="services" value="Debris Removal" />
-                        <div>
-                            <p class="option-card-title">Debris Removal</p>
-                            <p class="option-card-subtitle">We remove all supplied packing material.</p>
-                        </div>
-                    </label>
-                    <label class="option-card">
                         <input class="option-card-select" type="checkbox" name="services" value="Storage" />
                         <div>
                             <p class="option-card-title">Storage</p>
                             <p class="option-card-subtitle">We temporarily store your belongings.</p>
                         </div>
                     </label>
+                    <label class="option-card">
+                        <input class="option-card-select" type="checkbox" name="services" value="Car Shipping" />
+                        <div>
+                            <p class="option-card-title">Car Shipping</p>
+                            <p class="option-card-subtitle">We move your vehicles.</p>
+                        </div>
+                    </label>
+                    <label class="option-card">
+                        <input class="option-card-select" type="checkbox" name="services" value="Debris Removal" />
+                        <div class="w-100">
+                            <div class="d-flex justify-content-between align-items-center w-100">
+                                <p class="option-card-title">Junk Removal</p>
+                                <button type="button" class="junk-removal-toggle btn btn-sm p-0" data-expanded="false">
+                                    <i class="bi bi-chevron-down"></i>
+                                </button>
+                            </div>
+                            <div class="junk-removal-details"
+                                style="display: none; margin-top: 12px; padding-top: 12px; border-top: 1px solid #e0e0e0;">
+                                <ul style="font-size: 13px; line-height: 1.6; margin-bottom: 0; padding-left: 18px;">
+                                    <li>Move and load the rubbish onto our truck</li>
+                                    <li>Do a quick and thorough sweep up of the area</li>
+                                    <li>Take away just about anything that two rubbish experts can safely lift</li>
+                                    <li>Help you with reliable, friendly and professional teams</li>
+                                    <li>Recycle where possible</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </label>
                 </div>
             </div>
 
-            <div class="quote-step" data-step="5">
+            <div class="quote-step" data-step="4">
                 <h2 class="quote-step-title">How can we contact you?</h2>
                 <p class="quote-step-subtitle">* indicates required field</p>
                 <div class="quote-contact-form">
                     <div class="mt-4">
-                        <label class="form-label" for="first-name">First Name*</label>
-                        <input id="first-name" class="form-input" type="text" />
-                    </div>
-                    <div class="mt-4">
-                        <label class="form-label" for="last-name">Last Name*</label>
-                        <input id="last-name" class="form-input" type="text" />
+                        <label class="form-label" for="full-name">Full Name*</label>
+                        <input id="full-name" class="form-input" type="text" />
                     </div>
                     <div class="mt-4">
                         <label class="form-label" for="quote-email">Email Address*</label>
@@ -496,18 +496,27 @@
                         <input id="quote-phone" class="form-input" type="tel" />
                     </div>
                 </div>
-                <p id="communicsation-consent-mobile" class="quote-step-subtitle mt-4 communicsation-consent-mobile">
-                    <label class="d-flex align-items-start">
-                        <input id="consent-mobile" name="consent" type="checkbox" class="me-2" />
-                        <span>I agree to receive communications from Comfort Movers, its agents, or authorized
-                            partners
-                            at the
-                            contact information provided above.</span>
-                    </label>
-                </p>
             </div>
+            <script>
+                document.querySelectorAll('.junk-removal-toggle').forEach(button => {
+                    button.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        const details = this.closest('.option-card').querySelector('.junk-removal-details');
+                        const isExpanded = this.getAttribute('data-expanded') === 'true';
 
-
+                        if (isExpanded) {
+                            details.style.display = 'none';
+                            this.innerHTML = '<i class="bi bi-chevron-down"></i>';
+                            this.setAttribute('data-expanded', 'false');
+                        } else {
+                            details.style.display = 'block';
+                            this.innerHTML = '<i class="bi bi-chevron-up"></i>';
+                            this.setAttribute('data-expanded', 'true');
+                        }
+                    });
+                });
+            </script>
             <p class="quote-step-subtitle mt-8">This experience is secured by Comfort
                 Movers®&nbsp;|&nbsp;We never sell
                 your
@@ -586,7 +595,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.min.js"></script>
-    <script src="js/form.js"></script>
+    <script src="js/form.min.js"></script>
     <script src="js/reviews.min.js"></script>
 
     <!-- Fontawesome Kit -->
