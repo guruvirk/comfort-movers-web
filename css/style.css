@@ -4196,7 +4196,7 @@ h6 {
 @media (max-width: 992px) {
   .navbar .navbar-nav .nav-link {
     margin-right: 0;
-    padding: 10px 0;
+    padding: 8px 0;
   }
 
   .navbar .nav-item .dropdown-menu {
@@ -4256,6 +4256,15 @@ h6 {
     align-items: center !important;
     height: fit-content !important;
   }
+}
+
+@media (max-width: 768px) {
+
+  .navbar .navbar-nav .nav-link {
+    margin-right: 0;
+    padding: 6px 0;
+  }
+
 }
 
 /*** Feature ***/
