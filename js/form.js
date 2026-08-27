@@ -381,6 +381,16 @@ document.addEventListener('DOMContentLoaded', function () {
             return showError('Please enter your message.');
           }
         }
+
+        if (window.location.pathname.includes('comfort-movers-auckland')) {
+          if (!pickup) {
+            return showError('Please enter pickup address.');
+          }
+
+          if (!delivery) {
+            return showError('Please enter delivery address.');
+          }
+        }
       }
 
       // ===== BUILD PHONE =====
@@ -443,7 +453,11 @@ document.addEventListener('DOMContentLoaded', function () {
         showError('Network error. Please try again.');
       } finally {
         contactFormBtn.disabled = false;
-        contactFormBtn.innerText = 'Book Quote';
+        if (window.location.pathname.includes('comfort-movers-auckland')) {
+          contactFormBtn.innerText = 'Send My Free Quote Now';
+        } else {
+          contactFormBtn.innerText = 'Book Quote';
+        }
       }
     });
   }
