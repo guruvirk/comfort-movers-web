@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   let phoneIti = null;
   let analyticsInitialized = false;
+  let analyticsReady = false;
+  const pendingAnalyticsEvents = [];
 
   function initializeAnalytics() {
     if (analyticsInitialized) return;
@@ -13,13 +15,19 @@ document.addEventListener('DOMContentLoaded', function () {
       window.dataLayer.push(arguments);
     };
     window.gtag('js', new Date());
-    window.gtag('config', ga4MeasurementId, { send_page_view: false });
 
     if (!document.getElementById('ga4-event-tag')) {
       const googleTag = document.createElement('script');
       googleTag.id = 'ga4-event-tag';
       googleTag.async = true;
       googleTag.src = `https://www.googletagmanager.com/gtag/js?id=${ga4MeasurementId}`;
+      googleTag.onload = function () {
+        window.gtag('config', ga4MeasurementId, { send_page_view: false });
+        analyticsReady = true;
+        pendingAnalyticsEvents.splice(0).forEach(({ eventName, parameters }) => {
+          window.gtag('event', eventName, parameters);
+        });
+      };
       document.head.appendChild(googleTag);
     }
 
@@ -28,10 +36,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function trackAnalyticsEvent(eventName, parameters = {}) {
     initializeAnalytics();
-    window.gtag('event', eventName, {
+    const eventParameters = {
+      send_to: ga4MeasurementId,
       ...parameters,
       page_path: window.location.pathname,
-    });
+    };
+
+    if (!analyticsReady) {
+      pendingAnalyticsEvents.push({ eventName, parameters: eventParameters });
+      return;
+    }
+
+    window.gtag('event', eventName, eventParameters);
   }
 
   initializeAnalytics();
@@ -111,6 +127,9 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!phoneLink) return;
 
     trackAnalyticsEvent('phone_call_click', {
+      send_to: ga4MeasurementId,
+      transport_type: 'beacon',
+      page_name: document.title,
       link_url: phoneLink.href,
       link_text: phoneLink.textContent.trim(),
     });
