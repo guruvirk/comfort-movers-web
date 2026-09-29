@@ -1,7 +1,52 @@
 document.addEventListener('DOMContentLoaded', function () {
   const quoteWizard = document.querySelector('.quote-step-form');
+  const ga4MeasurementId = 'G-BPXKYHE7RR';
 
   let phoneIti = null;
+  let analyticsInitialized = false;
+
+  function initializeAnalytics() {
+    if (analyticsInitialized) return;
+
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function () {
+      window.dataLayer.push(arguments);
+    };
+    window.gtag('js', new Date());
+    window.gtag('config', ga4MeasurementId, { send_page_view: false });
+
+    if (!document.getElementById('ga4-event-tag')) {
+      const googleTag = document.createElement('script');
+      googleTag.id = 'ga4-event-tag';
+      googleTag.async = true;
+      googleTag.src = `https://www.googletagmanager.com/gtag/js?id=${ga4MeasurementId}`;
+      document.head.appendChild(googleTag);
+    }
+
+    analyticsInitialized = true;
+  }
+
+  function trackAnalyticsEvent(eventName, parameters = {}) {
+    initializeAnalytics();
+    window.gtag('event', eventName, {
+      ...parameters,
+      page_path: window.location.pathname,
+    });
+  }
+
+  initializeAnalytics();
+
+  function getContactFormEventName() {
+    const pathname = window.location.pathname.toLowerCase();
+
+    if (pathname.endsWith('/about-us.html')) return 'about_form_submit';
+    if (pathname.endsWith('/contact.html')) return 'contact_form_submit';
+    if (pathname.endsWith('/products.html')) return 'product_order_submit';
+    if (pathname.endsWith('/comfort-movers-auckland.html')) return 'auckland_quote_submit';
+    if (pathname === '/' || pathname.endsWith('/index.html')) return 'homepage_quote_submit';
+
+    return 'contact_form_submit';
+  }
 
   function showError(msg) {
     alert(msg);
@@ -60,6 +105,16 @@ document.addEventListener('DOMContentLoaded', function () {
     };
   }
 
+
+  document.addEventListener('click', function (event) {
+    const phoneLink = event.target.closest('a[href^="tel:"]');
+    if (!phoneLink) return;
+
+    trackAnalyticsEvent('phone_call_click', {
+      link_url: phoneLink.href,
+      link_text: phoneLink.textContent.trim(),
+    });
+  });
   function getRadioValue(name) {
     const input = document.querySelector(`input[name="${name}"]:checked`);
     return input ? input.value : '';
@@ -155,6 +210,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     currentStepIndex = stepIndex;
+    const stepNumber = stepIndex + 1;
+    trackAnalyticsEvent(`quote_step_${stepNumber}_view`, {
+      form_name: 'quote',
+      step_number: stepNumber,
+      step_name: steps[stepIndex].querySelector('.quote-step-title')?.textContent.trim() || '',
+    });
     try {
       localStorage.setItem('quoteStepIndex', String(stepIndex));
     } catch (e) {}
@@ -268,6 +329,7 @@ document.addEventListener('DOMContentLoaded', function () {
         console.error('API error', await response.text());
         showError('Something went wrong while submitting your request. Please try again.');
       } else {
+        trackAnalyticsEvent('quote_form_submit', { form_name: 'quote' });
         alert('Thank you! Your request has been submitted. We’ll contact you soon.');
         try {
           localStorage.removeItem('quoteStepIndex');
@@ -429,6 +491,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!response.ok) {
           showError('Something went wrong. Please try again.');
         } else {
+          trackAnalyticsEvent(getContactFormEventName(), { form_name: window.location.pathname });
           alert('Thank you! We will contact you shortly.');
           document.getElementById('full-name').value = '';
           document.getElementById('email').value = '';
@@ -557,6 +620,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!response.ok) {
           showError('Submission failed. Try again.');
         } else {
+          trackAnalyticsEvent('career_application_submit', { form_name: 'career' });
           alert('Profile submitted successfully!');
           document.getElementById('full-name').value = '';
           document.getElementById('email').value = '';
